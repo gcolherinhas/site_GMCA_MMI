@@ -226,6 +226,56 @@ a{color:var(--brand)}
   .profile-tabs{width:100%}.profile-tab{flex:1;justify-content:center;padding-inline:10px}.profile-publication-toolbar{align-items:stretch;flex-direction:column}.profile-year-control{justify-content:space-between}
 }
 @media(max-width:420px){.publication-filter-section .publication{grid-template-columns:1fr}.award{grid-template-columns:1fr}.award-cover img,.cover-placeholder{width:110px}}
+
+/* v12 — indicadores informativos e acabamento mobile. */
+.people-metrics-section,.publication-metrics-section{background:#edf3f9;border-bottom:1px solid var(--line)}
+.people-metrics,.publication-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:18px 0}
+.people-metric,.publication-metric{position:relative;overflow:hidden;min-width:0;padding:17px 19px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(7,20,38,.045)}
+.people-metric::before,.publication-metric::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(var(--accent),var(--brand))}
+.people-metric strong,.publication-metric strong{display:block;color:var(--brand);font-size:1.45rem;line-height:1;font-weight:900;letter-spacing:-.035em}
+.people-metric span,.publication-metric span{display:block;margin-top:7px;color:var(--muted);font-size:.76rem;font-weight:750}
+.person-card-copy{min-width:0}.person-card-copy h3,.person-card-copy p{overflow-wrap:anywhere}
+.person-mini-metrics{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.person-mini-metrics span{display:inline-flex;align-items:center;min-height:23px;padding:3px 8px;border-radius:999px;background:#edf4ff;color:#48647f;font-size:.67rem;font-weight:850}
+.person-mini-metrics .orcid-pill{margin-top:0;background:#eff8e9;color:#4e7a2a}
+.profile-tab .tab-count.projects{background:#e8f7ff;color:#1874a6}.profile-tab.active .tab-count.projects{background:#1685bd;color:#fff}
+.profile-production-metrics{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap}
+.profile-production-metric{min-width:128px;padding:10px 13px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.profile-production-metric strong{display:block;color:var(--brand);font-size:1.35rem;line-height:1;font-weight:900}.profile-production-metric span{display:block;margin-top:5px;color:var(--muted);font-size:.72rem;font-weight:750}
+.profile-year-summary{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 18px}
+.profile-year-chip{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#53677c;font:inherit;font-size:.72rem;font-weight:850;cursor:pointer}
+.profile-year-chip strong{color:var(--brand)}.profile-year-chip.active{border-color:rgba(21,94,232,.32);background:#edf4ff;color:var(--brand)}
+.profile-year-chip:focus-visible,.profile-tab:focus-visible,.nav-toggle:focus-visible,.button:focus-visible,.select-shell select:focus-visible,.profile-year-control select:focus-visible{outline:3px solid rgba(69,214,255,.45);outline-offset:2px}
+.publication-metrics-section{background:#f5f7fb}
+.publication-metric{padding-block:18px}.publication-metric small{display:block;margin-top:4px;color:#8a9bad;font-size:.64rem;font-weight:800}
+.publication-filter-section .publication-body a,.profile-main .publication a,.registration{overflow-wrap:anywhere;word-break:break-word}
+.machine-table-wrap,.recent-histogram-card{overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.button,.nav-toggle,.profile-links a,.profile-tab,.profile-year-chip,.select-shell select,.profile-year-control select{touch-action:manipulation}
+@media(max-width:980px){.people-metrics,.publication-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){
+  body{font-size:15px}.container{width:min(var(--max),calc(100% - 28px))}.section{padding:50px 0}.compact-section{padding:28px 0}
+  .nav-toggle{min-width:48px;min-height:44px;align-items:center;justify-content:center;font-weight:850}
+  .nav-links.open{top:50px;padding:10px;border-radius:0 0 18px 18px;box-shadow:0 20px 44px rgba(7,20,38,.16)}
+  .nav-links a{display:flex;align-items:center;min-height:46px;padding:10px 12px}body.menu-open{overflow:hidden}
+  .button,.profile-links a{min-height:44px}.hero-actions{gap:9px}.hero-actions .button{flex:1 1 180px}
+  .people-metrics-section,.publication-metrics-section{overflow:hidden}
+  .people-metrics,.publication-metrics{display:flex;gap:10px;overflow-x:auto;padding:14px 14px 16px;scroll-snap-type:x proximity;scrollbar-width:none}
+  .people-metrics::-webkit-scrollbar,.publication-metrics::-webkit-scrollbar,.profile-year-summary::-webkit-scrollbar{display:none}
+  .people-metric,.publication-metric{flex:0 0 158px;scroll-snap-align:start;padding:15px 16px}.people-metric strong,.publication-metric strong{font-size:1.3rem}
+  .person-card-link{gap:13px;padding:15px 16px}.person-card h3{font-size:.98rem}.muted{font-size:.8rem}.person-mini-metrics{gap:5px}.person-mini-metrics span{font-size:.64rem}
+  .profile-grid{gap:22px}.profile-links{gap:8px}.profile-tabs{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.profile-tabs::-webkit-scrollbar{display:none}.profile-tab{min-height:44px;white-space:nowrap}
+  .profile-publication-toolbar{gap:12px}.profile-production-metrics{display:grid;grid-template-columns:1fr 1fr;width:100%}.profile-production-metric{min-width:0}.profile-year-control select{min-height:44px}
+  .profile-year-summary{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px;scroll-snap-type:x proximity;scrollbar-width:none}.profile-year-chip{flex:0 0 auto;scroll-snap-align:start;min-height:40px}
+  .publication-filter-section{padding:44px 0 68px}.publication-year-filter{margin-bottom:28px;padding:15px 16px}.publication-filter-section .publication{transform:none!important}.publication-filter-section .publication-body h3{font-size:1rem}
+  .recent-histogram-card{scrollbar-width:thin}.machine-table-wrap{border-radius:12px;scrollbar-width:thin}.machine-table th,.machine-table td{padding:11px 12px}
+  .software-card{padding:24px;border-radius:22px}.award{border-radius:22px}.site-footer{padding:28px 0}.footer-grid{gap:18px}
+}
+@media(max-width:520px){
+  .hero-actions .button{flex-basis:100%}.profile-links a{flex:1 1 100%;justify-content:center}
+  .profile-production-metrics{grid-template-columns:1fr 1fr}.profile-year-control{align-items:stretch;flex-direction:column}.profile-year-control select{width:100%}
+  .publication-filter-section .year-heading{align-items:flex-start;flex-direction:column;gap:6px}.publication-filter-section .year-heading h2{font-size:2.8rem}.award-body h2{font-size:1.18rem}
+}
+@media(hover:none){.button:hover,.publication-filter-section .publication:hover{transform:none;box-shadow:inherit}}
 </style>
 </head>
 <body>
@@ -257,205 +307,32 @@ a{color:var(--brand)}
   </nav>
 </header>
 
-<main><section class="profile-hero">
-  <div class="container profile-grid">
-    <div class="profile-photo">
-<img src="data:image/webp;base64,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" alt="Foto de Douglas Xavier de Andrade" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">      <span class="avatar-fallback large" style="display:none">D</span>
+<main><section class="profile-hero"><div class="container profile-grid">
+  <div class="profile-photo"><img src="data:image/webp;base64,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" alt="Foto de Douglas Xavier de Andrade" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><span class="avatar-fallback large" style="display:none">D</span></div>
+  <div><span class="eyebrow">Pesquisadores/Colaboradores · Atual</span><h1>Douglas Xavier de Andrade</h1><p class="lead">Pesquisador Colaborador</p><p>Instituto Federal de Goiás - IFG</p><div class="profile-links"><a href="mailto:xavierd.fisica@gmail.com">E-mail</a><a href="http://lattes.cnpq.br/6253342796627194" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0000-0002-3625-1579" target="_blank" rel="noopener">ORCID 0000-0002-3625-1579 ↗</a></div></div>
+</div></section>
+<section class="section"><div class="container profile-content">
+  <div class="profile-main">
+    <div class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">
+      <button class="profile-tab active" type="button" role="tab" aria-selected="true" aria-controls="profile-projects" id="tab-projects" data-profile-tab="projects">Projetos <span class="tab-count projects">5</span></button>
+      <button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-productions" id="tab-productions" data-profile-tab="productions">Produções <span class="tab-count">18</span></button>
     </div>
-    <div>
-      <span class="eyebrow">Pesquisadores/Colaboradores · Atual</span>
-      <h1>Douglas Xavier de Andrade</h1>
-      <p class="lead">Pesquisador Colaborador</p>
-      <p>Instituto Federal de Goiás - IFG</p>
-      <div class="profile-links">
-<a href="mailto:xavierd.fisica@gmail.com">E-mail</a><a href="http://lattes.cnpq.br/6253342796627194" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0000-0002-3625-1579" target="_blank" rel="noopener">ORCID 0000-0002-3625-1579 ↗</a>      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container profile-content">
-    <div class="profile-main">
-      <div class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">
-        <button class="profile-tab active" type="button" role="tab" aria-selected="true" aria-controls="profile-projects" id="tab-projects" data-profile-tab="projects">Projetos</button>
-        <button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-productions" id="tab-productions" data-profile-tab="productions">Produções <span class="tab-count">18</span></button>
+    <section class="profile-tab-panel" id="profile-projects" role="tabpanel" aria-labelledby="tab-projects" data-profile-tab-panel="projects">
+      <div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div>
+<div class="project-list"><div class="project-verbatim">Design Atomístico de Nanomateriais Peptídicos: Investigação computacional de nanomateriais orgânicos formados pela agregação e auto-organização de aminoácidos e peptídeos, com ênfase nas relações entre sequência molecular, composição química, arquitetura supramolecular e estabilidade. Por meio de dinâmica molecular atomística, são estudadas diferentes classes de nanoestruturas peptídicas, incluindo membranas, nanofibras e agregados organizados. As análises envolvem propriedades estruturais e energéticas, hidratação, empacotamento molecular, interações eletrostáticas e de van der Waals e formação de estruturas secundárias. O objetivo é estabelecer princípios de design capazes de relacionar características da sequência peptídica às propriedades emergentes dos materiais auto-organizados.</div><div class="project-verbatim">Auto-organização, Estrutura e Estabilidade de Nanofibras e Nanomembranas Peptídicas: Modelagem molecular dos processos de organização e estabilização de nanofibras, nanotapes e nanomembranas formadas por peptídeos anfifílicos e bola-anfifílicos. A pesquisa investiga como alterações na sequência dos aminoácidos, orientação das cadeias laterais, distribuição de grupos hidrofóbicos e hidrofílicos e interação com o solvente determinam diferentes arquiteturas supramoleculares. São analisados parâmetros como espessura, organização em folhas-β, hidratação, distribuição espacial dos resíduos e persistência das interações intermoleculares, permitindo compreender por que sequências de composição semelhante podem originar materiais com estruturas e graus de estabilidade distintos.</div><div class="project-verbatim">Interações Intermoleculares e Mecanismos de Estabilização em Materiais Peptídicos: Estudo dos mecanismos físico-químicos responsáveis pela coesão e estabilidade de nanoestruturas peptídicas, com atenção especial às redes de ligações de hidrogênio, interações eletrostáticas, forças de van der Waals e formação de polar zippers entre segmentos peptídicos. Simulações de dinâmica molecular e cálculos de energia livre são empregados para quantificar a contribuição de diferentes resíduos e grupos funcionais para a associação molecular. A abordagem permite identificar quais interações dominam a formação e manutenção das estruturas supramoleculares e fornece fundamentos para o desenvolvimento racional de materiais peptídicos com maior estabilidade.</div><div class="project-verbatim">Estabilidade Térmica e Robustez de Nanoestruturas Peptídicas: Investigação dos efeitos da temperatura sobre a estrutura, organização e estabilidade energética de nanomateriais peptídicos. Utilizando simulações de dinâmica molecular em diferentes condições térmicas, são avaliadas alterações no empacotamento molecular, nas estruturas secundárias, na hidratação, nas redes de ligações de hidrogênio e nas interações responsáveis pela manutenção das nanoestruturas. A linha contempla diferentes sequências e arquiteturas de membranas peptídicas, permitindo determinar mecanismos de degradação ou reorganização térmica e identificar características moleculares associadas à maior resistência estrutural.</div><div class="project-verbatim">Propriedades Eletrônicas e Espectroscópicas de Sistemas Peptídicos: Caracterização das propriedades eletrônicas e espectroscópicas de peptídeos e nanoestruturas peptídicas por meio da integração entre dinâmica molecular e métodos de estrutura eletrônica. Configurações representativas obtidas nas simulações atomísticas são utilizadas em cálculos quânticos, incluindo DFT e TD-DFT, para investigar propriedades como blindagem magnética nuclear, distribuição eletrônica e espectros de absorção. A pesquisa busca compreender como solvatação, conformação e organização supramolecular modificam as respostas espectroscópicas dos peptídeos, estabelecendo relações entre estrutura molecular, ambiente químico e propriedades eletrônicas observáveis.</div></div>    </section>
+    <section class="profile-tab-panel" id="profile-productions" role="tabpanel" aria-labelledby="tab-productions" data-profile-tab-panel="productions" hidden>
+      <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
+      <div class="profile-publication-toolbar">
+        <div class="profile-production-metrics" aria-live="polite"><div class="profile-production-metric"><strong data-person-current-count>0</strong><span>no ano corrente</span></div><div class="profile-production-metric"><strong>18</strong><span>total no perfil</span></div></div>
+        <label class="profile-year-control"><span>Exibir ano</span><select data-person-year-filter aria-label="Filtrar produções por ano"></select></label>
       </div>
-
-      <section class="profile-tab-panel" id="profile-projects" role="tabpanel" aria-labelledby="tab-projects" data-profile-tab-panel="projects">
-        <div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div>
-        <div class="project-list"><div class="project-verbatim">Design Atomístico de Nanomateriais Peptídicos: Investigação computacional de nanomateriais orgânicos formados pela agregação e auto-organização de aminoácidos e peptídeos, com ênfase nas relações entre sequência molecular, composição química, arquitetura supramolecular e estabilidade. Por meio de dinâmica molecular atomística, são estudadas diferentes classes de nanoestruturas peptídicas, incluindo membranas, nanofibras e agregados organizados. As análises envolvem propriedades estruturais e energéticas, hidratação, empacotamento molecular, interações eletrostáticas e de van der Waals e formação de estruturas secundárias. O objetivo é estabelecer princípios de design capazes de relacionar características da sequência peptídica às propriedades emergentes dos materiais auto-organizados.</div><div class="project-verbatim">Auto-organização, Estrutura e Estabilidade de Nanofibras e Nanomembranas Peptídicas: Modelagem molecular dos processos de organização e estabilização de nanofibras, nanotapes e nanomembranas formadas por peptídeos anfifílicos e bola-anfifílicos. A pesquisa investiga como alterações na sequência dos aminoácidos, orientação das cadeias laterais, distribuição de grupos hidrofóbicos e hidrofílicos e interação com o solvente determinam diferentes arquiteturas supramoleculares. São analisados parâmetros como espessura, organização em folhas-β, hidratação, distribuição espacial dos resíduos e persistência das interações intermoleculares, permitindo compreender por que sequências de composição semelhante podem originar materiais com estruturas e graus de estabilidade distintos.</div><div class="project-verbatim">Interações Intermoleculares e Mecanismos de Estabilização em Materiais Peptídicos: Estudo dos mecanismos físico-químicos responsáveis pela coesão e estabilidade de nanoestruturas peptídicas, com atenção especial às redes de ligações de hidrogênio, interações eletrostáticas, forças de van der Waals e formação de polar zippers entre segmentos peptídicos. Simulações de dinâmica molecular e cálculos de energia livre são empregados para quantificar a contribuição de diferentes resíduos e grupos funcionais para a associação molecular. A abordagem permite identificar quais interações dominam a formação e manutenção das estruturas supramoleculares e fornece fundamentos para o desenvolvimento racional de materiais peptídicos com maior estabilidade.</div><div class="project-verbatim">Estabilidade Térmica e Robustez de Nanoestruturas Peptídicas: Investigação dos efeitos da temperatura sobre a estrutura, organização e estabilidade energética de nanomateriais peptídicos. Utilizando simulações de dinâmica molecular em diferentes condições térmicas, são avaliadas alterações no empacotamento molecular, nas estruturas secundárias, na hidratação, nas redes de ligações de hidrogênio e nas interações responsáveis pela manutenção das nanoestruturas. A linha contempla diferentes sequências e arquiteturas de membranas peptídicas, permitindo determinar mecanismos de degradação ou reorganização térmica e identificar características moleculares associadas à maior resistência estrutural.</div><div class="project-verbatim">Propriedades Eletrônicas e Espectroscópicas de Sistemas Peptídicos: Caracterização das propriedades eletrônicas e espectroscópicas de peptídeos e nanoestruturas peptídicas por meio da integração entre dinâmica molecular e métodos de estrutura eletrônica. Configurações representativas obtidas nas simulações atomísticas são utilizadas em cálculos quânticos, incluindo DFT e TD-DFT, para investigar propriedades como blindagem magnética nuclear, distribuição eletrônica e espectros de absorção. A pesquisa busca compreender como solvatação, conformação e organização supramolecular modificam as respostas espectroscópicas dos peptídeos, estabelecendo relações entre estrutura molecular, ambiente químico e propriedades eletrônicas observáveis.</div></div>
-      </section>
-
-      <section class="profile-tab-panel" id="profile-productions" role="tabpanel" aria-labelledby="tab-productions" data-profile-tab-panel="productions" hidden>
-        <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
-        <div class="profile-publication-toolbar">
-          <div class="profile-publication-indicator" aria-live="polite">
-            <strong data-person-current-count>0</strong>
-            <span>artigo(s) no ano corrente</span>
-          </div>
-          <label class="profile-year-control">
-            <span>Exibir ano</span>
-            <select data-person-year-filter aria-label="Filtrar produções por ano"></select>
-          </label>
-        </div>
-        <div class="publication-list" data-person-publications>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Versatility of self-assembling A6K peptide nanomembranes under thermal variation: A molecular dynamics analysis across the 300–400 K range</h3>
-              <p class="authors">Karinna Mendanha, Douglas X. de Andrade, Guilherme Colherinhas</p>
-              <p class="journal">Surfaces and Interfaces, v. 69, 106746</p>
-<a href="https://doi.org/10.1016/j.surfin.2025.106746" target="_blank" rel="noopener">DOI: 10.1016/j.surfin.2025.106746 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Molecular Dynamics Study of Functionalized Gold Nanoparticles: Structural and Aggregation Behavior under Varying Ionic Strength</h3>
-              <p class="authors">Esequias Coelho, Douglas Xavier de Andrade, Agnaldo Rosa de Almeida, Guilherme Colherinhas</p>
-              <p class="journal">ACS Physical Chemistry Au, v. 5, n. 6, 699-715</p>
-<a href="https://doi.org/10.1021/acsphyschemau.5c00077" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00077 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Investigating the Impact of Positively Charged Gold Nanoparticle (AuNP) Concentration in Water/Cl – Solutions Using Molecular Dynamics Simulations</h3>
-              <p class="authors">Esequias Coelho, Douglas Xavier de Andrade, Agnaldo Rosa de Almeida, Guilherme Colherinhas</p>
-              <p class="journal">ACS Omega, v. 10, n. 20, 20610-20622</p>
-<a href="https://doi.org/10.1021/acsomega.5c01441" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c01441 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Dynamic interactions of negatively charged gold nanoparticles (AuNPs) in aqueous environments with different ionic compositions</h3>
-              <p class="authors">Esequias Coelho, Douglas Xavier, Agnaldo Almeida, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 413, 126021</p>
-<a href="https://doi.org/10.1016/j.molliq.2024.126021" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126021 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2023">
-            <div class="pub-year">2023</div>
-            <div>
-              <h3>Polar Zipper on a Peptide Nanomembrane: A Characterization by Potential of Mean Force</h3>
-              <p class="authors">Douglas X. de Andrade, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry B, v. 127, n. 1, 228-235</p>
-<a href="https://doi.org/10.1021/acs.jpcb.2c07135" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.2c07135 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2023">
-            <div class="pub-year">2023</div>
-            <div>
-              <h3>Exploring Fullerenol-C60(OH)24 interactions with lipid bilayers: Molecular dynamics study of agglomeration and surface deposition</h3>
-              <p class="authors">Esequias Coelho, Douglas X. de Andrade, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 391, 123205</p>
-<a href="https://doi.org/10.1016/j.molliq.2023.123205" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.123205 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2023">
-            <div class="pub-year">2023</div>
-            <div>
-              <h3>Effects of Coulomb and vdW modifiers on hydrogen-bonds, energy and structural properties of peptide nanomembranes: A study by Molecular Dynamics simulations</h3>
-              <p class="authors">Agnaldo R. de Almeida, Guilherme Colherinhas, Douglas X. de Andrade</p>
-              <p class="journal">Journal of Molecular Liquids, v. 382, 122017</p>
-<a href="https://doi.org/10.1016/j.molliq.2023.122017" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.122017 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2022">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>Statistical and energetic analysis of hydrogen bonds in short and long peptide nanotapes/nanofibers using molecular dynamics simulations</h3>
-              <p class="authors">Agnaldo R. de Almeida, Douglas X. de Andrade, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 359, 119308</p>
-<a href="https://doi.org/10.1016/j.molliq.2022.119308" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.119308 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2022">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>Molecular dynamics study of hydrogen bond in peptide membrane at 150–300 K</h3>
-              <p class="authors">Eyber Domingos Alves, Douglas X. de Andrade, Agnaldo R. de Almeida, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 349, 118165</p>
-<a href="https://doi.org/10.1016/j.molliq.2021.118165" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.118165 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2022">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>EF4K bola-amphiphilic peptide nanomembrane: structural, energetic and dynamic properties using molecular dynamics</h3>
-              <p class="authors">Elias Rafael de Sousa, Douglas Xavier de Andrade, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 368, 120651</p>
-<a href="https://doi.org/10.1016/j.molliq.2022.120651" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.120651 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2021">
-            <div class="pub-year">2021</div>
-            <div>
-              <h3>Laminar peptide structure: Energetic and structural evaluation using molecular dynamics</h3>
-              <p class="authors">Douglas X. de Andrade, Eyber D. Alves, Agnaldo R. de Almeida, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 341, 117261</p>
-<a href="https://doi.org/10.1016/j.molliq.2021.117261" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.117261 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2021">
-            <div class="pub-year">2021</div>
-            <div>
-              <h3>Atomistic molecular dynamics study on the influence of high temperatures on the structure of peptide nanomembranes candidates for organic supercapacitor electrode</h3>
-              <p class="authors">Eyber D. Alves, Douglas X. de Andrade, Agnaldo R. de Almeida, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 334, 116126</p>
-<a href="https://doi.org/10.1016/j.molliq.2021.116126" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.116126 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2020">
-            <div class="pub-year">2020</div>
-            <div>
-              <h3>The influence of polar and non-polar interactions on the self-assembly of peptide nanomembranes and their applications: An atomistic study using classical molecular dynamics</h3>
-              <p class="authors">Douglas Andrade, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 318, 114263</p>
-<a href="https://doi.org/10.1016/j.molliq.2020.114263" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.114263 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2020">
-            <div class="pub-year">2020</div>
-            <div>
-              <h3>Design and analysis of polypeptide nanofiber using full atomistic Molecular Dynamic</h3>
-              <p class="authors">Douglas Andrade, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 302, 112610</p>
-<a href="https://doi.org/10.1016/j.molliq.2020.112610" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.112610 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2020">
-            <div class="pub-year">2020</div>
-            <div>
-              <h3>A6H polypeptide membranes: Molecular dynamics simulation, GIAO-DFT-NMR and TD-DFT spectroscopy analysis</h3>
-              <p class="authors">Douglas Andrade, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 316, 113850</p>
-<a href="https://doi.org/10.1016/j.molliq.2020.113850" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.113850 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2019">
-            <div class="pub-year">2019</div>
-            <div>
-              <h3>Elucidating NH2-I3V3A3G3K3-COOH and NH2-K3G3A3V3I3-COOH polypeptide membranes: A classical molecular dynamics study</h3>
-              <p class="authors">Douglas Andrade, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 279, 740-749</p>
-<a href="https://doi.org/10.1016/j.molliq.2019.02.006" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2019.02.006 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2017">
-            <div class="pub-year">2017</div>
-            <div>
-              <h3>A controvérsia ente o blu-ray e o HD-DVD em aulas de física na perspectiva da social construction of technology (SCOT).</h3>
-              <p class="authors"></p>
-              <p class="journal">EXPERIÊNCIAS EM ENSINO DE CIÊNCIAS</p>
-<a href="https://if.ufmt.br/eenci/?go=artigos&amp;idEdicao=54" target="_blank" rel="noopener">Abrir registro ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2016">
-            <div class="pub-year">2016</div>
-            <div>
-              <h3>Sobre a conexão entre alguns modelos físicos não-lineares</h3>
-              <p class="authors">D. X. Andrade, P. H. R. Anjos, P. E. G. Assis</p>
-              <p class="journal">Revista Brasileira de Ensino de Física, v. 39, n. 1</p>
-<a href="https://doi.org/10.1590/1806-9126-rbef-2016-0083" target="_blank" rel="noopener">DOI: 10.1590/1806-9126-rbef-2016-0083 ↗</a>            </div>
-          </article>
-        </div>
-        <div class="empty-state profile-year-empty" data-person-year-empty hidden>
-          <strong>Nenhuma produção encontrada para o ano selecionado.</strong>
-          <p>Use o seletor acima para consultar as produções dos demais anos.</p>
-        </div>
-      </section>
-    </div>
-
-    <aside class="profile-aside">
-      <div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2018</dd></div><div><dt>Saída</dt><dd>—</dd></div></dl></div>
-<div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Física - UFG (2013)</dd></div><div><dt>Mestrado</dt><dd>Física - UFG (2016)</dd></div><div><dt>Doutorado</dt><dd>Física - UFG (2022)</dd></div></dl></div>    </aside>
+      <div class="profile-year-summary" data-person-year-summary aria-label="Produções distribuídas por ano"></div>
+      <div class="publication-list" data-person-publications><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Versatility of self-assembling A6K peptide nanomembranes under thermal variation: A molecular dynamics analysis across the 300–400 K range</h3><p class="authors">Karinna Mendanha, Douglas X. de Andrade, Guilherme Colherinhas</p><p class="journal">Surfaces and Interfaces, v. 69, 106746</p><a href="https://doi.org/10.1016/j.surfin.2025.106746" target="_blank" rel="noopener">DOI: 10.1016/j.surfin.2025.106746 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Molecular Dynamics Study of Functionalized Gold Nanoparticles: Structural and Aggregation Behavior under Varying Ionic Strength</h3><p class="authors">Esequias Coelho, Douglas Xavier de Andrade, Agnaldo Rosa de Almeida, Guilherme Colherinhas</p><p class="journal">ACS Physical Chemistry Au, v. 5, n. 6, 699-715</p><a href="https://doi.org/10.1021/acsphyschemau.5c00077" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00077 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Investigating the Impact of Positively Charged Gold Nanoparticle (AuNP) Concentration in Water/Cl – Solutions Using Molecular Dynamics Simulations</h3><p class="authors">Esequias Coelho, Douglas Xavier de Andrade, Agnaldo Rosa de Almeida, Guilherme Colherinhas</p><p class="journal">ACS Omega, v. 10, n. 20, 20610-20622</p><a href="https://doi.org/10.1021/acsomega.5c01441" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c01441 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Dynamic interactions of negatively charged gold nanoparticles (AuNPs) in aqueous environments with different ionic compositions</h3><p class="authors">Esequias Coelho, Douglas Xavier, Agnaldo Almeida, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 413, 126021</p><a href="https://doi.org/10.1016/j.molliq.2024.126021" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126021 ↗</a></div></article><article class="publication" data-person-publication data-year="2023"><div class="pub-year">2023</div><div><h3>Polar Zipper on a Peptide Nanomembrane: A Characterization by Potential of Mean Force</h3><p class="authors">Douglas X. de Andrade, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 127, n. 1, 228-235</p><a href="https://doi.org/10.1021/acs.jpcb.2c07135" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.2c07135 ↗</a></div></article><article class="publication" data-person-publication data-year="2023"><div class="pub-year">2023</div><div><h3>Exploring Fullerenol-C60(OH)24 interactions with lipid bilayers: Molecular dynamics study of agglomeration and surface deposition</h3><p class="authors">Esequias Coelho, Douglas X. de Andrade, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 391, 123205</p><a href="https://doi.org/10.1016/j.molliq.2023.123205" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.123205 ↗</a></div></article><article class="publication" data-person-publication data-year="2023"><div class="pub-year">2023</div><div><h3>Effects of Coulomb and vdW modifiers on hydrogen-bonds, energy and structural properties of peptide nanomembranes: A study by Molecular Dynamics simulations</h3><p class="authors">Agnaldo R. de Almeida, Guilherme Colherinhas, Douglas X. de Andrade</p><p class="journal">Journal of Molecular Liquids, v. 382, 122017</p><a href="https://doi.org/10.1016/j.molliq.2023.122017" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.122017 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>Statistical and energetic analysis of hydrogen bonds in short and long peptide nanotapes/nanofibers using molecular dynamics simulations</h3><p class="authors">Agnaldo R. de Almeida, Douglas X. de Andrade, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 359, 119308</p><a href="https://doi.org/10.1016/j.molliq.2022.119308" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.119308 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>Molecular dynamics study of hydrogen bond in peptide membrane at 150–300 K</h3><p class="authors">Eyber Domingos Alves, Douglas X. de Andrade, Agnaldo R. de Almeida, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 349, 118165</p><a href="https://doi.org/10.1016/j.molliq.2021.118165" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.118165 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>EF4K bola-amphiphilic peptide nanomembrane: structural, energetic and dynamic properties using molecular dynamics</h3><p class="authors">Elias Rafael de Sousa, Douglas Xavier de Andrade, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 368, 120651</p><a href="https://doi.org/10.1016/j.molliq.2022.120651" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.120651 ↗</a></div></article><article class="publication" data-person-publication data-year="2021"><div class="pub-year">2021</div><div><h3>Laminar peptide structure: Energetic and structural evaluation using molecular dynamics</h3><p class="authors">Douglas X. de Andrade, Eyber D. Alves, Agnaldo R. de Almeida, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 341, 117261</p><a href="https://doi.org/10.1016/j.molliq.2021.117261" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.117261 ↗</a></div></article><article class="publication" data-person-publication data-year="2021"><div class="pub-year">2021</div><div><h3>Atomistic molecular dynamics study on the influence of high temperatures on the structure of peptide nanomembranes candidates for organic supercapacitor electrode</h3><p class="authors">Eyber D. Alves, Douglas X. de Andrade, Agnaldo R. de Almeida, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 334, 116126</p><a href="https://doi.org/10.1016/j.molliq.2021.116126" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.116126 ↗</a></div></article><article class="publication" data-person-publication data-year="2020"><div class="pub-year">2020</div><div><h3>The influence of polar and non-polar interactions on the self-assembly of peptide nanomembranes and their applications: An atomistic study using classical molecular dynamics</h3><p class="authors">Douglas Andrade, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 318, 114263</p><a href="https://doi.org/10.1016/j.molliq.2020.114263" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.114263 ↗</a></div></article><article class="publication" data-person-publication data-year="2020"><div class="pub-year">2020</div><div><h3>Design and analysis of polypeptide nanofiber using full atomistic Molecular Dynamic</h3><p class="authors">Douglas Andrade, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 302, 112610</p><a href="https://doi.org/10.1016/j.molliq.2020.112610" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.112610 ↗</a></div></article><article class="publication" data-person-publication data-year="2020"><div class="pub-year">2020</div><div><h3>A6H polypeptide membranes: Molecular dynamics simulation, GIAO-DFT-NMR and TD-DFT spectroscopy analysis</h3><p class="authors">Douglas Andrade, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 316, 113850</p><a href="https://doi.org/10.1016/j.molliq.2020.113850" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.113850 ↗</a></div></article><article class="publication" data-person-publication data-year="2019"><div class="pub-year">2019</div><div><h3>Elucidating NH2-I3V3A3G3K3-COOH and NH2-K3G3A3V3I3-COOH polypeptide membranes: A classical molecular dynamics study</h3><p class="authors">Douglas Andrade, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 279, 740-749</p><a href="https://doi.org/10.1016/j.molliq.2019.02.006" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2019.02.006 ↗</a></div></article><article class="publication" data-person-publication data-year="2017"><div class="pub-year">2017</div><div><h3>A controvérsia ente o blu-ray e o HD-DVD em aulas de física na perspectiva da social construction of technology (SCOT).</h3><p class="authors"></p><p class="journal">EXPERIÊNCIAS EM ENSINO DE CIÊNCIAS</p><a href="https://if.ufmt.br/eenci/?go=artigos&amp;idEdicao=54" target="_blank" rel="noopener">Abrir registro ↗</a></div></article><article class="publication" data-person-publication data-year="2016"><div class="pub-year">2016</div><div><h3>Sobre a conexão entre alguns modelos físicos não-lineares</h3><p class="authors">D. X. Andrade, P. H. R. Anjos, P. E. G. Assis</p><p class="journal">Revista Brasileira de Ensino de Física, v. 39, n. 1</p><a href="https://doi.org/10.1590/1806-9126-rbef-2016-0083" target="_blank" rel="noopener">DOI: 10.1590/1806-9126-rbef-2016-0083 ↗</a></div></article></div>
+      <div class="empty-state profile-year-empty" data-person-year-empty hidden><strong>Nenhuma produção encontrada para o ano selecionado.</strong><p>Use o seletor acima para consultar as produções dos demais anos.</p></div>
+    </section>
   </div>
-</section>
+  <aside class="profile-aside"><div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2018</dd></div><div><dt>Saída</dt><dd>—</dd></div></dl></div><div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Física - UFG (2013)</dd></div><div><dt>Mestrado</dt><dd>Física - UFG (2016)</dd></div><div><dt>Doutorado</dt><dd>Física - UFG (2022)</dd></div></dl></div></aside>
+</div></section>
 </main>
 
 <footer class="site-footer">
@@ -465,7 +342,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 04/09/2026 01:25</div>
+    <div class="footer-meta">Atualização do site: 04/09/2026 01:32</div>
   </div>
 </footer>
 <script>(() => {
@@ -560,6 +437,37 @@ a{color:var(--brand)}
   };
   select.addEventListener('change', apply);
   apply();
+})();
+
+(() => {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('#main-menu');
+  if (!toggle || !menu) return;
+  const close = () => {menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open');};
+  toggle.addEventListener('click', () => document.body.classList.toggle('menu-open', menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+  document.addEventListener('keydown', event => {if (event.key === 'Escape') close();});
+  document.addEventListener('click', event => {if (menu.classList.contains('open') && !menu.contains(event.target) && !toggle.contains(event.target)) close();});
+})();
+
+(() => {
+  const select = document.querySelector('[data-person-year-filter]');
+  const items = [...document.querySelectorAll('[data-person-publication]')];
+  const summary = document.querySelector('[data-person-year-summary]');
+  if (!select || !items.length || !summary) return;
+  const counts = new Map();
+  items.forEach(item => {const year=(item.dataset.year||'').trim();counts.set(year,(counts.get(year)||0)+1);});
+  const currentYear = String(new Date().getFullYear());
+  const numericYears = [...counts.keys()].filter(year => /^\d{4}$/.test(year)).sort((a,b) => Number(b)-Number(a));
+  const years = [currentYear,...numericYears.filter(year => year !== currentYear)];
+  if (counts.has('')) years.push('');
+  const refresh = () => {
+    const selected = select.value;
+    summary.innerHTML = years.map(year => `<button class="profile-year-chip${year===selected?' active':''}" type="button" data-profile-year-chip="${year}"><span>${year||'Sem ano'}</span><strong>${counts.get(year)||0}</strong></button>`).join('');
+    summary.querySelectorAll('[data-profile-year-chip]').forEach(button => button.addEventListener('click', () => {select.value=button.dataset.profileYearChip;select.dispatchEvent(new Event('change'));refresh();}));
+  };
+  select.addEventListener('change', refresh);
+  requestAnimationFrame(refresh);
 })();
 </script>
 </body>

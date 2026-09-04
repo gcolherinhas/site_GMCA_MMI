@@ -226,6 +226,56 @@ a{color:var(--brand)}
   .profile-tabs{width:100%}.profile-tab{flex:1;justify-content:center;padding-inline:10px}.profile-publication-toolbar{align-items:stretch;flex-direction:column}.profile-year-control{justify-content:space-between}
 }
 @media(max-width:420px){.publication-filter-section .publication{grid-template-columns:1fr}.award{grid-template-columns:1fr}.award-cover img,.cover-placeholder{width:110px}}
+
+/* v12 — indicadores informativos e acabamento mobile. */
+.people-metrics-section,.publication-metrics-section{background:#edf3f9;border-bottom:1px solid var(--line)}
+.people-metrics,.publication-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:18px 0}
+.people-metric,.publication-metric{position:relative;overflow:hidden;min-width:0;padding:17px 19px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(7,20,38,.045)}
+.people-metric::before,.publication-metric::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(var(--accent),var(--brand))}
+.people-metric strong,.publication-metric strong{display:block;color:var(--brand);font-size:1.45rem;line-height:1;font-weight:900;letter-spacing:-.035em}
+.people-metric span,.publication-metric span{display:block;margin-top:7px;color:var(--muted);font-size:.76rem;font-weight:750}
+.person-card-copy{min-width:0}.person-card-copy h3,.person-card-copy p{overflow-wrap:anywhere}
+.person-mini-metrics{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.person-mini-metrics span{display:inline-flex;align-items:center;min-height:23px;padding:3px 8px;border-radius:999px;background:#edf4ff;color:#48647f;font-size:.67rem;font-weight:850}
+.person-mini-metrics .orcid-pill{margin-top:0;background:#eff8e9;color:#4e7a2a}
+.profile-tab .tab-count.projects{background:#e8f7ff;color:#1874a6}.profile-tab.active .tab-count.projects{background:#1685bd;color:#fff}
+.profile-production-metrics{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap}
+.profile-production-metric{min-width:128px;padding:10px 13px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.profile-production-metric strong{display:block;color:var(--brand);font-size:1.35rem;line-height:1;font-weight:900}.profile-production-metric span{display:block;margin-top:5px;color:var(--muted);font-size:.72rem;font-weight:750}
+.profile-year-summary{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 18px}
+.profile-year-chip{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#53677c;font:inherit;font-size:.72rem;font-weight:850;cursor:pointer}
+.profile-year-chip strong{color:var(--brand)}.profile-year-chip.active{border-color:rgba(21,94,232,.32);background:#edf4ff;color:var(--brand)}
+.profile-year-chip:focus-visible,.profile-tab:focus-visible,.nav-toggle:focus-visible,.button:focus-visible,.select-shell select:focus-visible,.profile-year-control select:focus-visible{outline:3px solid rgba(69,214,255,.45);outline-offset:2px}
+.publication-metrics-section{background:#f5f7fb}
+.publication-metric{padding-block:18px}.publication-metric small{display:block;margin-top:4px;color:#8a9bad;font-size:.64rem;font-weight:800}
+.publication-filter-section .publication-body a,.profile-main .publication a,.registration{overflow-wrap:anywhere;word-break:break-word}
+.machine-table-wrap,.recent-histogram-card{overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.button,.nav-toggle,.profile-links a,.profile-tab,.profile-year-chip,.select-shell select,.profile-year-control select{touch-action:manipulation}
+@media(max-width:980px){.people-metrics,.publication-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){
+  body{font-size:15px}.container{width:min(var(--max),calc(100% - 28px))}.section{padding:50px 0}.compact-section{padding:28px 0}
+  .nav-toggle{min-width:48px;min-height:44px;align-items:center;justify-content:center;font-weight:850}
+  .nav-links.open{top:50px;padding:10px;border-radius:0 0 18px 18px;box-shadow:0 20px 44px rgba(7,20,38,.16)}
+  .nav-links a{display:flex;align-items:center;min-height:46px;padding:10px 12px}body.menu-open{overflow:hidden}
+  .button,.profile-links a{min-height:44px}.hero-actions{gap:9px}.hero-actions .button{flex:1 1 180px}
+  .people-metrics-section,.publication-metrics-section{overflow:hidden}
+  .people-metrics,.publication-metrics{display:flex;gap:10px;overflow-x:auto;padding:14px 14px 16px;scroll-snap-type:x proximity;scrollbar-width:none}
+  .people-metrics::-webkit-scrollbar,.publication-metrics::-webkit-scrollbar,.profile-year-summary::-webkit-scrollbar{display:none}
+  .people-metric,.publication-metric{flex:0 0 158px;scroll-snap-align:start;padding:15px 16px}.people-metric strong,.publication-metric strong{font-size:1.3rem}
+  .person-card-link{gap:13px;padding:15px 16px}.person-card h3{font-size:.98rem}.muted{font-size:.8rem}.person-mini-metrics{gap:5px}.person-mini-metrics span{font-size:.64rem}
+  .profile-grid{gap:22px}.profile-links{gap:8px}.profile-tabs{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.profile-tabs::-webkit-scrollbar{display:none}.profile-tab{min-height:44px;white-space:nowrap}
+  .profile-publication-toolbar{gap:12px}.profile-production-metrics{display:grid;grid-template-columns:1fr 1fr;width:100%}.profile-production-metric{min-width:0}.profile-year-control select{min-height:44px}
+  .profile-year-summary{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px;scroll-snap-type:x proximity;scrollbar-width:none}.profile-year-chip{flex:0 0 auto;scroll-snap-align:start;min-height:40px}
+  .publication-filter-section{padding:44px 0 68px}.publication-year-filter{margin-bottom:28px;padding:15px 16px}.publication-filter-section .publication{transform:none!important}.publication-filter-section .publication-body h3{font-size:1rem}
+  .recent-histogram-card{scrollbar-width:thin}.machine-table-wrap{border-radius:12px;scrollbar-width:thin}.machine-table th,.machine-table td{padding:11px 12px}
+  .software-card{padding:24px;border-radius:22px}.award{border-radius:22px}.site-footer{padding:28px 0}.footer-grid{gap:18px}
+}
+@media(max-width:520px){
+  .hero-actions .button{flex-basis:100%}.profile-links a{flex:1 1 100%;justify-content:center}
+  .profile-production-metrics{grid-template-columns:1fr 1fr}.profile-year-control{align-items:stretch;flex-direction:column}.profile-year-control select{width:100%}
+  .publication-filter-section .year-heading{align-items:flex-start;flex-direction:column;gap:6px}.publication-filter-section .year-heading h2{font-size:2.8rem}.award-body h2{font-size:1.18rem}
+}
+@media(hover:none){.button:hover,.publication-filter-section .publication:hover{transform:none;box-shadow:inherit}}
 </style>
 </head>
 <body>
@@ -257,141 +307,32 @@ a{color:var(--brand)}
   </nav>
 </header>
 
-<main><section class="profile-hero">
-  <div class="container profile-grid">
-    <div class="profile-photo">
-<img src="data:image/webp;base64,UklGRrYEAABXRUJQVlA4IKoEAABQFwCdASpQAFAAPk0gjkUioaET2q3kKATEsYBlqpiwz0U7Z7cX7zN6AHS5ybrlU/rtdMsa4sfx7+ivnwem/+57g38k/sHVx/aT2M/1AXZvAarEodPWkd5cCVt8hSL+VWdmcD26FMHexTLd+zPqqdwsSb8kDES2cj2hnC6tfBZhq6S74Ux3vDyDGAh/WovpXETCU1v7pf+IsnhjHkivZxqvaYfLanRdaRaXpWDPOPpEfCmPMMZZVnVjKT64IWZBWJmYpAAA/n5Z7x2tdLHVW2KtgQXLZhrQCFWrmlwbTu1RQoNBXUcIltUX9gKrdSYGcCcrHjfIaUuMixfR1XTB6Gwoq/jWy8eXDq4eKsicb+LWtv3Te3eHqmNM6hYCI1L9c/XO3QGPy6GcawDWBM6A8DbGW6in4kmMOjdkcdOVud/GgR5xroojuh7mWODnH9L+47XK+PYghqm5EGIasI7W8f986auTZejul2ldWdJnkhS8mBrCtZRAvd7CbUC2zuk6OxR/5IP8xewzaIUSBvI6MQPMva/dP+f+KG2AR57yZJehD2V5kx9k4RAU7d++LpFEjJ8atuPAvNcxkzbRbnhIiPFLu80EnpIwrucfL5O/+5E03ekfNbj/MJblHIf7Zpg0GbT8Qs5btgj4lBURxAC23c5DYpVXrOvIyRihxHN7VjsH/Eiib/xk4lcWwrZPaRegGlTTb/BMXSWJ0CS4IPVgSvcwcjylZ5wby7mjdkxuK+P26fn0gwMrgzERnbnGgyqPZDgv0wua+8EVvhl4A5MX5/FuMfPZG9/oj19H9mf/94cvwWl/6OmCijvg2/dfbf2O+7Vv8MWjyiZg9WXssFUHVqPFEJ3wXbuAWAiDIg3PuylvgHznMVAreSA2jzyo3bf9BdXngQns2f2pmtNCRsBxjS9LfyPpJB4Seksjt+xNpGzPPqnhnHtnolTwC9MC/DCTwPePss3Hftt6UWgzjGmeEn3+lWiUcAMIHFOfiuC0F5TMVcsC6B/dKgIksYq279M9tod/k2EP1w2s4oN1Envj111TIxofBlf2dch81Py7D0DuxmyLToQELhEu7c+uQh5SCMNI+/iZ06npW9nVe859OkLCSuuMqH60BotDQO5bC30N1dvy/eF+a6HcAtVu40GhpNZGZU8LBuk2DFPEpL4Ec7RrMBjiE9ecAjdmmLopO6DIy/wKrI65k3sMaG2xhPF383QTEpYhvRtf/ByeFKW6JznfM+7l/y0mF7eZ+MoXitEpA9WawH5k4ZUqPgC3xd9YUuC7vjJw88oZN0udo9LYX+8F1D4KJceRtrv3x+MtvbkIaXWA+Nb3S+0jje9imHsG3Hdb66BruWV6jxy3N4RuZOZnP+ywX5rnC8FzFY/yNLTu9JzPdAly4BSIpxgd18bw8f3x4BotwbVEEVudC+JJx401yYMWrPxPIgIlrmA7ie1gvyzT1Gpfhx2iWbqVdqWjIa69nWZdsjvYqsZrC1Xi1ZZawE5qzdqT7yTMJCSW4E4SkWtHvvcKkSD0sa3c3yRPZvJMRpOVBLZD8TgPnB+p/kc+4+uxh2lIRgzpxl07UkMB3r+/1enaZrYAAAA=" alt="Foto de Lucas de Sousa Silva" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">      <span class="avatar-fallback large" style="display:none">L</span>
+<main><section class="profile-hero"><div class="container profile-grid">
+  <div class="profile-photo"><img src="data:image/webp;base64,UklGRrYEAABXRUJQVlA4IKoEAABQFwCdASpQAFAAPk0gjkUioaET2q3kKATEsYBlqpiwz0U7Z7cX7zN6AHS5ybrlU/rtdMsa4sfx7+ivnwem/+57g38k/sHVx/aT2M/1AXZvAarEodPWkd5cCVt8hSL+VWdmcD26FMHexTLd+zPqqdwsSb8kDES2cj2hnC6tfBZhq6S74Ux3vDyDGAh/WovpXETCU1v7pf+IsnhjHkivZxqvaYfLanRdaRaXpWDPOPpEfCmPMMZZVnVjKT64IWZBWJmYpAAA/n5Z7x2tdLHVW2KtgQXLZhrQCFWrmlwbTu1RQoNBXUcIltUX9gKrdSYGcCcrHjfIaUuMixfR1XTB6Gwoq/jWy8eXDq4eKsicb+LWtv3Te3eHqmNM6hYCI1L9c/XO3QGPy6GcawDWBM6A8DbGW6in4kmMOjdkcdOVud/GgR5xroojuh7mWODnH9L+47XK+PYghqm5EGIasI7W8f986auTZejul2ldWdJnkhS8mBrCtZRAvd7CbUC2zuk6OxR/5IP8xewzaIUSBvI6MQPMva/dP+f+KG2AR57yZJehD2V5kx9k4RAU7d++LpFEjJ8atuPAvNcxkzbRbnhIiPFLu80EnpIwrucfL5O/+5E03ekfNbj/MJblHIf7Zpg0GbT8Qs5btgj4lBURxAC23c5DYpVXrOvIyRihxHN7VjsH/Eiib/xk4lcWwrZPaRegGlTTb/BMXSWJ0CS4IPVgSvcwcjylZ5wby7mjdkxuK+P26fn0gwMrgzERnbnGgyqPZDgv0wua+8EVvhl4A5MX5/FuMfPZG9/oj19H9mf/94cvwWl/6OmCijvg2/dfbf2O+7Vv8MWjyiZg9WXssFUHVqPFEJ3wXbuAWAiDIg3PuylvgHznMVAreSA2jzyo3bf9BdXngQns2f2pmtNCRsBxjS9LfyPpJB4Seksjt+xNpGzPPqnhnHtnolTwC9MC/DCTwPePss3Hftt6UWgzjGmeEn3+lWiUcAMIHFOfiuC0F5TMVcsC6B/dKgIksYq279M9tod/k2EP1w2s4oN1Envj111TIxofBlf2dch81Py7D0DuxmyLToQELhEu7c+uQh5SCMNI+/iZ06npW9nVe859OkLCSuuMqH60BotDQO5bC30N1dvy/eF+a6HcAtVu40GhpNZGZU8LBuk2DFPEpL4Ec7RrMBjiE9ecAjdmmLopO6DIy/wKrI65k3sMaG2xhPF383QTEpYhvRtf/ByeFKW6JznfM+7l/y0mF7eZ+MoXitEpA9WawH5k4ZUqPgC3xd9YUuC7vjJw88oZN0udo9LYX+8F1D4KJceRtrv3x+MtvbkIaXWA+Nb3S+0jje9imHsG3Hdb66BruWV6jxy3N4RuZOZnP+ywX5rnC8FzFY/yNLTu9JzPdAly4BSIpxgd18bw8f3x4BotwbVEEVudC+JJx401yYMWrPxPIgIlrmA7ie1gvyzT1Gpfhx2iWbqVdqWjIa69nWZdsjvYqsZrC1Xi1ZZawE5qzdqT7yTMJCSW4E4SkWtHvvcKkSD0sa3c3yRPZvJMRpOVBLZD8TgPnB+p/kc+4+uxh2lIRgzpxl07UkMB3r+/1enaZrYAAAA=" alt="Foto de Lucas de Sousa Silva" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><span class="avatar-fallback large" style="display:none">L</span></div>
+  <div><span class="eyebrow">Estudantes de Pós-Graduação · Atual</span><h1>Lucas de Sousa Silva</h1><p class="lead">Doutorando</p><p>PPGF/IF-UFG</p><div class="profile-links"><a href="mailto:lucasdesousasilva1@gmail.com">E-mail</a><a href="http://lattes.cnpq.br/1132415571154345" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0009-0002-0539-1103" target="_blank" rel="noopener">ORCID 0009-0002-0539-1103 ↗</a></div></div>
+</div></section>
+<section class="section"><div class="container profile-content">
+  <div class="profile-main">
+    <div class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">
+      <button class="profile-tab active" type="button" role="tab" aria-selected="true" aria-controls="profile-projects" id="tab-projects" data-profile-tab="projects">Projetos <span class="tab-count projects">5</span></button>
+      <button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-productions" id="tab-productions" data-profile-tab="productions">Produções <span class="tab-count">10</span></button>
     </div>
-    <div>
-      <span class="eyebrow">Estudantes de Pós-Graduação · Atual</span>
-      <h1>Lucas de Sousa Silva</h1>
-      <p class="lead">Doutorando</p>
-      <p>PPGF/IF-UFG</p>
-      <div class="profile-links">
-<a href="mailto:lucasdesousasilva1@gmail.com">E-mail</a><a href="http://lattes.cnpq.br/1132415571154345" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0009-0002-0539-1103" target="_blank" rel="noopener">ORCID 0009-0002-0539-1103 ↗</a>      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container profile-content">
-    <div class="profile-main">
-      <div class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">
-        <button class="profile-tab active" type="button" role="tab" aria-selected="true" aria-controls="profile-projects" id="tab-projects" data-profile-tab="projects">Projetos</button>
-        <button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-productions" id="tab-productions" data-profile-tab="productions">Produções <span class="tab-count">10</span></button>
+    <section class="profile-tab-panel" id="profile-projects" role="tabpanel" aria-labelledby="tab-projects" data-profile-tab-panel="projects">
+      <div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div>
+<div class="project-list"><div class="project-verbatim">Modelagem Molecular de Supercapacitores e Interfaces Eletrodo–Eletrólito: Investigação computacional dos mecanismos moleculares envolvidos no armazenamento eletrostático de energia em supercapacitores, com ênfase na formação e organização da dupla camada elétrica em interfaces entre eletrodos de carbono e eletrólitos líquidos. Utilizando dinâmica molecular atomística, são analisados perfis de densidade, distribuição de espécies iônicas, potenciais eletrostáticos, interações intermoleculares, capacitância e densidade de energia. A pesquisa busca estabelecer relações entre a estrutura microscópica da interface e o desempenho macroscópico do dispositivo, fornecendo critérios para a seleção racional de materiais de eletrodo, eletrólitos e condições operacionais capazes de aumentar a eficiência do armazenamento de energia.</div><div class="project-verbatim">Líquidos Iônicos Biodegradáveis e Eletrólitos Derivados de Aminoácidos: Desenvolvimento e avaliação computacional de eletrólitos sustentáveis baseados em líquidos iônicos derivados de aminoácidos para aplicação em supercapacitores. A linha investiga sistemas contendo o cátion 1-etil-3-metilimidazólio associado a aminoácidos como alanina, valina, leucina e isoleucina, avaliando como composição molecular e grau de hidratação afetam organização interfacial, mobilidade iônica, formação da dupla camada elétrica e capacidade de armazenamento energético. O objetivo é identificar eletrólitos que conciliem desempenho eletroquímico, biodegradabilidade e menor impacto ambiental, contribuindo para o desenvolvimento de tecnologias de armazenamento de energia mais sustentáveis.</div><div class="project-verbatim">Engenharia Molecular de Eletrólitos - Hidratação, Misturas e Cossolvatação: Investigação sistemática de como hidratação, mistura de espécies iônicas, substituição de ânions e incorporação de cossolventes modificam as propriedades estruturais e eletroquímicas de eletrólitos utilizados em supercapacitores. A pesquisa inclui líquidos iônicos hidratados puros e mistos, sistemas contendo diferentes proporções de nitrato, perclorato, brometo e cloreto, além da utilização de água e metanol como cossolventes. Também são estudadas misturas baseadas em líquidos iônicos contendo ânions orgânicos, como acetato, benzoato e propanoato. Por meio de dinâmica molecular, busca-se compreender como essas alterações controlam a organização da dupla camada elétrica, a adsorção preferencial de espécies, as interações eletrodo–eletrólito e o desempenho energético do dispositivo.</div><div class="project-verbatim">Solventes Eutéticos Profundos: Estudo atomístico da estrutura e dinâmica de solventes eutéticos profundos (DES), com atenção especial aos efeitos da razão molar entre seus componentes e da incorporação de água. A pesquisa utiliza dinâmica molecular para investigar sistemas como cloreto de colina–fenol em diferentes proporções molares e níveis de hidratação, caracterizando redes de ligações de hidrogênio, organização local, coordenação molecular e alterações estruturais induzidas pela água. O objetivo é compreender os mecanismos que controlam as propriedades microscópicas desses solventes e estabelecer princípios para ajustar sua composição em aplicações futuras como meios funcionais e eletrólitos sustentáveis.</div><div class="project-verbatim">Materiais Bidimensionais e Geração de Emaranhamento Quântico: Investigação teórica de sistemas bidimensionais de carbono funcionalizados com íons de lítio para controle de transições eletrônicas e geração de emaranhamento quântico. A pesquisa emprega métodos de teoria do funcional da densidade (DFT) e TD-DFT para caracterizar energias de interação, estrutura eletrônica e transições de transferência de carga em sistemas constituídos por grafeno ou grafino associados a íons de lítio. Diferentes geometrias e distâncias entre os componentes são avaliadas com o objetivo de identificar configurações energeticamente estáveis e transições eletrônicas seletivas capazes de produzir estados correlacionados. A linha explora a utilização de materiais bidimensionais como plataformas moleculares para aplicações conceituais em informação, comunicação e processamento quântico.</div></div>    </section>
+    <section class="profile-tab-panel" id="profile-productions" role="tabpanel" aria-labelledby="tab-productions" data-profile-tab-panel="productions" hidden>
+      <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
+      <div class="profile-publication-toolbar">
+        <div class="profile-production-metrics" aria-live="polite"><div class="profile-production-metric"><strong data-person-current-count>0</strong><span>no ano corrente</span></div><div class="profile-production-metric"><strong>10</strong><span>total no perfil</span></div></div>
+        <label class="profile-year-control"><span>Exibir ano</span><select data-person-year-filter aria-label="Filtrar produções por ano"></select></label>
       </div>
-
-      <section class="profile-tab-panel" id="profile-projects" role="tabpanel" aria-labelledby="tab-projects" data-profile-tab-panel="projects">
-        <div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div>
-        <div class="project-list"><div class="project-verbatim">Modelagem Molecular de Supercapacitores e Interfaces Eletrodo–Eletrólito: Investigação computacional dos mecanismos moleculares envolvidos no armazenamento eletrostático de energia em supercapacitores, com ênfase na formação e organização da dupla camada elétrica em interfaces entre eletrodos de carbono e eletrólitos líquidos. Utilizando dinâmica molecular atomística, são analisados perfis de densidade, distribuição de espécies iônicas, potenciais eletrostáticos, interações intermoleculares, capacitância e densidade de energia. A pesquisa busca estabelecer relações entre a estrutura microscópica da interface e o desempenho macroscópico do dispositivo, fornecendo critérios para a seleção racional de materiais de eletrodo, eletrólitos e condições operacionais capazes de aumentar a eficiência do armazenamento de energia.</div><div class="project-verbatim">Líquidos Iônicos Biodegradáveis e Eletrólitos Derivados de Aminoácidos: Desenvolvimento e avaliação computacional de eletrólitos sustentáveis baseados em líquidos iônicos derivados de aminoácidos para aplicação em supercapacitores. A linha investiga sistemas contendo o cátion 1-etil-3-metilimidazólio associado a aminoácidos como alanina, valina, leucina e isoleucina, avaliando como composição molecular e grau de hidratação afetam organização interfacial, mobilidade iônica, formação da dupla camada elétrica e capacidade de armazenamento energético. O objetivo é identificar eletrólitos que conciliem desempenho eletroquímico, biodegradabilidade e menor impacto ambiental, contribuindo para o desenvolvimento de tecnologias de armazenamento de energia mais sustentáveis.</div><div class="project-verbatim">Engenharia Molecular de Eletrólitos - Hidratação, Misturas e Cossolvatação: Investigação sistemática de como hidratação, mistura de espécies iônicas, substituição de ânions e incorporação de cossolventes modificam as propriedades estruturais e eletroquímicas de eletrólitos utilizados em supercapacitores. A pesquisa inclui líquidos iônicos hidratados puros e mistos, sistemas contendo diferentes proporções de nitrato, perclorato, brometo e cloreto, além da utilização de água e metanol como cossolventes. Também são estudadas misturas baseadas em líquidos iônicos contendo ânions orgânicos, como acetato, benzoato e propanoato. Por meio de dinâmica molecular, busca-se compreender como essas alterações controlam a organização da dupla camada elétrica, a adsorção preferencial de espécies, as interações eletrodo–eletrólito e o desempenho energético do dispositivo.</div><div class="project-verbatim">Solventes Eutéticos Profundos: Estudo atomístico da estrutura e dinâmica de solventes eutéticos profundos (DES), com atenção especial aos efeitos da razão molar entre seus componentes e da incorporação de água. A pesquisa utiliza dinâmica molecular para investigar sistemas como cloreto de colina–fenol em diferentes proporções molares e níveis de hidratação, caracterizando redes de ligações de hidrogênio, organização local, coordenação molecular e alterações estruturais induzidas pela água. O objetivo é compreender os mecanismos que controlam as propriedades microscópicas desses solventes e estabelecer princípios para ajustar sua composição em aplicações futuras como meios funcionais e eletrólitos sustentáveis.</div><div class="project-verbatim">Materiais Bidimensionais e Geração de Emaranhamento Quântico: Investigação teórica de sistemas bidimensionais de carbono funcionalizados com íons de lítio para controle de transições eletrônicas e geração de emaranhamento quântico. A pesquisa emprega métodos de teoria do funcional da densidade (DFT) e TD-DFT para caracterizar energias de interação, estrutura eletrônica e transições de transferência de carga em sistemas constituídos por grafeno ou grafino associados a íons de lítio. Diferentes geometrias e distâncias entre os componentes são avaliadas com o objetivo de identificar configurações energeticamente estáveis e transições eletrônicas seletivas capazes de produzir estados correlacionados. A linha explora a utilização de materiais bidimensionais como plataformas moleculares para aplicações conceituais em informação, comunicação e processamento quântico.</div></div>
-      </section>
-
-      <section class="profile-tab-panel" id="profile-productions" role="tabpanel" aria-labelledby="tab-productions" data-profile-tab-panel="productions" hidden>
-        <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
-        <div class="profile-publication-toolbar">
-          <div class="profile-publication-indicator" aria-live="polite">
-            <strong data-person-current-count>0</strong>
-            <span>artigo(s) no ano corrente</span>
-          </div>
-          <label class="profile-year-control">
-            <span>Exibir ano</span>
-            <select data-person-year-filter aria-label="Filtrar produções por ano"></select>
-          </label>
-        </div>
-        <div class="publication-list" data-person-publications>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Hydration and Molar Ratio Effects in Choline Chloride-Phenol Deep Eutectic Solvents</h3>
-              <p class="authors">Lucas de S. Silva, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry B, v. 130, n. 23, 5923-5938</p>
-<a href="https://doi.org/10.1021/acs.jpcb.6c01636" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.6c01636 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Ester-Based Electrolyte Mixtures for Graphene Supercapacitors: A Molecular Dynamics Investigation</h3>
-              <p class="authors">Lucas de S. Silva, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry B, v. 130, n. 7, 2178-2193</p>
-<a href="https://doi.org/10.1021/acs.jpcb.5c06507" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.5c06507 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Chloride substitution and hydration effects in [emim][bnz] electrolytes for lightweight supercapacitors</h3>
-              <p class="authors">Leonardo B.A. Oliveira, Lucas de S. Silva, Tertius L. Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 443, 129142</p>
-<a href="https://doi.org/10.1016/j.molliq.2025.129142" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.129142 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Sustainable supercapacitors using advanced hydrated amino acid ionic liquids: A novel approach to biodegradable energy storage</h3>
-              <p class="authors">Lucas de S. Silva, Henrique de A. Chagas, G. Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 417, 126638</p>
-<a href="https://doi.org/10.1016/j.molliq.2024.126638" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126638 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Structural and electrochemical properties of graphene-based supercapacitors with water and methanol-co-solvated ionic liquids: a molecular dynamics study</h3>
-              <p class="authors">Lucas de S. Silva, Leonardo B.A. Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 434, 128041</p>
-<a href="https://doi.org/10.1016/j.molliq.2025.128041" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.128041 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Impact of Chloride and Bromide Composition in Ionic Liquid/Water Electrolytes on the Electrochemical Performance of Graphene-Based Supercapacitors: A Molecular Dynamics Study</h3>
-              <p class="authors">Leonardo B. A. Oliveira, Lucas de S Silva, Henrique de Araujo Chagas, Tertius L. Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry C, v. 129, n. 30, 13532-13541</p>
-<a href="https://doi.org/10.1021/acs.jpcc.5c01816" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.5c01816 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Exploring MXene Materials in Energy Storage Devices: A Review of Supercapacitor Applications</h3>
-              <p class="authors">Lucas de Sousa Silva, Eudes Eterno Fileti, Guilherme Colherinhas</p>
-              <p class="journal">ACS Materials Au, v. 5, n. 6, 920-939</p>
-<a href="https://doi.org/10.1021/acsmaterialsau.5c00102" target="_blank" rel="noopener">DOI: 10.1021/acsmaterialsau.5c00102 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Evaluation of Structural and Electrochemical Properties of Supercapacitors with Graphene Electrodes and Hydrated Pure or Mixed [bmim]-Based Ionic Liquids via Molecular Dynamics</h3>
-              <p class="authors">Lucas de S. Silva, Guilherme Colherinhas</p>
-              <p class="journal">ACS Physical Chemistry Au, v. 5, n. 5, 519-532</p>
-<a href="https://doi.org/10.1021/acsphyschemau.5c00036" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00036 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Selecting electronic transitions between graphyne and lithium ions for entanglement generation using new organic material</h3>
-              <p class="authors">Lucas S. Silva, Wesley B. Cardoso, Guilherme Colherinhas</p>
-              <p class="journal">Computational and Theoretical Chemistry, v. 1238, 114692</p>
-<a href="https://doi.org/10.1016/j.comptc.2024.114692" target="_blank" rel="noopener">DOI: 10.1016/j.comptc.2024.114692 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Evaluating quantum entanglement generation in two‐dimensional graphene systems through lithium ion interactions: A DFT‐based study</h3>
-              <p class="authors">Lucas de S. Silva, Guilherme Colherinhas, Wesley B. Cardoso</p>
-              <p class="journal">Journal of Computational Chemistry, v. 45, n. 13, 1002-1007</p>
-<a href="https://doi.org/10.1002/jcc.27303" target="_blank" rel="noopener">DOI: 10.1002/jcc.27303 ↗</a>            </div>
-          </article>
-        </div>
-        <div class="empty-state profile-year-empty" data-person-year-empty hidden>
-          <strong>Nenhuma produção encontrada para o ano selecionado.</strong>
-          <p>Use o seletor acima para consultar as produções dos demais anos.</p>
-        </div>
-      </section>
-    </div>
-
-    <aside class="profile-aside">
-      <div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2022</dd></div><div><dt>Saída</dt><dd>—</dd></div><div><dt>Bolsa</dt><dd>CAPES - doutorado</dd></div></dl></div>
-<div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Engenharia Física - UFG (2023)</dd></div><div><dt>Mestrado</dt><dd>Física - UFG (2025)</dd></div><div><dt>Doutorado</dt><dd>Física - UFG, em andamento desde 2025</dd></div></dl></div>    </aside>
+      <div class="profile-year-summary" data-person-year-summary aria-label="Produções distribuídas por ano"></div>
+      <div class="publication-list" data-person-publications><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Hydration and Molar Ratio Effects in Choline Chloride-Phenol Deep Eutectic Solvents</h3><p class="authors">Lucas de S. Silva, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 130, n. 23, 5923-5938</p><a href="https://doi.org/10.1021/acs.jpcb.6c01636" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.6c01636 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Ester-Based Electrolyte Mixtures for Graphene Supercapacitors: A Molecular Dynamics Investigation</h3><p class="authors">Lucas de S. Silva, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 130, n. 7, 2178-2193</p><a href="https://doi.org/10.1021/acs.jpcb.5c06507" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.5c06507 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Chloride substitution and hydration effects in [emim][bnz] electrolytes for lightweight supercapacitors</h3><p class="authors">Leonardo B.A. Oliveira, Lucas de S. Silva, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 443, 129142</p><a href="https://doi.org/10.1016/j.molliq.2025.129142" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.129142 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Sustainable supercapacitors using advanced hydrated amino acid ionic liquids: A novel approach to biodegradable energy storage</h3><p class="authors">Lucas de S. Silva, Henrique de A. Chagas, G. Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 417, 126638</p><a href="https://doi.org/10.1016/j.molliq.2024.126638" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126638 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Structural and electrochemical properties of graphene-based supercapacitors with water and methanol-co-solvated ionic liquids: a molecular dynamics study</h3><p class="authors">Lucas de S. Silva, Leonardo B.A. Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 434, 128041</p><a href="https://doi.org/10.1016/j.molliq.2025.128041" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.128041 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Impact of Chloride and Bromide Composition in Ionic Liquid/Water Electrolytes on the Electrochemical Performance of Graphene-Based Supercapacitors: A Molecular Dynamics Study</h3><p class="authors">Leonardo B. A. Oliveira, Lucas de S Silva, Henrique de Araujo Chagas, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry C, v. 129, n. 30, 13532-13541</p><a href="https://doi.org/10.1021/acs.jpcc.5c01816" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.5c01816 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Exploring MXene Materials in Energy Storage Devices: A Review of Supercapacitor Applications</h3><p class="authors">Lucas de Sousa Silva, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">ACS Materials Au, v. 5, n. 6, 920-939</p><a href="https://doi.org/10.1021/acsmaterialsau.5c00102" target="_blank" rel="noopener">DOI: 10.1021/acsmaterialsau.5c00102 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Evaluation of Structural and Electrochemical Properties of Supercapacitors with Graphene Electrodes and Hydrated Pure or Mixed [bmim]-Based Ionic Liquids via Molecular Dynamics</h3><p class="authors">Lucas de S. Silva, Guilherme Colherinhas</p><p class="journal">ACS Physical Chemistry Au, v. 5, n. 5, 519-532</p><a href="https://doi.org/10.1021/acsphyschemau.5c00036" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00036 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Selecting electronic transitions between graphyne and lithium ions for entanglement generation using new organic material</h3><p class="authors">Lucas S. Silva, Wesley B. Cardoso, Guilherme Colherinhas</p><p class="journal">Computational and Theoretical Chemistry, v. 1238, 114692</p><a href="https://doi.org/10.1016/j.comptc.2024.114692" target="_blank" rel="noopener">DOI: 10.1016/j.comptc.2024.114692 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Evaluating quantum entanglement generation in two‐dimensional graphene systems through lithium ion interactions: A DFT‐based study</h3><p class="authors">Lucas de S. Silva, Guilherme Colherinhas, Wesley B. Cardoso</p><p class="journal">Journal of Computational Chemistry, v. 45, n. 13, 1002-1007</p><a href="https://doi.org/10.1002/jcc.27303" target="_blank" rel="noopener">DOI: 10.1002/jcc.27303 ↗</a></div></article></div>
+      <div class="empty-state profile-year-empty" data-person-year-empty hidden><strong>Nenhuma produção encontrada para o ano selecionado.</strong><p>Use o seletor acima para consultar as produções dos demais anos.</p></div>
+    </section>
   </div>
-</section>
+  <aside class="profile-aside"><div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2022</dd></div><div><dt>Saída</dt><dd>—</dd></div><div><dt>Bolsa</dt><dd>CAPES - doutorado</dd></div></dl></div><div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Engenharia Física - UFG (2023)</dd></div><div><dt>Mestrado</dt><dd>Física - UFG (2025)</dd></div><div><dt>Doutorado</dt><dd>Física - UFG, em andamento desde 2025</dd></div></dl></div></aside>
+</div></section>
 </main>
 
 <footer class="site-footer">
@@ -401,7 +342,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 04/09/2026 01:25</div>
+    <div class="footer-meta">Atualização do site: 04/09/2026 01:32</div>
   </div>
 </footer>
 <script>(() => {
@@ -496,6 +437,37 @@ a{color:var(--brand)}
   };
   select.addEventListener('change', apply);
   apply();
+})();
+
+(() => {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('#main-menu');
+  if (!toggle || !menu) return;
+  const close = () => {menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open');};
+  toggle.addEventListener('click', () => document.body.classList.toggle('menu-open', menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+  document.addEventListener('keydown', event => {if (event.key === 'Escape') close();});
+  document.addEventListener('click', event => {if (menu.classList.contains('open') && !menu.contains(event.target) && !toggle.contains(event.target)) close();});
+})();
+
+(() => {
+  const select = document.querySelector('[data-person-year-filter]');
+  const items = [...document.querySelectorAll('[data-person-publication]')];
+  const summary = document.querySelector('[data-person-year-summary]');
+  if (!select || !items.length || !summary) return;
+  const counts = new Map();
+  items.forEach(item => {const year=(item.dataset.year||'').trim();counts.set(year,(counts.get(year)||0)+1);});
+  const currentYear = String(new Date().getFullYear());
+  const numericYears = [...counts.keys()].filter(year => /^\d{4}$/.test(year)).sort((a,b) => Number(b)-Number(a));
+  const years = [currentYear,...numericYears.filter(year => year !== currentYear)];
+  if (counts.has('')) years.push('');
+  const refresh = () => {
+    const selected = select.value;
+    summary.innerHTML = years.map(year => `<button class="profile-year-chip${year===selected?' active':''}" type="button" data-profile-year-chip="${year}"><span>${year||'Sem ano'}</span><strong>${counts.get(year)||0}</strong></button>`).join('');
+    summary.querySelectorAll('[data-profile-year-chip]').forEach(button => button.addEventListener('click', () => {select.value=button.dataset.profileYearChip;select.dispatchEvent(new Event('change'));refresh();}));
+  };
+  select.addEventListener('change', refresh);
+  requestAnimationFrame(refresh);
 })();
 </script>
 </body>

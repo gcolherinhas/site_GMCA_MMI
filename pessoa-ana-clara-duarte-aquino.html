@@ -226,6 +226,56 @@ a{color:var(--brand)}
   .profile-tabs{width:100%}.profile-tab{flex:1;justify-content:center;padding-inline:10px}.profile-publication-toolbar{align-items:stretch;flex-direction:column}.profile-year-control{justify-content:space-between}
 }
 @media(max-width:420px){.publication-filter-section .publication{grid-template-columns:1fr}.award{grid-template-columns:1fr}.award-cover img,.cover-placeholder{width:110px}}
+
+/* v12 — indicadores informativos e acabamento mobile. */
+.people-metrics-section,.publication-metrics-section{background:#edf3f9;border-bottom:1px solid var(--line)}
+.people-metrics,.publication-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:18px 0}
+.people-metric,.publication-metric{position:relative;overflow:hidden;min-width:0;padding:17px 19px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(7,20,38,.045)}
+.people-metric::before,.publication-metric::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(var(--accent),var(--brand))}
+.people-metric strong,.publication-metric strong{display:block;color:var(--brand);font-size:1.45rem;line-height:1;font-weight:900;letter-spacing:-.035em}
+.people-metric span,.publication-metric span{display:block;margin-top:7px;color:var(--muted);font-size:.76rem;font-weight:750}
+.person-card-copy{min-width:0}.person-card-copy h3,.person-card-copy p{overflow-wrap:anywhere}
+.person-mini-metrics{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.person-mini-metrics span{display:inline-flex;align-items:center;min-height:23px;padding:3px 8px;border-radius:999px;background:#edf4ff;color:#48647f;font-size:.67rem;font-weight:850}
+.person-mini-metrics .orcid-pill{margin-top:0;background:#eff8e9;color:#4e7a2a}
+.profile-tab .tab-count.projects{background:#e8f7ff;color:#1874a6}.profile-tab.active .tab-count.projects{background:#1685bd;color:#fff}
+.profile-production-metrics{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap}
+.profile-production-metric{min-width:128px;padding:10px 13px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.profile-production-metric strong{display:block;color:var(--brand);font-size:1.35rem;line-height:1;font-weight:900}.profile-production-metric span{display:block;margin-top:5px;color:var(--muted);font-size:.72rem;font-weight:750}
+.profile-year-summary{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 18px}
+.profile-year-chip{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#53677c;font:inherit;font-size:.72rem;font-weight:850;cursor:pointer}
+.profile-year-chip strong{color:var(--brand)}.profile-year-chip.active{border-color:rgba(21,94,232,.32);background:#edf4ff;color:var(--brand)}
+.profile-year-chip:focus-visible,.profile-tab:focus-visible,.nav-toggle:focus-visible,.button:focus-visible,.select-shell select:focus-visible,.profile-year-control select:focus-visible{outline:3px solid rgba(69,214,255,.45);outline-offset:2px}
+.publication-metrics-section{background:#f5f7fb}
+.publication-metric{padding-block:18px}.publication-metric small{display:block;margin-top:4px;color:#8a9bad;font-size:.64rem;font-weight:800}
+.publication-filter-section .publication-body a,.profile-main .publication a,.registration{overflow-wrap:anywhere;word-break:break-word}
+.machine-table-wrap,.recent-histogram-card{overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.button,.nav-toggle,.profile-links a,.profile-tab,.profile-year-chip,.select-shell select,.profile-year-control select{touch-action:manipulation}
+@media(max-width:980px){.people-metrics,.publication-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){
+  body{font-size:15px}.container{width:min(var(--max),calc(100% - 28px))}.section{padding:50px 0}.compact-section{padding:28px 0}
+  .nav-toggle{min-width:48px;min-height:44px;align-items:center;justify-content:center;font-weight:850}
+  .nav-links.open{top:50px;padding:10px;border-radius:0 0 18px 18px;box-shadow:0 20px 44px rgba(7,20,38,.16)}
+  .nav-links a{display:flex;align-items:center;min-height:46px;padding:10px 12px}body.menu-open{overflow:hidden}
+  .button,.profile-links a{min-height:44px}.hero-actions{gap:9px}.hero-actions .button{flex:1 1 180px}
+  .people-metrics-section,.publication-metrics-section{overflow:hidden}
+  .people-metrics,.publication-metrics{display:flex;gap:10px;overflow-x:auto;padding:14px 14px 16px;scroll-snap-type:x proximity;scrollbar-width:none}
+  .people-metrics::-webkit-scrollbar,.publication-metrics::-webkit-scrollbar,.profile-year-summary::-webkit-scrollbar{display:none}
+  .people-metric,.publication-metric{flex:0 0 158px;scroll-snap-align:start;padding:15px 16px}.people-metric strong,.publication-metric strong{font-size:1.3rem}
+  .person-card-link{gap:13px;padding:15px 16px}.person-card h3{font-size:.98rem}.muted{font-size:.8rem}.person-mini-metrics{gap:5px}.person-mini-metrics span{font-size:.64rem}
+  .profile-grid{gap:22px}.profile-links{gap:8px}.profile-tabs{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.profile-tabs::-webkit-scrollbar{display:none}.profile-tab{min-height:44px;white-space:nowrap}
+  .profile-publication-toolbar{gap:12px}.profile-production-metrics{display:grid;grid-template-columns:1fr 1fr;width:100%}.profile-production-metric{min-width:0}.profile-year-control select{min-height:44px}
+  .profile-year-summary{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px;scroll-snap-type:x proximity;scrollbar-width:none}.profile-year-chip{flex:0 0 auto;scroll-snap-align:start;min-height:40px}
+  .publication-filter-section{padding:44px 0 68px}.publication-year-filter{margin-bottom:28px;padding:15px 16px}.publication-filter-section .publication{transform:none!important}.publication-filter-section .publication-body h3{font-size:1rem}
+  .recent-histogram-card{scrollbar-width:thin}.machine-table-wrap{border-radius:12px;scrollbar-width:thin}.machine-table th,.machine-table td{padding:11px 12px}
+  .software-card{padding:24px;border-radius:22px}.award{border-radius:22px}.site-footer{padding:28px 0}.footer-grid{gap:18px}
+}
+@media(max-width:520px){
+  .hero-actions .button{flex-basis:100%}.profile-links a{flex:1 1 100%;justify-content:center}
+  .profile-production-metrics{grid-template-columns:1fr 1fr}.profile-year-control{align-items:stretch;flex-direction:column}.profile-year-control select{width:100%}
+  .publication-filter-section .year-heading{align-items:flex-start;flex-direction:column;gap:6px}.publication-filter-section .year-heading h2{font-size:2.8rem}.award-body h2{font-size:1.18rem}
+}
+@media(hover:none){.button:hover,.publication-filter-section .publication:hover{transform:none;box-shadow:inherit}}
 </style>
 </head>
 <body>
@@ -257,46 +307,25 @@ a{color:var(--brand)}
   </nav>
 </header>
 
-<main><section class="profile-hero">
-  <div class="container profile-grid">
-    <div class="profile-photo">
-<img src="data:image/webp;base64,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" alt="Foto de Ana Clara Duarte Aquino" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">      <span class="avatar-fallback large" style="display:none">A</span>
+<main><section class="profile-hero"><div class="container profile-grid">
+  <div class="profile-photo"><img src="data:image/webp;base64,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" alt="Foto de Ana Clara Duarte Aquino" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><span class="avatar-fallback large" style="display:none">A</span></div>
+  <div><span class="eyebrow">Egressos · Egressa</span><h1>Ana Clara Duarte Aquino</h1><p class="lead">Iniciação Científica / TCC</p><p>UFG - Física Médica</p><div class="profile-links"><a href="mailto:anaaquino@discente.ufg.br">E-mail</a><a href="http://lattes.cnpq.br/8300368934336019" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0009-0003-5349-9802" target="_blank" rel="noopener">ORCID 0009-0003-5349-9802 ↗</a></div></div>
+</div></section>
+<section class="section"><div class="container profile-content">
+  <div class="profile-main">
+    <div class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">
+      <button class="profile-tab active" type="button" role="tab" aria-selected="true" aria-controls="profile-projects" id="tab-projects" data-profile-tab="projects">Projetos <span class="tab-count projects">1</span></button>
+      <button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-productions" id="tab-productions" data-profile-tab="productions">Produções <span class="tab-count">0</span></button>
     </div>
-    <div>
-      <span class="eyebrow">Egressos · Egressa</span>
-      <h1>Ana Clara Duarte Aquino</h1>
-      <p class="lead">Iniciação Científica / TCC</p>
-      <p>UFG - Física Médica</p>
-      <div class="profile-links">
-<a href="mailto:anaaquino@discente.ufg.br">E-mail</a><a href="http://lattes.cnpq.br/8300368934336019" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0009-0003-5349-9802" target="_blank" rel="noopener">ORCID 0009-0003-5349-9802 ↗</a>      </div>
-    </div>
+    <section class="profile-tab-panel" id="profile-projects" role="tabpanel" aria-labelledby="tab-projects" data-profile-tab-panel="projects">
+      <div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div>
+<div class="project-list"><div class="project-verbatim">Peptídeos Antimicrobianos e Interações com Membranas Lipídicas: Investigação atomística das propriedades estruturais, dinâmicas e energéticas de peptídeos antimicrobianos em diferentes ambientes moleculares, com ênfase nos efeitos da solvatação e na interação com membranas lipídicas biomiméticas. Por meio de simulações de dinâmica molecular, são estudados peptídeos como Corticostatin-1 e a defensina NP-3a em vácuo, solução aquosa e interfaces com bicamadas lipídicas. As análises incluem estabilidade conformacional, redes de ligações de hidrogênio, interações eletrostáticas e de van der Waals, solvatação, mobilidade, energia de interação e identificação de resíduos responsáveis pelo reconhecimento e ancoragem às cabeças polares dos lipídios. A pesquisa busca esclarecer os mecanismos moleculares que controlam adsorção superficial, inserção e estabilização dos peptídeos nas membranas, contribuindo para a compreensão de sua atividade antimicrobiana e para o design racional de moléculas bioativas com potencial terapêutico.</div></div>    </section>
+    <section class="profile-tab-panel" id="profile-productions" role="tabpanel" aria-labelledby="tab-productions" data-profile-tab-panel="productions" hidden>
+      <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
+<div class="empty-state"><strong>Nenhum artigo foi carregado nesta execução.</strong></div>    </section>
   </div>
-</section>
-
-<section class="section">
-  <div class="container profile-content">
-    <div class="profile-main">
-      <div class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">
-        <button class="profile-tab active" type="button" role="tab" aria-selected="true" aria-controls="profile-projects" id="tab-projects" data-profile-tab="projects">Projetos</button>
-        <button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-productions" id="tab-productions" data-profile-tab="productions">Produções <span class="tab-count">0</span></button>
-      </div>
-
-      <section class="profile-tab-panel" id="profile-projects" role="tabpanel" aria-labelledby="tab-projects" data-profile-tab-panel="projects">
-        <div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div>
-        <div class="project-list"><div class="project-verbatim">Peptídeos Antimicrobianos e Interações com Membranas Lipídicas: Investigação atomística das propriedades estruturais, dinâmicas e energéticas de peptídeos antimicrobianos em diferentes ambientes moleculares, com ênfase nos efeitos da solvatação e na interação com membranas lipídicas biomiméticas. Por meio de simulações de dinâmica molecular, são estudados peptídeos como Corticostatin-1 e a defensina NP-3a em vácuo, solução aquosa e interfaces com bicamadas lipídicas. As análises incluem estabilidade conformacional, redes de ligações de hidrogênio, interações eletrostáticas e de van der Waals, solvatação, mobilidade, energia de interação e identificação de resíduos responsáveis pelo reconhecimento e ancoragem às cabeças polares dos lipídios. A pesquisa busca esclarecer os mecanismos moleculares que controlam adsorção superficial, inserção e estabilização dos peptídeos nas membranas, contribuindo para a compreensão de sua atividade antimicrobiana e para o design racional de moléculas bioativas com potencial terapêutico.</div></div>
-      </section>
-
-      <section class="profile-tab-panel" id="profile-productions" role="tabpanel" aria-labelledby="tab-productions" data-profile-tab-panel="productions" hidden>
-        <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
-        <div class="empty-state"><strong>Nenhum artigo foi carregado nesta execução.</strong></div>
-      </section>
-    </div>
-
-    <aside class="profile-aside">
-      <div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2024</dd></div><div><dt>Saída</dt><dd>2026</dd></div></dl></div>
-<div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Física Médica - UFG</dd></div></dl></div>    </aside>
-  </div>
-</section>
+  <aside class="profile-aside"><div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2024</dd></div><div><dt>Saída</dt><dd>2026</dd></div></dl></div><div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Física Médica - UFG</dd></div></dl></div></aside>
+</div></section>
 </main>
 
 <footer class="site-footer">
@@ -306,7 +335,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 04/09/2026 01:25</div>
+    <div class="footer-meta">Atualização do site: 04/09/2026 01:32</div>
   </div>
 </footer>
 <script>(() => {
@@ -401,6 +430,37 @@ a{color:var(--brand)}
   };
   select.addEventListener('change', apply);
   apply();
+})();
+
+(() => {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('#main-menu');
+  if (!toggle || !menu) return;
+  const close = () => {menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open');};
+  toggle.addEventListener('click', () => document.body.classList.toggle('menu-open', menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+  document.addEventListener('keydown', event => {if (event.key === 'Escape') close();});
+  document.addEventListener('click', event => {if (menu.classList.contains('open') && !menu.contains(event.target) && !toggle.contains(event.target)) close();});
+})();
+
+(() => {
+  const select = document.querySelector('[data-person-year-filter]');
+  const items = [...document.querySelectorAll('[data-person-publication]')];
+  const summary = document.querySelector('[data-person-year-summary]');
+  if (!select || !items.length || !summary) return;
+  const counts = new Map();
+  items.forEach(item => {const year=(item.dataset.year||'').trim();counts.set(year,(counts.get(year)||0)+1);});
+  const currentYear = String(new Date().getFullYear());
+  const numericYears = [...counts.keys()].filter(year => /^\d{4}$/.test(year)).sort((a,b) => Number(b)-Number(a));
+  const years = [currentYear,...numericYears.filter(year => year !== currentYear)];
+  if (counts.has('')) years.push('');
+  const refresh = () => {
+    const selected = select.value;
+    summary.innerHTML = years.map(year => `<button class="profile-year-chip${year===selected?' active':''}" type="button" data-profile-year-chip="${year}"><span>${year||'Sem ano'}</span><strong>${counts.get(year)||0}</strong></button>`).join('');
+    summary.querySelectorAll('[data-profile-year-chip]').forEach(button => button.addEventListener('click', () => {select.value=button.dataset.profileYearChip;select.dispatchEvent(new Event('change'));refresh();}));
+  };
+  select.addEventListener('change', refresh);
+  requestAnimationFrame(refresh);
 })();
 </script>
 </body>

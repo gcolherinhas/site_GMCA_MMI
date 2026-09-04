@@ -226,6 +226,56 @@ a{color:var(--brand)}
   .profile-tabs{width:100%}.profile-tab{flex:1;justify-content:center;padding-inline:10px}.profile-publication-toolbar{align-items:stretch;flex-direction:column}.profile-year-control{justify-content:space-between}
 }
 @media(max-width:420px){.publication-filter-section .publication{grid-template-columns:1fr}.award{grid-template-columns:1fr}.award-cover img,.cover-placeholder{width:110px}}
+
+/* v12 — indicadores informativos e acabamento mobile. */
+.people-metrics-section,.publication-metrics-section{background:#edf3f9;border-bottom:1px solid var(--line)}
+.people-metrics,.publication-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:18px 0}
+.people-metric,.publication-metric{position:relative;overflow:hidden;min-width:0;padding:17px 19px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(7,20,38,.045)}
+.people-metric::before,.publication-metric::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(var(--accent),var(--brand))}
+.people-metric strong,.publication-metric strong{display:block;color:var(--brand);font-size:1.45rem;line-height:1;font-weight:900;letter-spacing:-.035em}
+.people-metric span,.publication-metric span{display:block;margin-top:7px;color:var(--muted);font-size:.76rem;font-weight:750}
+.person-card-copy{min-width:0}.person-card-copy h3,.person-card-copy p{overflow-wrap:anywhere}
+.person-mini-metrics{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.person-mini-metrics span{display:inline-flex;align-items:center;min-height:23px;padding:3px 8px;border-radius:999px;background:#edf4ff;color:#48647f;font-size:.67rem;font-weight:850}
+.person-mini-metrics .orcid-pill{margin-top:0;background:#eff8e9;color:#4e7a2a}
+.profile-tab .tab-count.projects{background:#e8f7ff;color:#1874a6}.profile-tab.active .tab-count.projects{background:#1685bd;color:#fff}
+.profile-production-metrics{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap}
+.profile-production-metric{min-width:128px;padding:10px 13px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.profile-production-metric strong{display:block;color:var(--brand);font-size:1.35rem;line-height:1;font-weight:900}.profile-production-metric span{display:block;margin-top:5px;color:var(--muted);font-size:.72rem;font-weight:750}
+.profile-year-summary{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 18px}
+.profile-year-chip{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#53677c;font:inherit;font-size:.72rem;font-weight:850;cursor:pointer}
+.profile-year-chip strong{color:var(--brand)}.profile-year-chip.active{border-color:rgba(21,94,232,.32);background:#edf4ff;color:var(--brand)}
+.profile-year-chip:focus-visible,.profile-tab:focus-visible,.nav-toggle:focus-visible,.button:focus-visible,.select-shell select:focus-visible,.profile-year-control select:focus-visible{outline:3px solid rgba(69,214,255,.45);outline-offset:2px}
+.publication-metrics-section{background:#f5f7fb}
+.publication-metric{padding-block:18px}.publication-metric small{display:block;margin-top:4px;color:#8a9bad;font-size:.64rem;font-weight:800}
+.publication-filter-section .publication-body a,.profile-main .publication a,.registration{overflow-wrap:anywhere;word-break:break-word}
+.machine-table-wrap,.recent-histogram-card{overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.button,.nav-toggle,.profile-links a,.profile-tab,.profile-year-chip,.select-shell select,.profile-year-control select{touch-action:manipulation}
+@media(max-width:980px){.people-metrics,.publication-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){
+  body{font-size:15px}.container{width:min(var(--max),calc(100% - 28px))}.section{padding:50px 0}.compact-section{padding:28px 0}
+  .nav-toggle{min-width:48px;min-height:44px;align-items:center;justify-content:center;font-weight:850}
+  .nav-links.open{top:50px;padding:10px;border-radius:0 0 18px 18px;box-shadow:0 20px 44px rgba(7,20,38,.16)}
+  .nav-links a{display:flex;align-items:center;min-height:46px;padding:10px 12px}body.menu-open{overflow:hidden}
+  .button,.profile-links a{min-height:44px}.hero-actions{gap:9px}.hero-actions .button{flex:1 1 180px}
+  .people-metrics-section,.publication-metrics-section{overflow:hidden}
+  .people-metrics,.publication-metrics{display:flex;gap:10px;overflow-x:auto;padding:14px 14px 16px;scroll-snap-type:x proximity;scrollbar-width:none}
+  .people-metrics::-webkit-scrollbar,.publication-metrics::-webkit-scrollbar,.profile-year-summary::-webkit-scrollbar{display:none}
+  .people-metric,.publication-metric{flex:0 0 158px;scroll-snap-align:start;padding:15px 16px}.people-metric strong,.publication-metric strong{font-size:1.3rem}
+  .person-card-link{gap:13px;padding:15px 16px}.person-card h3{font-size:.98rem}.muted{font-size:.8rem}.person-mini-metrics{gap:5px}.person-mini-metrics span{font-size:.64rem}
+  .profile-grid{gap:22px}.profile-links{gap:8px}.profile-tabs{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.profile-tabs::-webkit-scrollbar{display:none}.profile-tab{min-height:44px;white-space:nowrap}
+  .profile-publication-toolbar{gap:12px}.profile-production-metrics{display:grid;grid-template-columns:1fr 1fr;width:100%}.profile-production-metric{min-width:0}.profile-year-control select{min-height:44px}
+  .profile-year-summary{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px;scroll-snap-type:x proximity;scrollbar-width:none}.profile-year-chip{flex:0 0 auto;scroll-snap-align:start;min-height:40px}
+  .publication-filter-section{padding:44px 0 68px}.publication-year-filter{margin-bottom:28px;padding:15px 16px}.publication-filter-section .publication{transform:none!important}.publication-filter-section .publication-body h3{font-size:1rem}
+  .recent-histogram-card{scrollbar-width:thin}.machine-table-wrap{border-radius:12px;scrollbar-width:thin}.machine-table th,.machine-table td{padding:11px 12px}
+  .software-card{padding:24px;border-radius:22px}.award{border-radius:22px}.site-footer{padding:28px 0}.footer-grid{gap:18px}
+}
+@media(max-width:520px){
+  .hero-actions .button{flex-basis:100%}.profile-links a{flex:1 1 100%;justify-content:center}
+  .profile-production-metrics{grid-template-columns:1fr 1fr}.profile-year-control{align-items:stretch;flex-direction:column}.profile-year-control select{width:100%}
+  .publication-filter-section .year-heading{align-items:flex-start;flex-direction:column;gap:6px}.publication-filter-section .year-heading h2{font-size:2.8rem}.award-body h2{font-size:1.18rem}
+}
+@media(hover:none){.button:hover,.publication-filter-section .publication:hover{transform:none;box-shadow:inherit}}
 </style>
 </head>
 <body>
@@ -257,917 +307,32 @@ a{color:var(--brand)}
   </nav>
 </header>
 
-<main><section class="profile-hero">
-  <div class="container profile-grid">
-    <div class="profile-photo">
-<img src="data:image/webp;base64,UklGRmAGAABXRUJQVlA4WAoAAAAIAAAATwAATwAAVlA4IBgGAABQGgCdASpQAFAAPmUokEWkIiGrrhXckXAMiWRpH02k8KFL4T5M/losL+h/S/kIESwltvfz2em6egB+mdD702+Pf4BLkuF+yAbZdkjv5JSs9uJfJ+iq4WAyrfji9RMoUtMWpPX73Hp7j+F5dEDC1NtG34MX0UuB5JfRcJkyLC47gnhJ5SoyMG6VUENqyPEdZ3YZopElyVY4pEIr3Sd4HIlb8drxxpru1lA0kbrWHCJ4AA2ChYyUVAiL2u3Gg4k8FopX9VUuMqOuvF4M8Os2mbPaNcOsHWb4svk2+5AA/uXTjoS9fbPX/3Mtvl7CnqE//vt18wfif9DTlfgs2VuJxcxHg5cF+5ehCb48GFPbIAS8lfU/+Wjry7FRRzHmfZtbPMTdfWCcsQlllcjXGHG5sPI8/7EVg7XsK01y3nby08DsBpA5a59fzv/M52wWZJ140VbI/plbPFac/UEb9C9yfTI3Zx64FvoL1rTe0wenUwBtXP4lIrf4/2iwntpcjFMqq5HKWT6q7qBWhVAn5XqwQZyyNrg0TsMzoBQem1/ILIfNU/5xVOI753fjpCd01SFHTM/Xp53/G+dHiqA7mMnVUPjeFfPErHNdwhbvdv0iHImxa/PNfRRiBif22vkElAr0MGK7YmZFVTkySYKrO27SceiS9H9Ua9L45iWteV09Igd97HVg/QeiXm0z1DXimGVRE8gvpI2qthTp8+vI86V2LrYDsLU37m5SIBO2GvCLY9E2zD2g6sKGr6+Z6H7b2CrZXGgqStovsf1gJdMZJiEOjf9hgfKa86fT+fzpzkhzK6eMEU/AbsKIBhqY1vouLaQJ4mNsPLPj3LUnRc6yYTRGDGePYu+cZHkhR4Tkh6lGVcX6cUnvof19GVglG5jmXqDdShONAU7mvIWKXPK9qiTKuOEd+DmV6XejHYcdIQd/8BbkIabreKQpueczlSoI7iSM9h5S2A7J8QnVma7TAmzCFWzuGRCyrFbfCUA1jykfIg8cWzcX8yaJl4iH/VLaxx0965ey2Q9hBnn6L2lCld8uXxK+ZibH0tJw8l2GCuLw58wO3D3684t/evMcxgZXgAjp9JPTcvhxEEFQDQZLj1bqk4+O4VwwN5JclFN2rijyxwTEft3Rjja7brNkI1ABkFsdNMbi9OiTZfPHxPqYO1UsnADqNefawamF5VGuCVcSJN7d9SV8hdZsARUpGNtAOl9qOxnvI35RlLIxpXcT5kAj+YsyjLArBfnmcgUoGbmTBagodYrwqMWhqIERY3Vym4EMZNnALLpo54hoPtQW/geZQN5wJt8gsSk+ICIeafRyBceBLKrIJ4erXS99Zp9CMKRGJP7y0m/UKkf3MUoLwNVxRfoSaXlcPwJqj4QEDhTikEmu6rqsKTbwFMJr7wdyeA/QQleotWJGYpnIv2aRvj1x0k3oxbTo/SAUKSIS4czbSnEuiokpPx/UjnV/Js8SQdLfGZsZUelMP/tF31Pis2zaKkf1+YhJYRtgrkWyOFN/vbswZl3jaMgOeCG0fiCvBAvTlcDvlcg0qbizJ0yeRQDTG4f05WOtfu3o34vmlpC4KhDpOMpcffzPsh+XBgtnoIvKU5SJKC5MsIvemYRguQ3PAMSLmOzIsJK8gn3MZCbkR4X5oo1QsngWuyR6sQfWkE+MhDyydyBguvC1xcq8BmdylMMNr68RBVUnCkW0yB1pX9ruhBmpZdeC2Os+zUBiAOueFDC6e5Ji3FrgH0HUdTl7sNCPgj2RX+matQunPF+Uu83tHX1TTeACM+Dof4D1J0v90c/ZjQ9F035H6VmP3KcaL4wnZIG6yB97GDR3V/wDrc4Ie9lWRF4EVbD0u4knhp6rH2axZWXTRY29CqOqg30uY+JOW39WUs93fR3XH7iNQRfl86Ba/u1Az/TUhjTiIQF58Yu4zMi/5xdd4ygbB6cCm+1apu/8IZf7FIzxFer0nZFNmHbM/zyHGdD/fOC5d8R1WyJHm2q24kL6ZexJCEJkVsPVPnhW8PHEwVqt5zYZk40ph/j8Z6O6+RDvrewvPkgxzRumWepljxZ6mHjNPzBQTLIk44jdy66rAABFWElGIgAAAElJKgAIAAAAAQAxAQIABwAAABoAAAAAAAAAUGljYXNhAAA=" alt="Foto de Guilherme Colherinhas de Oliveira" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">      <span class="avatar-fallback large" style="display:none">G</span>
+<main><section class="profile-hero"><div class="container profile-grid">
+  <div class="profile-photo"><img src="data:image/webp;base64,UklGRmAGAABXRUJQVlA4WAoAAAAIAAAATwAATwAAVlA4IBgGAABQGgCdASpQAFAAPmUokEWkIiGrrhXckXAMiWRpH02k8KFL4T5M/losL+h/S/kIESwltvfz2em6egB+mdD702+Pf4BLkuF+yAbZdkjv5JSs9uJfJ+iq4WAyrfji9RMoUtMWpPX73Hp7j+F5dEDC1NtG34MX0UuB5JfRcJkyLC47gnhJ5SoyMG6VUENqyPEdZ3YZopElyVY4pEIr3Sd4HIlb8drxxpru1lA0kbrWHCJ4AA2ChYyUVAiL2u3Gg4k8FopX9VUuMqOuvF4M8Os2mbPaNcOsHWb4svk2+5AA/uXTjoS9fbPX/3Mtvl7CnqE//vt18wfif9DTlfgs2VuJxcxHg5cF+5ehCb48GFPbIAS8lfU/+Wjry7FRRzHmfZtbPMTdfWCcsQlllcjXGHG5sPI8/7EVg7XsK01y3nby08DsBpA5a59fzv/M52wWZJ140VbI/plbPFac/UEb9C9yfTI3Zx64FvoL1rTe0wenUwBtXP4lIrf4/2iwntpcjFMqq5HKWT6q7qBWhVAn5XqwQZyyNrg0TsMzoBQem1/ILIfNU/5xVOI753fjpCd01SFHTM/Xp53/G+dHiqA7mMnVUPjeFfPErHNdwhbvdv0iHImxa/PNfRRiBif22vkElAr0MGK7YmZFVTkySYKrO27SceiS9H9Ua9L45iWteV09Igd97HVg/QeiXm0z1DXimGVRE8gvpI2qthTp8+vI86V2LrYDsLU37m5SIBO2GvCLY9E2zD2g6sKGr6+Z6H7b2CrZXGgqStovsf1gJdMZJiEOjf9hgfKa86fT+fzpzkhzK6eMEU/AbsKIBhqY1vouLaQJ4mNsPLPj3LUnRc6yYTRGDGePYu+cZHkhR4Tkh6lGVcX6cUnvof19GVglG5jmXqDdShONAU7mvIWKXPK9qiTKuOEd+DmV6XejHYcdIQd/8BbkIabreKQpueczlSoI7iSM9h5S2A7J8QnVma7TAmzCFWzuGRCyrFbfCUA1jykfIg8cWzcX8yaJl4iH/VLaxx0965ey2Q9hBnn6L2lCld8uXxK+ZibH0tJw8l2GCuLw58wO3D3684t/evMcxgZXgAjp9JPTcvhxEEFQDQZLj1bqk4+O4VwwN5JclFN2rijyxwTEft3Rjja7brNkI1ABkFsdNMbi9OiTZfPHxPqYO1UsnADqNefawamF5VGuCVcSJN7d9SV8hdZsARUpGNtAOl9qOxnvI35RlLIxpXcT5kAj+YsyjLArBfnmcgUoGbmTBagodYrwqMWhqIERY3Vym4EMZNnALLpo54hoPtQW/geZQN5wJt8gsSk+ICIeafRyBceBLKrIJ4erXS99Zp9CMKRGJP7y0m/UKkf3MUoLwNVxRfoSaXlcPwJqj4QEDhTikEmu6rqsKTbwFMJr7wdyeA/QQleotWJGYpnIv2aRvj1x0k3oxbTo/SAUKSIS4czbSnEuiokpPx/UjnV/Js8SQdLfGZsZUelMP/tF31Pis2zaKkf1+YhJYRtgrkWyOFN/vbswZl3jaMgOeCG0fiCvBAvTlcDvlcg0qbizJ0yeRQDTG4f05WOtfu3o34vmlpC4KhDpOMpcffzPsh+XBgtnoIvKU5SJKC5MsIvemYRguQ3PAMSLmOzIsJK8gn3MZCbkR4X5oo1QsngWuyR6sQfWkE+MhDyydyBguvC1xcq8BmdylMMNr68RBVUnCkW0yB1pX9ruhBmpZdeC2Os+zUBiAOueFDC6e5Ji3FrgH0HUdTl7sNCPgj2RX+matQunPF+Uu83tHX1TTeACM+Dof4D1J0v90c/ZjQ9F035H6VmP3KcaL4wnZIG6yB97GDR3V/wDrc4Ie9lWRF4EVbD0u4knhp6rH2axZWXTRY29CqOqg30uY+JOW39WUs93fR3XH7iNQRfl86Ba/u1Az/TUhjTiIQF58Yu4zMi/5xdd4ygbB6cCm+1apu/8IZf7FIzxFer0nZFNmHbM/zyHGdD/fOC5d8R1WyJHm2q24kL6ZexJCEJkVsPVPnhW8PHEwVqt5zYZk40ph/j8Z6O6+RDvrewvPkgxzRumWepljxZ6mHjNPzBQTLIk44jdy66rAABFWElGIgAAAElJKgAIAAAAAQAxAQIABwAAABoAAAAAAAAAUGljYXNhAAA=" alt="Foto de Guilherme Colherinhas de Oliveira" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><span class="avatar-fallback large" style="display:none">G</span></div>
+  <div><span class="eyebrow">Coordenadores · Atual</span><h1>Guilherme Colherinhas de Oliveira</h1><p class="lead">Coordenador</p><p>Instituto de Física - UFG / PPGF-UFG</p><div class="profile-links"><a href="mailto:gcolherinhas@ufg.br">E-mail</a><a href="http://lattes.cnpq.br/0171051425848743" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0000-0002-4526-3408" target="_blank" rel="noopener">ORCID 0000-0002-4526-3408 ↗</a></div></div>
+</div></section>
+<section class="section"><div class="container profile-content">
+  <div class="profile-main">
+    <div class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">
+      <button class="profile-tab active" type="button" role="tab" aria-selected="true" aria-controls="profile-projects" id="tab-projects" data-profile-tab="projects">Projetos <span class="tab-count projects">6</span></button>
+      <button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-productions" id="tab-productions" data-profile-tab="productions">Produções <span class="tab-count">107</span></button>
     </div>
-    <div>
-      <span class="eyebrow">Coordenadores · Atual</span>
-      <h1>Guilherme Colherinhas de Oliveira</h1>
-      <p class="lead">Coordenador</p>
-      <p>Instituto de Física - UFG / PPGF-UFG</p>
-      <div class="profile-links">
-<a href="mailto:gcolherinhas@ufg.br">E-mail</a><a href="http://lattes.cnpq.br/0171051425848743" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0000-0002-4526-3408" target="_blank" rel="noopener">ORCID 0000-0002-4526-3408 ↗</a>      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container profile-content">
-    <div class="profile-main">
-      <div class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">
-        <button class="profile-tab active" type="button" role="tab" aria-selected="true" aria-controls="profile-projects" id="tab-projects" data-profile-tab="projects">Projetos</button>
-        <button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-productions" id="tab-productions" data-profile-tab="productions">Produções <span class="tab-count">107</span></button>
+    <section class="profile-tab-panel" id="profile-projects" role="tabpanel" aria-labelledby="tab-projects" data-profile-tab-panel="projects">
+      <div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div>
+<div class="project-list"><div class="project-verbatim">Materiais Peptídicos, Auto-organização e Nanoestruturas Bioinspiradas: Investigação computacional das propriedades estruturais, energéticas e dinâmicas de materiais formados por peptídeos auto-organizáveis, incluindo nanomembranas, nanofibras, nanotapes, nanobastões e sistemas peptídicos confinados em nanoestruturas de carbono. A pesquisa emprega principalmente dinâmica molecular atomística para compreender mecanismos de automontagem, estabilidade térmica e estrutural, formação e persistência de ligações de hidrogênio, organização de estruturas secundárias e balanço entre interações eletrostáticas e de van der Waals. Esses estudos buscam estabelecer relações entre sequência peptídica, ambiente molecular e propriedades emergentes das nanoestruturas, contribuindo para o desenvolvimento racional de materiais biomiméticos, sistemas de transporte molecular, nanocarreadores e componentes funcionais para aplicações em nanotecnologia e armazenamento de energia.</div><div class="project-verbatim">Líquidos Iônicos, Solventes Funcionais e Ambientes Moleculares Complexos: Modelagem molecular de líquidos iônicos, eletrólitos altamente concentrados e solventes eutéticos profundos, com ênfase na compreensão de sua organização microscópica, hidratação, estabilidade e interação com superfícies e nanoestruturas. Por meio de dinâmica molecular clássica e ab initio, são investigados efeitos da composição química, concentração de água, temperatura e confinamento sobre a estrutura local e as interações intermoleculares desses fluidos. A linha contempla tanto líquidos iônicos convencionais quanto sistemas de maior interesse ambiental e biológico, incluindo líquidos iônicos derivados de aminoácidos e Natural Deep Eutectic Solvents (NADES), visando identificar relações entre composição molecular e desempenho em aplicações como eletrólitos, interfaces funcionais e meios de solvatação.</div><div class="project-verbatim">Modelagem Molecular de Supercapacitores e Materiais para Armazenamento de Energia: Desenvolvimento de modelos computacionais de supercapacitores para investigar, em escala molecular, os mecanismos responsáveis pela formação da dupla camada elétrica e pelo armazenamento eletrostático de energia. A pesquisa envolve eletrodos constituídos por materiais bidimensionais, como grafeno e grafino, bem como diferentes classes de eletrólitos, incluindo líquidos iônicos convencionais, líquidos iônicos biocompatíveis e biodegradáveis, sistemas hidratados, misturas de eletrólitos e solventes eutéticos profundos. As simulações permitem avaliar a organização dos íons junto às superfícies eletrificadas, perfis de potencial, capacitância, densidade de energia e efeitos decorrentes da composição do eletrólito, hidratação, temperatura, geometria e espaçamento dos eletrodos. O objetivo é estabelecer princípios moleculares para o projeto de dispositivos de armazenamento de energia mais eficientes e ambientalmente sustentáveis.</div><div class="project-verbatim">Biomoléculas, Fármacos e Nanomateriais em Interfaces Biológicas: Investigação computacional das interações entre moléculas bioativas, fármacos, peptídeos e nanomateriais com membranas e outros ambientes biomoleculares. A linha utiliza dinâmica molecular, cálculos de energia livre e, em problemas específicos, estratégias de molecular docking para caracterizar processos como adsorção, inserção, ancoragem, agregação, reconhecimento molecular e estabilização de compostos em interfaces biológicas. Entre os sistemas estudados encontram-se fullerenóis em bicamadas lipídicas, peptídeos antimicrobianos associados a membranas, sistemas lipossomais para incorporação de ivermectina e reposicionamento computacional de fármacos. A abordagem busca elucidar os mecanismos moleculares que controlam afinidade, estabilidade e organização dessas associações, fornecendo subsídios para o desenho de nanocarreadores, sistemas de liberação de fármacos e novas estratégias de aplicação de moléculas bioativas.</div><div class="project-verbatim">Materiais Moleculares e Nanoestruturas para Captura de CO₂: Prospecção e caracterização, por métodos computacionais, de materiais moleculares e interfaces nanoestruturadas capazes de interagir seletivamente com dióxido de carbono. A pesquisa investiga como composição química, distribuição de cargas, grupos funcionais e organização supramolecular determinam a afinidade e os mecanismos de adsorção ou fixação de CO₂. Entre os sistemas estudados destacam-se membranas peptídicas bioinspiradas e sistemas baseados em líquidos iônicos, nos quais são analisadas as interações intermoleculares responsáveis pela captura do gás. As simulações em escala atomística permitem comparar diferentes arquiteturas e identificar sítios e mecanismos de interação, contribuindo para o desenho racional de materiais ajustáveis, sustentáveis e potencialmente aplicáveis a tecnologias de separação, captura e sequestro de carbono.</div><div class="project-verbatim">Inteligência Artificial e Aprendizado de Máquina Aplicados à Física Computacional: Desenvolvimento e aplicação de métodos de inteligência artificial, aprendizado de máquina e análise de dados como ferramentas complementares à modelagem computacional de sistemas físicos. A linha investiga a capacidade de algoritmos de classificação, agrupamento e redes neurais artificiais de reconhecer padrões complexos, identificar regiões de transição e produzir previsões em condições nas quais métodos numéricos convencionais apresentam elevado custo computacional ou dificuldades de convergência. Trabalhos já realizados incluem o emprego de K-means, máquinas de vetores de suporte (SVM) e redes neurais artificiais do tipo perceptron multicamadas na previsão de fenômenos de quebra espontânea de simetria em sistemas físicos. A perspectiva é integrar essas técnicas a fluxos de trabalho de Física Computacional, ampliando a capacidade de análise, classificação e predição em problemas de alta dimensionalidade.</div></div>    </section>
+    <section class="profile-tab-panel" id="profile-productions" role="tabpanel" aria-labelledby="tab-productions" data-profile-tab-panel="productions" hidden>
+      <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
+      <div class="profile-publication-toolbar">
+        <div class="profile-production-metrics" aria-live="polite"><div class="profile-production-metric"><strong data-person-current-count>0</strong><span>no ano corrente</span></div><div class="profile-production-metric"><strong>107</strong><span>total no perfil</span></div></div>
+        <label class="profile-year-control"><span>Exibir ano</span><select data-person-year-filter aria-label="Filtrar produções por ano"></select></label>
       </div>
-
-      <section class="profile-tab-panel" id="profile-projects" role="tabpanel" aria-labelledby="tab-projects" data-profile-tab-panel="projects">
-        <div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div>
-        <div class="project-list"><div class="project-verbatim">Materiais Peptídicos, Auto-organização e Nanoestruturas Bioinspiradas: Investigação computacional das propriedades estruturais, energéticas e dinâmicas de materiais formados por peptídeos auto-organizáveis, incluindo nanomembranas, nanofibras, nanotapes, nanobastões e sistemas peptídicos confinados em nanoestruturas de carbono. A pesquisa emprega principalmente dinâmica molecular atomística para compreender mecanismos de automontagem, estabilidade térmica e estrutural, formação e persistência de ligações de hidrogênio, organização de estruturas secundárias e balanço entre interações eletrostáticas e de van der Waals. Esses estudos buscam estabelecer relações entre sequência peptídica, ambiente molecular e propriedades emergentes das nanoestruturas, contribuindo para o desenvolvimento racional de materiais biomiméticos, sistemas de transporte molecular, nanocarreadores e componentes funcionais para aplicações em nanotecnologia e armazenamento de energia.</div><div class="project-verbatim">Líquidos Iônicos, Solventes Funcionais e Ambientes Moleculares Complexos: Modelagem molecular de líquidos iônicos, eletrólitos altamente concentrados e solventes eutéticos profundos, com ênfase na compreensão de sua organização microscópica, hidratação, estabilidade e interação com superfícies e nanoestruturas. Por meio de dinâmica molecular clássica e ab initio, são investigados efeitos da composição química, concentração de água, temperatura e confinamento sobre a estrutura local e as interações intermoleculares desses fluidos. A linha contempla tanto líquidos iônicos convencionais quanto sistemas de maior interesse ambiental e biológico, incluindo líquidos iônicos derivados de aminoácidos e Natural Deep Eutectic Solvents (NADES), visando identificar relações entre composição molecular e desempenho em aplicações como eletrólitos, interfaces funcionais e meios de solvatação.</div><div class="project-verbatim">Modelagem Molecular de Supercapacitores e Materiais para Armazenamento de Energia: Desenvolvimento de modelos computacionais de supercapacitores para investigar, em escala molecular, os mecanismos responsáveis pela formação da dupla camada elétrica e pelo armazenamento eletrostático de energia. A pesquisa envolve eletrodos constituídos por materiais bidimensionais, como grafeno e grafino, bem como diferentes classes de eletrólitos, incluindo líquidos iônicos convencionais, líquidos iônicos biocompatíveis e biodegradáveis, sistemas hidratados, misturas de eletrólitos e solventes eutéticos profundos. As simulações permitem avaliar a organização dos íons junto às superfícies eletrificadas, perfis de potencial, capacitância, densidade de energia e efeitos decorrentes da composição do eletrólito, hidratação, temperatura, geometria e espaçamento dos eletrodos. O objetivo é estabelecer princípios moleculares para o projeto de dispositivos de armazenamento de energia mais eficientes e ambientalmente sustentáveis.</div><div class="project-verbatim">Biomoléculas, Fármacos e Nanomateriais em Interfaces Biológicas: Investigação computacional das interações entre moléculas bioativas, fármacos, peptídeos e nanomateriais com membranas e outros ambientes biomoleculares. A linha utiliza dinâmica molecular, cálculos de energia livre e, em problemas específicos, estratégias de molecular docking para caracterizar processos como adsorção, inserção, ancoragem, agregação, reconhecimento molecular e estabilização de compostos em interfaces biológicas. Entre os sistemas estudados encontram-se fullerenóis em bicamadas lipídicas, peptídeos antimicrobianos associados a membranas, sistemas lipossomais para incorporação de ivermectina e reposicionamento computacional de fármacos. A abordagem busca elucidar os mecanismos moleculares que controlam afinidade, estabilidade e organização dessas associações, fornecendo subsídios para o desenho de nanocarreadores, sistemas de liberação de fármacos e novas estratégias de aplicação de moléculas bioativas.</div><div class="project-verbatim">Materiais Moleculares e Nanoestruturas para Captura de CO₂: Prospecção e caracterização, por métodos computacionais, de materiais moleculares e interfaces nanoestruturadas capazes de interagir seletivamente com dióxido de carbono. A pesquisa investiga como composição química, distribuição de cargas, grupos funcionais e organização supramolecular determinam a afinidade e os mecanismos de adsorção ou fixação de CO₂. Entre os sistemas estudados destacam-se membranas peptídicas bioinspiradas e sistemas baseados em líquidos iônicos, nos quais são analisadas as interações intermoleculares responsáveis pela captura do gás. As simulações em escala atomística permitem comparar diferentes arquiteturas e identificar sítios e mecanismos de interação, contribuindo para o desenho racional de materiais ajustáveis, sustentáveis e potencialmente aplicáveis a tecnologias de separação, captura e sequestro de carbono.</div><div class="project-verbatim">Inteligência Artificial e Aprendizado de Máquina Aplicados à Física Computacional: Desenvolvimento e aplicação de métodos de inteligência artificial, aprendizado de máquina e análise de dados como ferramentas complementares à modelagem computacional de sistemas físicos. A linha investiga a capacidade de algoritmos de classificação, agrupamento e redes neurais artificiais de reconhecer padrões complexos, identificar regiões de transição e produzir previsões em condições nas quais métodos numéricos convencionais apresentam elevado custo computacional ou dificuldades de convergência. Trabalhos já realizados incluem o emprego de K-means, máquinas de vetores de suporte (SVM) e redes neurais artificiais do tipo perceptron multicamadas na previsão de fenômenos de quebra espontânea de simetria em sistemas físicos. A perspectiva é integrar essas técnicas a fluxos de trabalho de Física Computacional, ampliando a capacidade de análise, classificação e predição em problemas de alta dimensionalidade.</div></div>
-      </section>
-
-      <section class="profile-tab-panel" id="profile-productions" role="tabpanel" aria-labelledby="tab-productions" data-profile-tab-panel="productions" hidden>
-        <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
-        <div class="profile-publication-toolbar">
-          <div class="profile-publication-indicator" aria-live="polite">
-            <strong data-person-current-count>0</strong>
-            <span>artigo(s) no ano corrente</span>
-          </div>
-          <label class="profile-year-control">
-            <span>Exibir ano</span>
-            <select data-person-year-filter aria-label="Filtrar produções por ano"></select>
-          </label>
-        </div>
-        <div class="publication-list" data-person-publications>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Water-Mediated Stability of Ionic Liquids Confined in Aqueous Droplets: Molecular Dynamics Insights with Atmospheric Parallels</h3>
-              <p class="authors">Tertius Lima Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry B, v. 130, n. 2, 800-813</p>
-<a href="https://doi.org/10.1021/acs.jpcb.5c06039" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.5c06039 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Unveiling the Potential of Natural Deep Eutectic Solvents in Electrochemical Energy Storage Applications</h3>
-              <p class="authors">Henrique de Araujo Chagas, Guilherme Colherinhas, Eudes E. Fileti</p>
-              <p class="journal">ACS Physical Chemistry Au, v. 6, n. 1, 29-37</p>
-<a href="https://doi.org/10.1021/acsphyschemau.5c00063" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00063 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Temperature Effects on the Structural Stability of EF 4 K Peptide Membranes: Insights into Mono- and Multilayer Architectures</h3>
-              <p class="authors">Karinna Mendanha, Douglas Xavier de Andrade, Guilherme Colherinhas</p>
-              <p class="journal">ACS Materials Au, v. 6, n. 2, 437-449</p>
-<a href="https://doi.org/10.1021/acsmaterialsau.5c00214" target="_blank" rel="noopener">DOI: 10.1021/acsmaterialsau.5c00214 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Repurposing HIV Protease Inhibitors against West Nile Virus: Insights from Molecular Docking and Molecular Dynamics Simulations</h3>
-              <p class="authors">Renato D. dos Santos, Guilherme Colherinhas, Wesley B. Cardoso</p>
-              <p class="journal">ACS Physical Chemistry Au, acsphyschemau.6c00043</p>
-<a href="https://doi.org/10.1021/acsphyschemau.6c00043" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.6c00043 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Peptide–Carbon Nanotube Hybrids under Confinement: Structure and Stability from Atomistic Simulations</h3>
-              <p class="authors">Karinna Mendanha, Guilherme Colherinhas</p>
-              <p class="journal">ACS Omega, acsomega.5c12748</p>
-<a href="https://doi.org/10.1021/acsomega.5c12748" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c12748 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Hydrogen bonding and membrane anchoring of the antimicrobial peptide NP-3a investigated through molecular dynamics</h3>
-              <p class="authors">Ana Clara D. Aquino, Karinna Mendanha, Herbert de C. Georg, Guilherme Colherinhas</p>
-              <p class="journal">Computational Biology and Chemistry, v. 123, 108997</p>
-<a href="https://doi.org/10.1016/j.compbiolchem.2026.108997" target="_blank" rel="noopener">DOI: 10.1016/j.compbiolchem.2026.108997 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Hydration and Molar Ratio Effects in Choline Chloride-Phenol Deep Eutectic Solvents</h3>
-              <p class="authors">Lucas de S. Silva, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry B, v. 130, n. 23, 5923-5938</p>
-<a href="https://doi.org/10.1021/acs.jpcb.6c01636" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.6c01636 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Ester-Based Electrolyte Mixtures for Graphene Supercapacitors: A Molecular Dynamics Investigation</h3>
-              <p class="authors">Lucas de S. Silva, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry B, v. 130, n. 7, 2178-2193</p>
-<a href="https://doi.org/10.1021/acs.jpcb.5c06507" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.5c06507 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Does Electrode Spacing Truly Control Capacitance and Energy Density in Graphene-Based Supercapacitors? A Molecular Simulation Perspective</h3>
-              <p class="authors">Davi de Oliveira Guedes, Henrique de Araujo Chagas, Iuliia V. Voroshylova, Guilherme Colherinhas</p>
-              <p class="journal">ACS Omega, v. 11, n. 22, 33072-33085</p>
-<a href="https://doi.org/10.1021/acsomega.6c02890" target="_blank" rel="noopener">DOI: 10.1021/acsomega.6c02890 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Cholesterol-Driven Optimization of Liposomal Systems for Ivermectin Capture: Insights from Experimental and Molecular Dynamics Studies</h3>
-              <p class="authors">Alexandre C. M. Barros, Jader Pires, Karinna Mendanha, Lucas R. de Sousa, Bianca B. Fontanezi, Guilherme Colherinhas, Ana F. M. Botelho, Sebastião A. Mendanha, Eliana M. Lima</p>
-              <p class="journal">ACS Applied Materials &amp;amp; Interfaces, v. 18, n. 7, 10832-10841</p>
-<a href="https://doi.org/10.1021/acsami.5c21365" target="_blank" rel="noopener">DOI: 10.1021/acsami.5c21365 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Chloride substitution and hydration effects in [emim][bnz] electrolytes for lightweight supercapacitors</h3>
-              <p class="authors">Leonardo B.A. Oliveira, Lucas de S. Silva, Tertius L. Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 443, 129142</p>
-<a href="https://doi.org/10.1016/j.molliq.2025.129142" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.129142 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Bio-Inspired Peptide Membranes for CO 2 Capture: A Molecular Dynamics Study of A 6 H and A 6 R Interfaces</h3>
-              <p class="authors">Karinna Mendanha, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry B, v. 130, n. 20, 5152-5164</p>
-<a href="https://doi.org/10.1021/acs.jpcb.6c00256" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.6c00256 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Atomic-Scale Insights into Phosphorene-Ionic Liquid Interface with Ab Initio Molecular Dynamics</h3>
-              <p class="authors">Debora Ariana C. da Silva, Guilherme Colherinhas, Eudes Eterno Fileti</p>
-              <p class="journal">ACS Physical Chemistry Au, v. 6, n. 1, 207-214</p>
-<a href="https://doi.org/10.1021/acsphyschemau.5c00111" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00111 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Versatility of self-assembling A6K peptide nanomembranes under thermal variation: A molecular dynamics analysis across the 300–400 K range</h3>
-              <p class="authors">Karinna Mendanha, Douglas X. de Andrade, Guilherme Colherinhas</p>
-              <p class="journal">Surfaces and Interfaces, v. 69, 106746</p>
-<a href="https://doi.org/10.1016/j.surfin.2025.106746" target="_blank" rel="noopener">DOI: 10.1016/j.surfin.2025.106746 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Temperature dependence of electric double-layer structure and electrochemical properties in graphene supercapacitors with [emim][BF₄] electrolyte: A molecular dynamics study</h3>
-              <p class="authors">Henrique de Araujo Chagas, Guilherme Colherinhas</p>
-              <p class="journal">Chemical Physics Letters, v. 877, 142325</p>
-<a href="https://doi.org/10.1016/j.cplett.2025.142325" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142325 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Sustainable supercapacitors using advanced hydrated amino acid ionic liquids: A novel approach to biodegradable energy storage</h3>
-              <p class="authors">Lucas de S. Silva, Henrique de A. Chagas, G. Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 417, 126638</p>
-<a href="https://doi.org/10.1016/j.molliq.2024.126638" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126638 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Structural and electrochemical properties of graphene-based supercapacitors with water and methanol-co-solvated ionic liquids: a molecular dynamics study</h3>
-              <p class="authors">Lucas de S. Silva, Leonardo B.A. Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 434, 128041</p>
-<a href="https://doi.org/10.1016/j.molliq.2025.128041" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.128041 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Quantum Molecular Dynamics Approach to Understanding Interactions in Betaine Chloride and Amino Acid Natural Deep Eutectic Solvents</h3>
-              <p class="authors">Eudes Eterno Fileti, Henrique de Araujo Chagas, Guilherme Colherinhas, Thaciana Malaspina</p>
-              <p class="journal">ACS Physical Chemistry Au, v. 5, n. 1, 72-79</p>
-<a href="https://doi.org/10.1021/acsphyschemau.4c00072" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.4c00072 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Performance Analysis of Supercapacitors With Graphene and Graphyne Electrodes</h3>
-              <p class="authors">Henrique de Araujo Chagas, Thaciana Malaspina, Eudes Eterno Fileti, Guilherme Colherinhas</p>
-              <p class="journal">Energy Storage, v. 7, n. 1, e70114</p>
-<a href="https://doi.org/10.1002/est2.70114" target="_blank" rel="noopener">DOI: 10.1002/est2.70114 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Molecular Dynamics Study of Functionalized Gold Nanoparticles: Structural and Aggregation Behavior under Varying Ionic Strength</h3>
-              <p class="authors">Esequias Coelho, Douglas Xavier de Andrade, Agnaldo Rosa de Almeida, Guilherme Colherinhas</p>
-              <p class="journal">ACS Physical Chemistry Au, v. 5, n. 6, 699-715</p>
-<a href="https://doi.org/10.1021/acsphyschemau.5c00077" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00077 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Molecular Dynamics Simulations of Self-Assembled E 2 (SW) 6 E 2 Peptide Nanofibers: Implications for Drug Delivery and Biomimetic Material Design</h3>
-              <p class="authors">Karinna Mendanha, Guilherme Colherinhas</p>
-              <p class="journal">ACS Physical Chemistry Au, v. 5, n. 3, 302-315</p>
-<a href="https://doi.org/10.1021/acsphyschemau.5c00028" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00028 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Modeling supercapacitors with integrated conductors via molecular dynamics: Optimization and impacts on energy efficiency</h3>
-              <p class="authors">Henrique de Araujo Chagas, Tertius Lima Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Power Sources, v. 656, 238100</p>
-<a href="https://doi.org/10.1016/j.jpowsour.2025.238100" target="_blank" rel="noopener">DOI: 10.1016/j.jpowsour.2025.238100 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Investigating the Impact of Positively Charged Gold Nanoparticle (AuNP) Concentration in Water/Cl – Solutions Using Molecular Dynamics Simulations</h3>
-              <p class="authors">Esequias Coelho, Douglas Xavier de Andrade, Agnaldo Rosa de Almeida, Guilherme Colherinhas</p>
-              <p class="journal">ACS Omega, v. 10, n. 20, 20610-20622</p>
-<a href="https://doi.org/10.1021/acsomega.5c01441" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c01441 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Insights into Antiviral Candidates against Oropouche Virus: A Molecular Dynamics Study</h3>
-              <p class="authors">Guilherme Colherinhas, Wesley B. Cardoso</p>
-              <p class="journal">ACS Physical Chemistry Au, v. 5, n. 5, 549-559</p>
-<a href="https://doi.org/10.1021/acsphyschemau.5c00042" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00042 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Impact of Chloride and Bromide Composition in Ionic Liquid/Water Electrolytes on the Electrochemical Performance of Graphene-Based Supercapacitors: A Molecular Dynamics Study</h3>
-              <p class="authors">Leonardo B. A. Oliveira, Lucas de S Silva, Henrique de Araujo Chagas, Tertius L. Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry C, v. 129, n. 30, 13532-13541</p>
-<a href="https://doi.org/10.1021/acs.jpcc.5c01816" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.5c01816 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Exploring MXene Materials in Energy Storage Devices: A Review of Supercapacitor Applications</h3>
-              <p class="authors">Lucas de Sousa Silva, Eudes Eterno Fileti, Guilherme Colherinhas</p>
-              <p class="journal">ACS Materials Au, v. 5, n. 6, 920-939</p>
-<a href="https://doi.org/10.1021/acsmaterialsau.5c00102" target="_blank" rel="noopener">DOI: 10.1021/acsmaterialsau.5c00102 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Evaluation of Structural and Electrochemical Properties of Supercapacitors with Graphene Electrodes and Hydrated Pure or Mixed [bmim]-Based Ionic Liquids via Molecular Dynamics</h3>
-              <p class="authors">Lucas de S. Silva, Guilherme Colherinhas</p>
-              <p class="journal">ACS Physical Chemistry Au, v. 5, n. 5, 519-532</p>
-<a href="https://doi.org/10.1021/acsphyschemau.5c00036" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00036 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Computational analysis of KGAVK peptide nanorod model: High structural stability under low hydration</h3>
-              <p class="authors">Karinna Mendanha, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 437, 128515</p>
-<a href="https://doi.org/10.1016/j.molliq.2025.128515" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.128515 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Biodegradable ionic liquids in energy storage: Molecular insights into hydration-controlled performance in graphene-based supercapacitors</h3>
-              <p class="authors">Matheus R.N. Dias, Matheus A. Arebalo, Henrique A. Chagas, Wesley B. Cardoso, Guilherme Colherinhas</p>
-              <p class="journal">Chemical Physics Letters, v. 881, 142440</p>
-<a href="https://doi.org/10.1016/j.cplett.2025.142440" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142440 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Anisotropic Ferricyanide Ionic Liquids and Confined SCILLs for Selective CO 2 Fixation via NHC–CO 2 Mediated Catch-and-Release Catalysis</h3>
-              <p class="authors">Camila P. Ebersol, Jonas X. Torres, Rafael P. das Chagas, Luciano M. Lião, Muhammad Nisar, Pedro H. F. Matias, Heibbe Cristhian. B. de Oliveira, José S. S. Neto, Guilherme Colherinhas, Muhammad I. Qadir</p>
-              <p class="journal">The Journal of Physical Chemistry C, v. 129, n. 45, 20258-20267</p>
-<a href="https://doi.org/10.1021/acs.jpcc.5c06371" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.5c06371 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Theoretical study on symmetric and asymmetric stacking in the self-assembly of bola-amphiphilic peptides into membranes with mixtures of EF4E and KF4K</h3>
-              <p class="authors">Elias Rafael de Sousa, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 400, 124535</p>
-<a href="https://doi.org/10.1016/j.molliq.2024.124535" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.124535 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Systematic analysis to evaluate the impact of hydration on electrolytes [emim][BF4] and [cho][gly] in supercapacitors formed by graphene or graphyne electrodes</h3>
-              <p class="authors">Henrique de Araujo Chagas, Leonardo B.A. Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 415, 126280</p>
-<a href="https://doi.org/10.1016/j.molliq.2024.126280" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126280 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Solvent effects on the spectroscopic properties of cannabinoids derivatives: A theoretical study using PCM</h3>
-              <p class="authors">Richard Costa Prado, Verônyca Santos Filho, Samanta Aparecida Portes, Guilherme Colherinhas, Leonardo Bruno Assis Oliveira</p>
-              <p class="journal">International Journal of Quantum Chemistry, v. 124, n. 11, e27417</p>
-<a href="https://doi.org/10.1002/qua.27417" target="_blank" rel="noopener">DOI: 10.1002/qua.27417 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Selecting electronic transitions between graphyne and lithium ions for entanglement generation using new organic material</h3>
-              <p class="authors">Lucas S. Silva, Wesley B. Cardoso, Guilherme Colherinhas</p>
-              <p class="journal">Computational and Theoretical Chemistry, v. 1238, 114692</p>
-<a href="https://doi.org/10.1016/j.comptc.2024.114692" target="_blank" rel="noopener">DOI: 10.1016/j.comptc.2024.114692 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Investigating ionic liquid hydration effects at high temperatures: Insights from classic molecular dynamics simulations</h3>
-              <p class="authors">Leonardo Bruno Assis Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 393, 123662</p>
-<a href="https://doi.org/10.1016/j.molliq.2023.123662" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.123662 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Exploring How System Dimensions and Periodic Boundary Conditions Influence the Molecular Dynamics Simulation of A 6 H Peptide Self-Assembly Nanostructures</h3>
-              <p class="authors">Karinna Mendanha, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry B, v. 128, n. 28, 6853-6865</p>
-<a href="https://doi.org/10.1021/acs.jpcb.4c03043" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.4c03043 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Evaluating quantum entanglement generation in two‐dimensional graphene systems through lithium ion interactions: A DFT‐based study</h3>
-              <p class="authors">Lucas de S. Silva, Guilherme Colherinhas, Wesley B. Cardoso</p>
-              <p class="journal">Journal of Computational Chemistry, v. 45, n. 13, 1002-1007</p>
-<a href="https://doi.org/10.1002/jcc.27303" target="_blank" rel="noopener">DOI: 10.1002/jcc.27303 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Employing molecular dynamics simulations and DFT calculations to elucidate the energetic, structural, and spectroscopic attributes of (poly)valines in water solution</h3>
-              <p class="authors">R.C. Prado, K. Mendanha, L.B.A. Oliveira, G. Colherinhas</p>
-              <p class="journal">Chemical Physics Letters, v. 847, 141364</p>
-<a href="https://doi.org/10.1016/j.cplett.2024.141364" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2024.141364 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Dynamic interactions of negatively charged gold nanoparticles (AuNPs) in aqueous environments with different ionic compositions</h3>
-              <p class="authors">Esequias Coelho, Douglas Xavier, Agnaldo Almeida, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 413, 126021</p>
-<a href="https://doi.org/10.1016/j.molliq.2024.126021" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126021 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>DFT-based investigation of graphene-mediated manipulation for efficient potassium ion entanglement</h3>
-              <p class="authors">Guilherme Colherinhas, Wesley B. Cardoso</p>
-              <p class="journal">Chemical Physics Letters, v. 837, 141056</p>
-<a href="https://doi.org/10.1016/j.cplett.2023.141056" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2023.141056 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Can machine learning efficiently predict symmetry breaking in physical problems like Bose-Einstein condensates?</h3>
-              <p class="authors">Bruno M. Miranda, Agnaldo R. de Almeida, Ardiley T. Avelar, Wesley B. Cardoso, Guilherme Colherinhas</p>
-              <p class="journal">Physica D: Nonlinear Phenomena, v. 464, 134198</p>
-<a href="https://doi.org/10.1016/j.physd.2024.134198" target="_blank" rel="noopener">DOI: 10.1016/j.physd.2024.134198 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2023">
-            <div class="pub-year">2023</div>
-            <div>
-              <h3>Unraveling local structures of Salt-in-Water and Water-in-Salt electrolytes via ab initio molecular dynamics</h3>
-              <p class="authors">Thaciana Malaspina, Guilherme Colherinhas, Stephen E. Weitzner, Brandon C. Wood, Eudes Eterno Fileti</p>
-              <p class="journal">Journal of Molecular Liquids, v. 383, 122097</p>
-<a href="https://doi.org/10.1016/j.molliq.2023.122097" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.122097 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2023">
-            <div class="pub-year">2023</div>
-            <div>
-              <h3>Polar Zipper on a Peptide Nanomembrane: A Characterization by Potential of Mean Force</h3>
-              <p class="authors">Douglas X. de Andrade, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry B, v. 127, n. 1, 228-235</p>
-<a href="https://doi.org/10.1021/acs.jpcb.2c07135" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.2c07135 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2023">
-            <div class="pub-year">2023</div>
-            <div>
-              <h3>Exploring Fullerenol-C60(OH)24 interactions with lipid bilayers: Molecular dynamics study of agglomeration and surface deposition</h3>
-              <p class="authors">Esequias Coelho, Douglas X. de Andrade, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 391, 123205</p>
-<a href="https://doi.org/10.1016/j.molliq.2023.123205" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.123205 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2023">
-            <div class="pub-year">2023</div>
-            <div>
-              <h3>Effects of Coulomb and vdW modifiers on hydrogen-bonds, energy and structural properties of peptide nanomembranes: A study by Molecular Dynamics simulations</h3>
-              <p class="authors">Agnaldo R. de Almeida, Guilherme Colherinhas, Douglas X. de Andrade</p>
-              <p class="journal">Journal of Molecular Liquids, v. 382, 122017</p>
-<a href="https://doi.org/10.1016/j.molliq.2023.122017" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.122017 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2023">
-            <div class="pub-year">2023</div>
-            <div>
-              <h3>Comparing supercapacitors with graphene/graphyne electrodes and [Bmim][PF6], [Emim][BF4], [Ch][Gly] and [Pyr][Tfsi] ionic liquids using molecular dynamics</h3>
-              <p class="authors">Henrique de Araujo Chagas, Eudes Eterno Fileti, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 379, 121703</p>
-<a href="https://doi.org/10.1016/j.molliq.2023.121703" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.121703 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2023">
-            <div class="pub-year">2023</div>
-            <div>
-              <h3>Ab Initio Dynamics of Graphene and Graphyne Electrodes in Vacuum and in the Presence of Electrolytes</h3>
-              <p class="authors">Thaciana Malaspina, Guilherme Colherinhas, Stephen E. Weitzner, Brandon C. Wood, Eudes Eterno Fileti</p>
-              <p class="journal">The Journal of Physical Chemistry C, v. 127, n. 13, 6515-6523</p>
-<a href="https://doi.org/10.1021/acs.jpcc.2c08699" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.2c08699 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2022">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>Statistical and energetic analysis of hydrogen bonds in short and long peptide nanotapes/nanofibers using molecular dynamics simulations</h3>
-              <p class="authors">Agnaldo R. de Almeida, Douglas X. de Andrade, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 359, 119308</p>
-<a href="https://doi.org/10.1016/j.molliq.2022.119308" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.119308 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2022">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>On the influence of increasing the concentration of Au144(SRCOO1-)60 nanoparticles in water/Na1+ solution using molecular dynamics simulations</h3>
-              <p class="authors">Giulia P. Bordoni, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 368, 120776</p>
-<a href="https://doi.org/10.1016/j.molliq.2022.120776" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.120776 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2022">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>Molecular dynamics study of hydrogen bond in peptide membrane at 150–300 K</h3>
-              <p class="authors">Eyber Domingos Alves, Douglas X. de Andrade, Agnaldo R. de Almeida, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 349, 118165</p>
-<a href="https://doi.org/10.1016/j.molliq.2021.118165" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.118165 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2022">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>Modeling, energetic and structural analysis of peptide membranes formed by arginine and phenylalanine (R2F4R2) using fully atomistic molecular dynamics</h3>
-              <p class="authors">Karinna Mendanha, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 367, 120498</p>
-<a href="https://doi.org/10.1016/j.molliq.2022.120498" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.120498 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2022">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>GIAO-NMR spectroscopy of the xanthine’s structures in water solution using S-MC/QM methodology: An evaluation of the DFT-functionals’ efficiency</h3>
-              <p class="authors">Guilherme Colherinhas, Valdemir Ludwig, Zélia M. da Costa Ludwig</p>
-              <p class="journal">Journal of Molecular Liquids, v. 347, 117955</p>
-<a href="https://doi.org/10.1016/j.molliq.2021.117955" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.117955 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2022">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>Fullerene C60 spectroscopy in [BMIM][PF6] ionic liquid: Molecular dynamics study using polarization effects</h3>
-              <p class="authors">Wesley Bueno Cardoso, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Structure, v. 1250, 131887</p>
-<a href="https://doi.org/10.1016/j.molstruc.2021.131887" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2021.131887 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2022">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>EF4K bola-amphiphilic peptide nanomembrane: structural, energetic and dynamic properties using molecular dynamics</h3>
-              <p class="authors">Elias Rafael de Sousa, Douglas Xavier de Andrade, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 368, 120651</p>
-<a href="https://doi.org/10.1016/j.molliq.2022.120651" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.120651 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2022">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>A molecular dynamics study of graphyne-based electrode and biocompatible ionic liquid for supercapacitor applications</h3>
-              <p class="authors">Henrique de Araujo Chagas, Eudes Eterno Fileti, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 360, 119494</p>
-<a href="https://doi.org/10.1016/j.molliq.2022.119494" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.119494 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2021">
-            <div class="pub-year">2021</div>
-            <div>
-              <h3>Updating atomic charge parameters of aliphatic amino acids: a quest to improve the performance of molecular modeling via sequential molecular dynamics and DFT-GIAO-NMR calculations</h3>
-              <p class="authors">Guilherme Colherinhas</p>
-              <p class="journal">Physical Chemistry Chemical Physics, v. 23, n. 14, 8413-8425</p>
-<a href="https://doi.org/10.1039/d1cp00183c" target="_blank" rel="noopener">DOI: 10.1039/d1cp00183c ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2021">
-            <div class="pub-year">2021</div>
-            <div>
-              <h3>Update of CHARMM36&#39;s atomic charges for aromatic amino acids in water solution simulations and spectroscopy analysis via sequential molecular dynamics and DFT calculations</h3>
-              <p class="authors">Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 321, 114739</p>
-<a href="https://doi.org/10.1016/j.molliq.2020.114739" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.114739 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2021">
-            <div class="pub-year">2021</div>
-            <div>
-              <h3>TD-DFT absorption spectrum of (poly)threonine in water: A study combining molecular dynamics and quantum mechanics calculations</h3>
-              <p class="authors">Karinna Mendanha, Richard C. Prado, Leonardo B.A. Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">Chemical Physics Letters, v. 779, 138876</p>
-<a href="https://doi.org/10.1016/j.cplett.2021.138876" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2021.138876 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2021">
-            <div class="pub-year">2021</div>
-            <div>
-              <h3>Molecular dynamic simulations, GIAO‐NMR and TD‐DFT spectroscopy analyze for zwitterionic isoleucine ( ILE ) N , 1 ≤ N ≤ 6, in water solution</h3>
-              <p class="authors">Karinna Mendanha, Richard Costa Prado, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Computational Chemistry, v. 42, n. 5, 344-357</p>
-<a href="https://doi.org/10.1002/jcc.26460" target="_blank" rel="noopener">DOI: 10.1002/jcc.26460 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2021">
-            <div class="pub-year">2021</div>
-            <div>
-              <h3>Laminar peptide structure: Energetic and structural evaluation using molecular dynamics</h3>
-              <p class="authors">Douglas X. de Andrade, Eyber D. Alves, Agnaldo R. de Almeida, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 341, 117261</p>
-<a href="https://doi.org/10.1016/j.molliq.2021.117261" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.117261 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2021">
-            <div class="pub-year">2021</div>
-            <div>
-              <h3>Hydroxylic, sulfur-containing and amidic amino acids in water solution: Atomic charges parameters for computational modeling using molecular dynamics simulation and DFT calculations</h3>
-              <p class="authors">Leonardo B.A. Oliveira, Wesley B. Cardoso, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 339, 116815</p>
-<a href="https://doi.org/10.1016/j.molliq.2021.116815" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.116815 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2021">
-            <div class="pub-year">2021</div>
-            <div>
-              <h3>Atomistic molecular dynamics study on the influence of high temperatures on the structure of peptide nanomembranes candidates for organic supercapacitor electrode</h3>
-              <p class="authors">Eyber D. Alves, Douglas X. de Andrade, Agnaldo R. de Almeida, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 334, 116126</p>
-<a href="https://doi.org/10.1016/j.molliq.2021.116126" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.116126 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2020">
-            <div class="pub-year">2020</div>
-            <div>
-              <h3>The influence of polar and non-polar interactions on the self-assembly of peptide nanomembranes and their applications: An atomistic study using classical molecular dynamics</h3>
-              <p class="authors">Douglas Andrade, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 318, 114263</p>
-<a href="https://doi.org/10.1016/j.molliq.2020.114263" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.114263 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2020">
-            <div class="pub-year">2020</div>
-            <div>
-              <h3>Design and analysis of polypeptide nanofiber using full atomistic Molecular Dynamic</h3>
-              <p class="authors">Douglas Andrade, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 302, 112610</p>
-<a href="https://doi.org/10.1016/j.molliq.2020.112610" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.112610 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2020">
-            <div class="pub-year">2020</div>
-            <div>
-              <h3>Can CHARMM36 atomic charges described correctly the interaction between amino acid and water molecules by molecular dynamics simulations?</h3>
-              <p class="authors">Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 317, 113919</p>
-<a href="https://doi.org/10.1016/j.molliq.2020.113919" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.113919 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2020">
-            <div class="pub-year">2020</div>
-            <div>
-              <h3>Assessing the DOPC-cholesterol interactions and their influence on fullerene C60 partitioning in lipid bilayers</h3>
-              <p class="authors">Eyber Domingos Alves, Guilherme Colherinhas, Sebastião Antonio Mendanha</p>
-              <p class="journal">Journal of Molecular Liquids, v. 315, 113698</p>
-<a href="https://doi.org/10.1016/j.molliq.2020.113698" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.113698 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2020">
-            <div class="pub-year">2020</div>
-            <div>
-              <h3>A6H polypeptide membranes: Molecular dynamics simulation, GIAO-DFT-NMR and TD-DFT spectroscopy analysis</h3>
-              <p class="authors">Douglas Andrade, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 316, 113850</p>
-<a href="https://doi.org/10.1016/j.molliq.2020.113850" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.113850 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2019">
-            <div class="pub-year">2019</div>
-            <div>
-              <h3>Understanding the stability of polypeptide membranes in ionic liquids: a theoretical molecular dynamics study</h3>
-              <p class="authors">Eyber Domingos Alves, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">New Journal of Chemistry, v. 43, n. 25, 10151-10161</p>
-<a href="https://doi.org/10.1039/c9nj01512d" target="_blank" rel="noopener">DOI: 10.1039/c9nj01512d ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2019">
-            <div class="pub-year">2019</div>
-            <div>
-              <h3>Solvent effects on the spectroscopic properties of Damascone derivatives: A sequential Monte Carlo/Quantum Mechanics study</h3>
-              <p class="authors">Agnaldo Rosa de Almeida, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">Chemical Physics Letters, v. 730, 531-537</p>
-<a href="https://doi.org/10.1016/j.cplett.2019.05.028" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2019.05.028 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2019">
-            <div class="pub-year">2019</div>
-            <div>
-              <h3>Robust Entanglement Generation in Lithium Ions Mediated by Graphene Quantum Dots Interaction</h3>
-              <p class="authors">Wesley B. Cardoso, Ardiley T. Avelar, Norton G. de Almeida, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry A, v. 123, n. 9, 1790-1795</p>
-<a href="https://doi.org/10.1021/acs.jpca.8b11354" target="_blank" rel="noopener">DOI: 10.1021/acs.jpca.8b11354 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2019">
-            <div class="pub-year">2019</div>
-            <div>
-              <h3>On the calculation of magnetic properties of nucleic acids in liquid water with the sequential QM/MM method</h3>
-              <p class="authors">G. Colherinhas, L.B.A. Oliveira, M.A. Castro, T.L. Fonseca, K. Coutinho, S. Canuto</p>
-              <p class="journal">Journal of Molecular Liquids, v. 294, 111611</p>
-<a href="https://doi.org/10.1016/j.molliq.2019.111611" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2019.111611 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2019">
-            <div class="pub-year">2019</div>
-            <div>
-              <h3>Investigating the asymmetry in the EDL response of C 60 /graphene supercapacitors</h3>
-              <p class="authors">Eudes Eterno Fileti, Guilherme Colherinhas</p>
-              <p class="journal">Physical Chemistry Chemical Physics, v. 21, n. 28, 15362-15371</p>
-<a href="https://doi.org/10.1039/c9cp02664a" target="_blank" rel="noopener">DOI: 10.1039/c9cp02664a ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2019">
-            <div class="pub-year">2019</div>
-            <div>
-              <h3>Elucidating NH2-I3V3A3G3K3-COOH and NH2-K3G3A3V3I3-COOH polypeptide membranes: A classical molecular dynamics study</h3>
-              <p class="authors">Douglas Andrade, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 279, 740-749</p>
-<a href="https://doi.org/10.1016/j.molliq.2019.02.006" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2019.02.006 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2018">
-            <div class="pub-year">2018</div>
-            <div>
-              <h3>The influence of flexibility on the spectroscopic properties for organic molecules in solution: A theoretical study applied to A3R polypeptide</h3>
-              <p class="authors">Leonardo B.A. Oliveira, Richard C. Prado, Luizmar A. Júnior, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 263, 334-341</p>
-<a href="https://doi.org/10.1016/j.molliq.2018.05.007" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2018.05.007 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2018">
-            <div class="pub-year">2018</div>
-            <div>
-              <h3>Storing Energy in Biodegradable Electrochemical Supercapacitors</h3>
-              <p class="authors">Guilherme Colherinhas, Thaciana Malaspina, Eudes Eterno Fileti</p>
-              <p class="journal">ACS Omega, v. 3, n. 10, 13869-13875</p>
-<a href="https://doi.org/10.1021/acsomega.8b01980" target="_blank" rel="noopener">DOI: 10.1021/acsomega.8b01980 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2018">
-            <div class="pub-year">2018</div>
-            <div>
-              <h3>Storing Energy in Biodegradable Electrochemical Supercapacitors</h3>
-              <p class="authors">Guilherme Colherinhas, Thaciana Malaspina, Eudes Eterno Fileti</p>
-              <p class="journal">ACS Omega</p>
-<a href="https://doi.org/10.1021/acsomega.8b01980.s001" target="_blank" rel="noopener">DOI: 10.1021/acsomega.8b01980.s001 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2018">
-            <div class="pub-year">2018</div>
-            <div>
-              <h3>Stability and Structural Analysis of A 6 R Polypeptide Nanosheets: A Theoretical Study Using the Classical Molecular Dynamics Simulation</h3>
-              <p class="authors">Bárbara Proença, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry C, v. 122, n. 42, 24445-24453</p>
-<a href="https://doi.org/10.1021/acs.jpcc.8b07927" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.8b07927 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2018">
-            <div class="pub-year">2018</div>
-            <div>
-              <h3>Spectroscopic properties and solute–solvent structural analyses for A N R polypeptides in water solution: a sequential Monte Carlo/quantum mechanics (S-MC/QM) theoretical study</h3>
-              <p class="authors">Richard Costa Prado, Guilherme Colherinhas, Leonardo Bruno Assis Oliveira</p>
-              <p class="journal">New Journal of Chemistry, v. 42, n. 24, 19692-19700</p>
-<a href="https://doi.org/10.1039/c8nj03070g" target="_blank" rel="noopener">DOI: 10.1039/c8nj03070g ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2018">
-            <div class="pub-year">2018</div>
-            <div>
-              <h3>Solvent effects on the electrical and magnetic spectroscopic properties of azo-enaminone derivatives in methanol and in water</h3>
-              <p class="authors">Leonardo Bruno Assis Oliveira, Luizmar Adriano Júnior, Guilherme Colherinhas</p>
-              <p class="journal">New Journal of Chemistry, v. 42, n. 14, 12032-12044</p>
-<a href="https://doi.org/10.1039/c8nj01842a" target="_blank" rel="noopener">DOI: 10.1039/c8nj01842a ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2018">
-            <div class="pub-year">2018</div>
-            <div>
-              <h3>Matemática básica aplicada ao ensino de física: relação entre competências e habilidades técnicas necessárias para a resolução de problemas de física segundo o Inep</h3>
-              <p class="authors">Patrícia Cardoso de Andrade, Guilherme Colherinhas de Oliveira</p>
-              <p class="journal">Ensino e Tecnologia em Revista, v. 2, n. 1, 3</p>
-<a href="https://doi.org/10.3895/etr.v2n1.5961" target="_blank" rel="noopener">DOI: 10.3895/etr.v2n1.5961 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2018">
-            <div class="pub-year">2018</div>
-            <div>
-              <h3>GIAO-DFT-NMR characterization of fullerene-cucurbituril complex: the effects of the C60@CB[9] host-guest mutual interactions</h3>
-              <p class="authors">Guilherme Colherinhas, Eudes Eterno Fileti, Thaciana Malaspina</p>
-              <p class="journal">Journal of Molecular Modeling, v. 24, n. 7, 181</p>
-<a href="https://doi.org/10.1007/s00894-018-3719-3" target="_blank" rel="noopener">DOI: 10.1007/s00894-018-3719-3 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2017">
-            <div class="pub-year">2017</div>
-            <div>
-              <h3>TD-DFT and GIAO-NMR spectroscopy studies for maltose and (α- and β)-glucose in water solution using S-MC/QM polarization methodology</h3>
-              <p class="authors">Leonardo B.A. Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 237, 295-303</p>
-<a href="https://doi.org/10.1016/j.molliq.2017.04.108" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2017.04.108 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2017">
-            <div class="pub-year">2017</div>
-            <div>
-              <h3>Hydration properties of the polyalanines by atomistic molecular dynamics</h3>
-              <p class="authors">Thaciana Malaspina, Felipe de Oliveira Outi, Guilherme Colherinhas, Eudes E. Fileti</p>
-              <p class="journal">Journal of Molecular Liquids, v. 244, 285-290</p>
-<a href="https://doi.org/10.1016/j.molliq.2017.09.003" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2017.09.003 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2017">
-            <div class="pub-year">2017</div>
-            <div>
-              <h3>Elucidating the stability of bolaamphiphilic polypeptide nanosheets using atomistic molecular dynamics</h3>
-              <p class="authors">T. Malaspina, E. E. Fileti, G. Colherinhas</p>
-              <p class="journal">Physical Chemistry Chemical Physics, v. 19, n. 47, 31921-31928</p>
-<a href="https://doi.org/10.1039/c7cp06284b" target="_blank" rel="noopener">DOI: 10.1039/c7cp06284b ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2017">
-            <div class="pub-year">2017</div>
-            <div>
-              <h3>Assessing the interaction between surfactant-like peptides and lipid membranes</h3>
-              <p class="authors">Thaciana Malaspina, Guilherme Colherinhas, Felipe de Oliveira Outi, Eudes E. Fileti</p>
-              <p class="journal">RSC Advances, v. 7, n. 57, 35973-35981</p>
-<a href="https://doi.org/10.1039/c7ra04537a" target="_blank" rel="noopener">DOI: 10.1039/c7ra04537a ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2017">
-            <div class="pub-year">2017</div>
-            <div>
-              <h3>All-boron fullerene exhibits a strong affinity to inorganic anions</h3>
-              <p class="authors">Guilherme Colherinhas, Eudes Eterno Fileti, Vitaly V. Chaban</p>
-              <p class="journal">Chemical Physics Letters, v. 671, 107-112</p>
-<a href="https://doi.org/10.1016/j.cplett.2017.01.025" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2017.01.025 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2016">
-            <div class="pub-year">2016</div>
-            <div>
-              <h3>Versatile interactions of boron fullerene B 80 with gas molecules</h3>
-              <p class="authors">Guilherme Colherinhas, Eudes Eterno Fileti, Vitaly V. Chaban</p>
-              <p class="journal">RSC Advances, v. 6, n. 82, 78684-78691</p>
-<a href="https://doi.org/10.1039/c6ra15793a" target="_blank" rel="noopener">DOI: 10.1039/c6ra15793a ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2016">
-            <div class="pub-year">2016</div>
-            <div>
-              <h3>Potential energy surface of excited semiconductors: Graphene quantum dot and BODIPY</h3>
-              <p class="authors">Guilherme Colherinhas, Eudes Eterno Fileti, Vitaly V. Chaban</p>
-              <p class="journal">Chemical Physics, v. 474, 1-6</p>
-<a href="https://doi.org/10.1016/j.chemphys.2016.05.011" target="_blank" rel="noopener">DOI: 10.1016/j.chemphys.2016.05.011 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2016">
-            <div class="pub-year">2016</div>
-            <div>
-              <h3>GIAO⿿DFT isotropic magnetic shielding constants and spin⿿spin coupling of tartaric acid in water solution</h3>
-              <p class="authors">Bruna Fideles, Leonardo B.A. Oliveira, Guilherme Colherinhas</p>
-              <p class="journal">Chemical Physics Letters, v. 644, 205-211</p>
-<a href="https://doi.org/10.1016/j.cplett.2015.12.003" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2015.12.003 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2015">
-            <div class="pub-year">2015</div>
-            <div>
-              <h3>The Band Gap of Graphene Is Efficiently Tuned by Monovalent Ions</h3>
-              <p class="authors">Guilherme Colherinhas, Eudes Eterno Fileti, Vitaly V. Chaban</p>
-              <p class="journal">The Journal of Physical Chemistry Letters, v. 6, n. 2, 302-307</p>
-<a href="https://doi.org/10.1021/jz502601z" target="_blank" rel="noopener">DOI: 10.1021/jz502601z ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2015">
-            <div class="pub-year">2015</div>
-            <div>
-              <h3>Spectroscopic properties of vitamin E models in solution</h3>
-              <p class="authors">L.B.A. Oliveira, G. Colherinhas, T.L. Fonseca, M.A. Castro</p>
-              <p class="journal">Chemical Physics Letters, v. 628, 49-53</p>
-<a href="https://doi.org/10.1016/j.cplett.2015.03.045" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2015.03.045 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2015">
-            <div class="pub-year">2015</div>
-            <div>
-              <h3>Can inorganic salts tune electronic properties of graphene quantum dots?</h3>
-              <p class="authors">Guilherme Colherinhas, Eudes Eterno Fileti, Vitaly V. Chaban</p>
-              <p class="journal">Physical Chemistry Chemical Physics, v. 17, n. 26, 17413-17420</p>
-<a href="https://doi.org/10.1039/c5cp02083b" target="_blank" rel="noopener">DOI: 10.1039/c5cp02083b ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2015">
-            <div class="pub-year">2015</div>
-            <div>
-              <h3>Can Inorganic Salts Tune Electronic Properties of Graphene?</h3>
-              <p class="authors">Colherinhas, Guilherme, Eterno Fileti, Eudes, V. Chaban, Vitaly</p>
-              <p class="journal">ArXiv</p>
-<a href="https://publons.com/wos-op/publon/1284748/" target="_blank" rel="noopener">Abrir registro ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2014">
-            <div class="pub-year">2014</div>
-            <div>
-              <h3>Solvent effects on the first hyperpolarizability of retinal derivatives</h3>
-              <p class="authors">L.A. Junior, G. Colherinhas, T.L. Fonseca, M.A. Castro</p>
-              <p class="journal">Chemical Physics Letters, v. 598, 43-47</p>
-<a href="https://doi.org/10.1016/j.cplett.2014.02.051" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2014.02.051 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2014">
-            <div class="pub-year">2014</div>
-            <div>
-              <h3>Predicting the properties of a new class of host–guest complexes: C 60 fullerene and CB[9] cucurbituril</h3>
-              <p class="authors">Eudes Fileti, Guilherme Colherinhas, Thaciana Malaspina</p>
-              <p class="journal">Phys. Chem. Chem. Phys., v. 16, n. 41, 22823-22829</p>
-<a href="https://doi.org/10.1039/c4cp03299c" target="_blank" rel="noopener">DOI: 10.1039/c4cp03299c ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2014">
-            <div class="pub-year">2014</div>
-            <div>
-              <h3>Molecular Dynamics Study of Surfactant-Like Peptide Based Nanostructures</h3>
-              <p class="authors">Guilherme Colherinhas, Eudes Fileti</p>
-              <p class="journal">The Journal of Physical Chemistry B, v. 118, n. 42, 12215-12222</p>
-<a href="https://doi.org/10.1021/jp5082593" target="_blank" rel="noopener">DOI: 10.1021/jp5082593 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2014">
-            <div class="pub-year">2014</div>
-            <div>
-              <h3>Molecular Description of Surfactant-like Peptide Based Membranes</h3>
-              <p class="authors">Guilherme Colherinhas, Eudes Fileti</p>
-              <p class="journal">The Journal of Physical Chemistry C, v. 118, n. 18, 9598-9603</p>
-<a href="https://doi.org/10.1021/jp502420x" target="_blank" rel="noopener">DOI: 10.1021/jp502420x ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2013">
-            <div class="pub-year">2013</div>
-            <div>
-              <h3>Isotropic magnetic shielding constants of retinal derivatives in aprotic and protic solvents</h3>
-              <p class="authors">G. Colherinhas, T. L. Fonseca, M. A. Castro, K. Coutinho, S. Canuto</p>
-              <p class="journal">The Journal of Chemical Physics, v. 139, n. 9, 094502</p>
-<a href="https://doi.org/10.1063/1.4819694" target="_blank" rel="noopener">DOI: 10.1063/1.4819694 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2011">
-            <div class="pub-year">2011</div>
-            <div>
-              <h3>Theoretical analysis of the hydration of C60 in normal and supercritical conditions</h3>
-              <p class="authors">Guilherme Colherinhas, Tertius L. Fonseca, Eudes E. Fileti</p>
-              <p class="journal">Carbon, v. 49, n. 1, 187-192</p>
-<a href="https://doi.org/10.1016/j.carbon.2010.09.002" target="_blank" rel="noopener">DOI: 10.1016/j.carbon.2010.09.002 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2011">
-            <div class="pub-year">2011</div>
-            <div>
-              <h3>Isomerization effects on chemical shifts and spin‐spin coupling constants of polyacetylene chains: A GIAO‐DFT study</h3>
-              <p class="authors">G. Colherinhas, T. L. Fonseca, H. C. Georg, M. A. Castro</p>
-              <p class="journal">International Journal of Quantum Chemistry, v. 111, n. 7-8, 1616-1625</p>
-<a href="https://doi.org/10.1002/qua.22672" target="_blank" rel="noopener">DOI: 10.1002/qua.22672 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2011">
-            <div class="pub-year">2011</div>
-            <div>
-              <h3>13C chemical shifts of polyacetylene chains with charged conformational defects: A GIAO–DFT study</h3>
-              <p class="authors">G. Colherinhas, T.L. Fonseca, M.A. Castro</p>
-              <p class="journal">Chemical Physics Letters, v. 503, n. 4-6, 191-196</p>
-<a href="https://doi.org/10.1016/j.cplett.2011.01.014" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2011.01.014 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2007">
-            <div class="pub-year">2007</div>
-            <div>
-              <h3>INTERACTION OF A TWO-LEVEL ATOM WITH A SQUEEZED DISPLACED NUMBER STATE</h3>
-              <p class="authors">GUILHERME C. DE OLIVEIRA, CÉLIA M. A. DANTAS, JOSÉ S. SALES</p>
-              <p class="journal">International Journal of Modern Physics B, v. 21, n. 16, 2723-2733</p>
-<a href="https://doi.org/10.1142/s0217979207037260" target="_blank" rel="noopener">DOI: 10.1142/s0217979207037260 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2006">
-            <div class="pub-year">2006</div>
-            <div>
-              <h3>SCATTERING OF ATOMS BY LIGHT: MEASURING THE QUANTUM STATE OF THE FIELD IN A CAVITY</h3>
-              <p class="authors">GUILHERME C. DE OLIVEIRA, AGNALDO R. DE ALMEIDA, MARTA J. F. S. SOUZA, ARTHUR M. MORAES, CELIA M. A. DANTAS</p>
-              <p class="journal">International Journal of Modern Physics B, v. 20, n. 03, 325-339</p>
-<a href="https://doi.org/10.1142/s0217979206033231" target="_blank" rel="noopener">DOI: 10.1142/s0217979206033231 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2006">
-            <div class="pub-year">2006</div>
-            <div>
-              <h3>NONLINEAR EVEN AND ODD DISPLACED NUMBER STATE</h3>
-              <p class="authors">GUILHERME C. DE OLIVEIRA, AGAMENON L. DO VALE, CELIA M. A. DANTAS</p>
-              <p class="journal">Modern Physics Letters B, v. 20, n. 18, 1135-1146</p>
-<a href="https://doi.org/10.1142/s021798490601161x" target="_blank" rel="noopener">DOI: 10.1142/s021798490601161x ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2005">
-            <div class="pub-year">2005</div>
-            <div>
-              <h3>Nonlinear displaced number states</h3>
-              <p class="authors">Guilherme C. de Oliveira, Agnaldo R. de Almeida, Célia M.A. Dantas, Arthur M. Moraes</p>
-              <p class="journal">Physics Letters A, v. 339, n. 3-5, 275-282</p>
-<a href="https://doi.org/10.1016/j.physleta.2005.03.033" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2005.03.033 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2005">
-            <div class="pub-year">2005</div>
-            <div>
-              <h3>EVEN AND ODD DISPLACED NUMBER STATE</h3>
-              <p class="authors">GUILHERME C. DE OLIVEIRA, PAULO S. MELO, CELIA M. A. DANTAS, ELIAS DE S. LEITE</p>
-              <p class="journal">Modern Physics Letters B, v. 19, n. 26, 1347-1360</p>
-<a href="https://doi.org/10.1142/s021798490500916x" target="_blank" rel="noopener">DOI: 10.1142/s021798490500916x ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2005">
-            <div class="pub-year">2005</div>
-            <div>
-              <h3>Alternative proposal for the generation of the displaced number state</h3>
-              <p class="authors">Guilherme C. de Oliveira, Agnaldo R. de Almeida, Iara P. de Queirós, Arthur M. Moraes, Célia M.A. Dantas</p>
-              <p class="journal">Physica A: Statistical Mechanics and its Applications, v. 351, n. 2-4, 251-259</p>
-<a href="https://doi.org/10.1016/j.physa.2004.11.066" target="_blank" rel="noopener">DOI: 10.1016/j.physa.2004.11.066 ↗</a>            </div>
-          </article>
-        </div>
-        <div class="empty-state profile-year-empty" data-person-year-empty hidden>
-          <strong>Nenhuma produção encontrada para o ano selecionado.</strong>
-          <p>Use o seletor acima para consultar as produções dos demais anos.</p>
-        </div>
-      </section>
-    </div>
-
-    <aside class="profile-aside">
-      <div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2018</dd></div><div><dt>Saída</dt><dd>—</dd></div><div><dt>Bolsa</dt><dd>CNPq - Produtividade em Pesquisa, Nível 2</dd></div></dl></div>
-<div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Licenciatura em Física - PUC Goiás (2003)</dd></div><div><dt>Graduação adicional</dt><dd>Big Data e Inteligência Artificial - PUC Goiás (2023)</dd></div><div><dt>Especialização</dt><dd>Ensino de Ciências e Matemática - PUC Goiás (2004)</dd></div><div><dt>Mestrado</dt><dd>Física - UFG (2006)</dd></div><div><dt>Doutorado</dt><dd>Física - UFG (2012)</dd></div></dl></div>    </aside>
+      <div class="profile-year-summary" data-person-year-summary aria-label="Produções distribuídas por ano"></div>
+      <div class="publication-list" data-person-publications><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Water-Mediated Stability of Ionic Liquids Confined in Aqueous Droplets: Molecular Dynamics Insights with Atmospheric Parallels</h3><p class="authors">Tertius Lima Fonseca, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 130, n. 2, 800-813</p><a href="https://doi.org/10.1021/acs.jpcb.5c06039" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.5c06039 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Unveiling the Potential of Natural Deep Eutectic Solvents in Electrochemical Energy Storage Applications</h3><p class="authors">Henrique de Araujo Chagas, Guilherme Colherinhas, Eudes E. Fileti</p><p class="journal">ACS Physical Chemistry Au, v. 6, n. 1, 29-37</p><a href="https://doi.org/10.1021/acsphyschemau.5c00063" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00063 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Temperature Effects on the Structural Stability of EF 4 K Peptide Membranes: Insights into Mono- and Multilayer Architectures</h3><p class="authors">Karinna Mendanha, Douglas Xavier de Andrade, Guilherme Colherinhas</p><p class="journal">ACS Materials Au, v. 6, n. 2, 437-449</p><a href="https://doi.org/10.1021/acsmaterialsau.5c00214" target="_blank" rel="noopener">DOI: 10.1021/acsmaterialsau.5c00214 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Repurposing HIV Protease Inhibitors against West Nile Virus: Insights from Molecular Docking and Molecular Dynamics Simulations</h3><p class="authors">Renato D. dos Santos, Guilherme Colherinhas, Wesley B. Cardoso</p><p class="journal">ACS Physical Chemistry Au, acsphyschemau.6c00043</p><a href="https://doi.org/10.1021/acsphyschemau.6c00043" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.6c00043 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Peptide–Carbon Nanotube Hybrids under Confinement: Structure and Stability from Atomistic Simulations</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">ACS Omega, acsomega.5c12748</p><a href="https://doi.org/10.1021/acsomega.5c12748" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c12748 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Hydrogen bonding and membrane anchoring of the antimicrobial peptide NP-3a investigated through molecular dynamics</h3><p class="authors">Ana Clara D. Aquino, Karinna Mendanha, Herbert de C. Georg, Guilherme Colherinhas</p><p class="journal">Computational Biology and Chemistry, v. 123, 108997</p><a href="https://doi.org/10.1016/j.compbiolchem.2026.108997" target="_blank" rel="noopener">DOI: 10.1016/j.compbiolchem.2026.108997 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Hydration and Molar Ratio Effects in Choline Chloride-Phenol Deep Eutectic Solvents</h3><p class="authors">Lucas de S. Silva, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 130, n. 23, 5923-5938</p><a href="https://doi.org/10.1021/acs.jpcb.6c01636" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.6c01636 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Ester-Based Electrolyte Mixtures for Graphene Supercapacitors: A Molecular Dynamics Investigation</h3><p class="authors">Lucas de S. Silva, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 130, n. 7, 2178-2193</p><a href="https://doi.org/10.1021/acs.jpcb.5c06507" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.5c06507 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Does Electrode Spacing Truly Control Capacitance and Energy Density in Graphene-Based Supercapacitors? A Molecular Simulation Perspective</h3><p class="authors">Davi de Oliveira Guedes, Henrique de Araujo Chagas, Iuliia V. Voroshylova, Guilherme Colherinhas</p><p class="journal">ACS Omega, v. 11, n. 22, 33072-33085</p><a href="https://doi.org/10.1021/acsomega.6c02890" target="_blank" rel="noopener">DOI: 10.1021/acsomega.6c02890 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Cholesterol-Driven Optimization of Liposomal Systems for Ivermectin Capture: Insights from Experimental and Molecular Dynamics Studies</h3><p class="authors">Alexandre C. M. Barros, Jader Pires, Karinna Mendanha, Lucas R. de Sousa, Bianca B. Fontanezi, Guilherme Colherinhas, Ana F. M. Botelho, Sebastião A. Mendanha, Eliana M. Lima</p><p class="journal">ACS Applied Materials &amp;amp; Interfaces, v. 18, n. 7, 10832-10841</p><a href="https://doi.org/10.1021/acsami.5c21365" target="_blank" rel="noopener">DOI: 10.1021/acsami.5c21365 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Chloride substitution and hydration effects in [emim][bnz] electrolytes for lightweight supercapacitors</h3><p class="authors">Leonardo B.A. Oliveira, Lucas de S. Silva, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 443, 129142</p><a href="https://doi.org/10.1016/j.molliq.2025.129142" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.129142 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Bio-Inspired Peptide Membranes for CO 2 Capture: A Molecular Dynamics Study of A 6 H and A 6 R Interfaces</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 130, n. 20, 5152-5164</p><a href="https://doi.org/10.1021/acs.jpcb.6c00256" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.6c00256 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Atomic-Scale Insights into Phosphorene-Ionic Liquid Interface with Ab Initio Molecular Dynamics</h3><p class="authors">Debora Ariana C. da Silva, Guilherme Colherinhas, Eudes Eterno Fileti</p><p class="journal">ACS Physical Chemistry Au, v. 6, n. 1, 207-214</p><a href="https://doi.org/10.1021/acsphyschemau.5c00111" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00111 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Versatility of self-assembling A6K peptide nanomembranes under thermal variation: A molecular dynamics analysis across the 300–400 K range</h3><p class="authors">Karinna Mendanha, Douglas X. de Andrade, Guilherme Colherinhas</p><p class="journal">Surfaces and Interfaces, v. 69, 106746</p><a href="https://doi.org/10.1016/j.surfin.2025.106746" target="_blank" rel="noopener">DOI: 10.1016/j.surfin.2025.106746 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Temperature dependence of electric double-layer structure and electrochemical properties in graphene supercapacitors with [emim][BF₄] electrolyte: A molecular dynamics study</h3><p class="authors">Henrique de Araujo Chagas, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 877, 142325</p><a href="https://doi.org/10.1016/j.cplett.2025.142325" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142325 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Sustainable supercapacitors using advanced hydrated amino acid ionic liquids: A novel approach to biodegradable energy storage</h3><p class="authors">Lucas de S. Silva, Henrique de A. Chagas, G. Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 417, 126638</p><a href="https://doi.org/10.1016/j.molliq.2024.126638" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126638 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Structural and electrochemical properties of graphene-based supercapacitors with water and methanol-co-solvated ionic liquids: a molecular dynamics study</h3><p class="authors">Lucas de S. Silva, Leonardo B.A. Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 434, 128041</p><a href="https://doi.org/10.1016/j.molliq.2025.128041" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.128041 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Quantum Molecular Dynamics Approach to Understanding Interactions in Betaine Chloride and Amino Acid Natural Deep Eutectic Solvents</h3><p class="authors">Eudes Eterno Fileti, Henrique de Araujo Chagas, Guilherme Colherinhas, Thaciana Malaspina</p><p class="journal">ACS Physical Chemistry Au, v. 5, n. 1, 72-79</p><a href="https://doi.org/10.1021/acsphyschemau.4c00072" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.4c00072 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Performance Analysis of Supercapacitors With Graphene and Graphyne Electrodes</h3><p class="authors">Henrique de Araujo Chagas, Thaciana Malaspina, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Energy Storage, v. 7, n. 1, e70114</p><a href="https://doi.org/10.1002/est2.70114" target="_blank" rel="noopener">DOI: 10.1002/est2.70114 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Molecular Dynamics Study of Functionalized Gold Nanoparticles: Structural and Aggregation Behavior under Varying Ionic Strength</h3><p class="authors">Esequias Coelho, Douglas Xavier de Andrade, Agnaldo Rosa de Almeida, Guilherme Colherinhas</p><p class="journal">ACS Physical Chemistry Au, v. 5, n. 6, 699-715</p><a href="https://doi.org/10.1021/acsphyschemau.5c00077" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00077 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Molecular Dynamics Simulations of Self-Assembled E 2 (SW) 6 E 2 Peptide Nanofibers: Implications for Drug Delivery and Biomimetic Material Design</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">ACS Physical Chemistry Au, v. 5, n. 3, 302-315</p><a href="https://doi.org/10.1021/acsphyschemau.5c00028" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00028 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Modeling supercapacitors with integrated conductors via molecular dynamics: Optimization and impacts on energy efficiency</h3><p class="authors">Henrique de Araujo Chagas, Tertius Lima Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Power Sources, v. 656, 238100</p><a href="https://doi.org/10.1016/j.jpowsour.2025.238100" target="_blank" rel="noopener">DOI: 10.1016/j.jpowsour.2025.238100 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Investigating the Impact of Positively Charged Gold Nanoparticle (AuNP) Concentration in Water/Cl – Solutions Using Molecular Dynamics Simulations</h3><p class="authors">Esequias Coelho, Douglas Xavier de Andrade, Agnaldo Rosa de Almeida, Guilherme Colherinhas</p><p class="journal">ACS Omega, v. 10, n. 20, 20610-20622</p><a href="https://doi.org/10.1021/acsomega.5c01441" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c01441 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Insights into Antiviral Candidates against Oropouche Virus: A Molecular Dynamics Study</h3><p class="authors">Guilherme Colherinhas, Wesley B. Cardoso</p><p class="journal">ACS Physical Chemistry Au, v. 5, n. 5, 549-559</p><a href="https://doi.org/10.1021/acsphyschemau.5c00042" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00042 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Impact of Chloride and Bromide Composition in Ionic Liquid/Water Electrolytes on the Electrochemical Performance of Graphene-Based Supercapacitors: A Molecular Dynamics Study</h3><p class="authors">Leonardo B. A. Oliveira, Lucas de S Silva, Henrique de Araujo Chagas, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry C, v. 129, n. 30, 13532-13541</p><a href="https://doi.org/10.1021/acs.jpcc.5c01816" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.5c01816 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Exploring MXene Materials in Energy Storage Devices: A Review of Supercapacitor Applications</h3><p class="authors">Lucas de Sousa Silva, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">ACS Materials Au, v. 5, n. 6, 920-939</p><a href="https://doi.org/10.1021/acsmaterialsau.5c00102" target="_blank" rel="noopener">DOI: 10.1021/acsmaterialsau.5c00102 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Evaluation of Structural and Electrochemical Properties of Supercapacitors with Graphene Electrodes and Hydrated Pure or Mixed [bmim]-Based Ionic Liquids via Molecular Dynamics</h3><p class="authors">Lucas de S. Silva, Guilherme Colherinhas</p><p class="journal">ACS Physical Chemistry Au, v. 5, n. 5, 519-532</p><a href="https://doi.org/10.1021/acsphyschemau.5c00036" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00036 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Computational analysis of KGAVK peptide nanorod model: High structural stability under low hydration</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 437, 128515</p><a href="https://doi.org/10.1016/j.molliq.2025.128515" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.128515 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Biodegradable ionic liquids in energy storage: Molecular insights into hydration-controlled performance in graphene-based supercapacitors</h3><p class="authors">Matheus R.N. Dias, Matheus A. Arebalo, Henrique A. Chagas, Wesley B. Cardoso, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 881, 142440</p><a href="https://doi.org/10.1016/j.cplett.2025.142440" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142440 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Anisotropic Ferricyanide Ionic Liquids and Confined SCILLs for Selective CO 2 Fixation via NHC–CO 2 Mediated Catch-and-Release Catalysis</h3><p class="authors">Camila P. Ebersol, Jonas X. Torres, Rafael P. das Chagas, Luciano M. Lião, Muhammad Nisar, Pedro H. F. Matias, Heibbe Cristhian. B. de Oliveira, José S. S. Neto, Guilherme Colherinhas, Muhammad I. Qadir</p><p class="journal">The Journal of Physical Chemistry C, v. 129, n. 45, 20258-20267</p><a href="https://doi.org/10.1021/acs.jpcc.5c06371" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.5c06371 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Theoretical study on symmetric and asymmetric stacking in the self-assembly of bola-amphiphilic peptides into membranes with mixtures of EF4E and KF4K</h3><p class="authors">Elias Rafael de Sousa, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 400, 124535</p><a href="https://doi.org/10.1016/j.molliq.2024.124535" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.124535 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Systematic analysis to evaluate the impact of hydration on electrolytes [emim][BF4] and [cho][gly] in supercapacitors formed by graphene or graphyne electrodes</h3><p class="authors">Henrique de Araujo Chagas, Leonardo B.A. Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 415, 126280</p><a href="https://doi.org/10.1016/j.molliq.2024.126280" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126280 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Solvent effects on the spectroscopic properties of cannabinoids derivatives: A theoretical study using PCM</h3><p class="authors">Richard Costa Prado, Verônyca Santos Filho, Samanta Aparecida Portes, Guilherme Colherinhas, Leonardo Bruno Assis Oliveira</p><p class="journal">International Journal of Quantum Chemistry, v. 124, n. 11, e27417</p><a href="https://doi.org/10.1002/qua.27417" target="_blank" rel="noopener">DOI: 10.1002/qua.27417 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Selecting electronic transitions between graphyne and lithium ions for entanglement generation using new organic material</h3><p class="authors">Lucas S. Silva, Wesley B. Cardoso, Guilherme Colherinhas</p><p class="journal">Computational and Theoretical Chemistry, v. 1238, 114692</p><a href="https://doi.org/10.1016/j.comptc.2024.114692" target="_blank" rel="noopener">DOI: 10.1016/j.comptc.2024.114692 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Investigating ionic liquid hydration effects at high temperatures: Insights from classic molecular dynamics simulations</h3><p class="authors">Leonardo Bruno Assis Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 393, 123662</p><a href="https://doi.org/10.1016/j.molliq.2023.123662" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.123662 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Exploring How System Dimensions and Periodic Boundary Conditions Influence the Molecular Dynamics Simulation of A 6 H Peptide Self-Assembly Nanostructures</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 128, n. 28, 6853-6865</p><a href="https://doi.org/10.1021/acs.jpcb.4c03043" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.4c03043 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Evaluating quantum entanglement generation in two‐dimensional graphene systems through lithium ion interactions: A DFT‐based study</h3><p class="authors">Lucas de S. Silva, Guilherme Colherinhas, Wesley B. Cardoso</p><p class="journal">Journal of Computational Chemistry, v. 45, n. 13, 1002-1007</p><a href="https://doi.org/10.1002/jcc.27303" target="_blank" rel="noopener">DOI: 10.1002/jcc.27303 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Employing molecular dynamics simulations and DFT calculations to elucidate the energetic, structural, and spectroscopic attributes of (poly)valines in water solution</h3><p class="authors">R.C. Prado, K. Mendanha, L.B.A. Oliveira, G. Colherinhas</p><p class="journal">Chemical Physics Letters, v. 847, 141364</p><a href="https://doi.org/10.1016/j.cplett.2024.141364" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2024.141364 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Dynamic interactions of negatively charged gold nanoparticles (AuNPs) in aqueous environments with different ionic compositions</h3><p class="authors">Esequias Coelho, Douglas Xavier, Agnaldo Almeida, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 413, 126021</p><a href="https://doi.org/10.1016/j.molliq.2024.126021" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126021 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>DFT-based investigation of graphene-mediated manipulation for efficient potassium ion entanglement</h3><p class="authors">Guilherme Colherinhas, Wesley B. Cardoso</p><p class="journal">Chemical Physics Letters, v. 837, 141056</p><a href="https://doi.org/10.1016/j.cplett.2023.141056" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2023.141056 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Can machine learning efficiently predict symmetry breaking in physical problems like Bose-Einstein condensates?</h3><p class="authors">Bruno M. Miranda, Agnaldo R. de Almeida, Ardiley T. Avelar, Wesley B. Cardoso, Guilherme Colherinhas</p><p class="journal">Physica D: Nonlinear Phenomena, v. 464, 134198</p><a href="https://doi.org/10.1016/j.physd.2024.134198" target="_blank" rel="noopener">DOI: 10.1016/j.physd.2024.134198 ↗</a></div></article><article class="publication" data-person-publication data-year="2023"><div class="pub-year">2023</div><div><h3>Unraveling local structures of Salt-in-Water and Water-in-Salt electrolytes via ab initio molecular dynamics</h3><p class="authors">Thaciana Malaspina, Guilherme Colherinhas, Stephen E. Weitzner, Brandon C. Wood, Eudes Eterno Fileti</p><p class="journal">Journal of Molecular Liquids, v. 383, 122097</p><a href="https://doi.org/10.1016/j.molliq.2023.122097" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.122097 ↗</a></div></article><article class="publication" data-person-publication data-year="2023"><div class="pub-year">2023</div><div><h3>Polar Zipper on a Peptide Nanomembrane: A Characterization by Potential of Mean Force</h3><p class="authors">Douglas X. de Andrade, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 127, n. 1, 228-235</p><a href="https://doi.org/10.1021/acs.jpcb.2c07135" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.2c07135 ↗</a></div></article><article class="publication" data-person-publication data-year="2023"><div class="pub-year">2023</div><div><h3>Exploring Fullerenol-C60(OH)24 interactions with lipid bilayers: Molecular dynamics study of agglomeration and surface deposition</h3><p class="authors">Esequias Coelho, Douglas X. de Andrade, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 391, 123205</p><a href="https://doi.org/10.1016/j.molliq.2023.123205" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.123205 ↗</a></div></article><article class="publication" data-person-publication data-year="2023"><div class="pub-year">2023</div><div><h3>Effects of Coulomb and vdW modifiers on hydrogen-bonds, energy and structural properties of peptide nanomembranes: A study by Molecular Dynamics simulations</h3><p class="authors">Agnaldo R. de Almeida, Guilherme Colherinhas, Douglas X. de Andrade</p><p class="journal">Journal of Molecular Liquids, v. 382, 122017</p><a href="https://doi.org/10.1016/j.molliq.2023.122017" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.122017 ↗</a></div></article><article class="publication" data-person-publication data-year="2023"><div class="pub-year">2023</div><div><h3>Comparing supercapacitors with graphene/graphyne electrodes and [Bmim][PF6], [Emim][BF4], [Ch][Gly] and [Pyr][Tfsi] ionic liquids using molecular dynamics</h3><p class="authors">Henrique de Araujo Chagas, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 379, 121703</p><a href="https://doi.org/10.1016/j.molliq.2023.121703" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.121703 ↗</a></div></article><article class="publication" data-person-publication data-year="2023"><div class="pub-year">2023</div><div><h3>Ab Initio Dynamics of Graphene and Graphyne Electrodes in Vacuum and in the Presence of Electrolytes</h3><p class="authors">Thaciana Malaspina, Guilherme Colherinhas, Stephen E. Weitzner, Brandon C. Wood, Eudes Eterno Fileti</p><p class="journal">The Journal of Physical Chemistry C, v. 127, n. 13, 6515-6523</p><a href="https://doi.org/10.1021/acs.jpcc.2c08699" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.2c08699 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>Statistical and energetic analysis of hydrogen bonds in short and long peptide nanotapes/nanofibers using molecular dynamics simulations</h3><p class="authors">Agnaldo R. de Almeida, Douglas X. de Andrade, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 359, 119308</p><a href="https://doi.org/10.1016/j.molliq.2022.119308" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.119308 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>On the influence of increasing the concentration of Au144(SRCOO1-)60 nanoparticles in water/Na1+ solution using molecular dynamics simulations</h3><p class="authors">Giulia P. Bordoni, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 368, 120776</p><a href="https://doi.org/10.1016/j.molliq.2022.120776" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.120776 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>Molecular dynamics study of hydrogen bond in peptide membrane at 150–300 K</h3><p class="authors">Eyber Domingos Alves, Douglas X. de Andrade, Agnaldo R. de Almeida, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 349, 118165</p><a href="https://doi.org/10.1016/j.molliq.2021.118165" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.118165 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>Modeling, energetic and structural analysis of peptide membranes formed by arginine and phenylalanine (R2F4R2) using fully atomistic molecular dynamics</h3><p class="authors">Karinna Mendanha, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 367, 120498</p><a href="https://doi.org/10.1016/j.molliq.2022.120498" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.120498 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>GIAO-NMR spectroscopy of the xanthine’s structures in water solution using S-MC/QM methodology: An evaluation of the DFT-functionals’ efficiency</h3><p class="authors">Guilherme Colherinhas, Valdemir Ludwig, Zélia M. da Costa Ludwig</p><p class="journal">Journal of Molecular Liquids, v. 347, 117955</p><a href="https://doi.org/10.1016/j.molliq.2021.117955" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.117955 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>Fullerene C60 spectroscopy in [BMIM][PF6] ionic liquid: Molecular dynamics study using polarization effects</h3><p class="authors">Wesley Bueno Cardoso, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Structure, v. 1250, 131887</p><a href="https://doi.org/10.1016/j.molstruc.2021.131887" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2021.131887 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>EF4K bola-amphiphilic peptide nanomembrane: structural, energetic and dynamic properties using molecular dynamics</h3><p class="authors">Elias Rafael de Sousa, Douglas Xavier de Andrade, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 368, 120651</p><a href="https://doi.org/10.1016/j.molliq.2022.120651" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.120651 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>A molecular dynamics study of graphyne-based electrode and biocompatible ionic liquid for supercapacitor applications</h3><p class="authors">Henrique de Araujo Chagas, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 360, 119494</p><a href="https://doi.org/10.1016/j.molliq.2022.119494" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.119494 ↗</a></div></article><article class="publication" data-person-publication data-year="2021"><div class="pub-year">2021</div><div><h3>Updating atomic charge parameters of aliphatic amino acids: a quest to improve the performance of molecular modeling via sequential molecular dynamics and DFT-GIAO-NMR calculations</h3><p class="authors">Guilherme Colherinhas</p><p class="journal">Physical Chemistry Chemical Physics, v. 23, n. 14, 8413-8425</p><a href="https://doi.org/10.1039/d1cp00183c" target="_blank" rel="noopener">DOI: 10.1039/d1cp00183c ↗</a></div></article><article class="publication" data-person-publication data-year="2021"><div class="pub-year">2021</div><div><h3>Update of CHARMM36&#39;s atomic charges for aromatic amino acids in water solution simulations and spectroscopy analysis via sequential molecular dynamics and DFT calculations</h3><p class="authors">Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 321, 114739</p><a href="https://doi.org/10.1016/j.molliq.2020.114739" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.114739 ↗</a></div></article><article class="publication" data-person-publication data-year="2021"><div class="pub-year">2021</div><div><h3>TD-DFT absorption spectrum of (poly)threonine in water: A study combining molecular dynamics and quantum mechanics calculations</h3><p class="authors">Karinna Mendanha, Richard C. Prado, Leonardo B.A. Oliveira, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 779, 138876</p><a href="https://doi.org/10.1016/j.cplett.2021.138876" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2021.138876 ↗</a></div></article><article class="publication" data-person-publication data-year="2021"><div class="pub-year">2021</div><div><h3>Molecular dynamic simulations, GIAO‐NMR and TD‐DFT spectroscopy analyze for zwitterionic isoleucine ( ILE ) N , 1 ≤ N ≤ 6, in water solution</h3><p class="authors">Karinna Mendanha, Richard Costa Prado, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">Journal of Computational Chemistry, v. 42, n. 5, 344-357</p><a href="https://doi.org/10.1002/jcc.26460" target="_blank" rel="noopener">DOI: 10.1002/jcc.26460 ↗</a></div></article><article class="publication" data-person-publication data-year="2021"><div class="pub-year">2021</div><div><h3>Laminar peptide structure: Energetic and structural evaluation using molecular dynamics</h3><p class="authors">Douglas X. de Andrade, Eyber D. Alves, Agnaldo R. de Almeida, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 341, 117261</p><a href="https://doi.org/10.1016/j.molliq.2021.117261" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.117261 ↗</a></div></article><article class="publication" data-person-publication data-year="2021"><div class="pub-year">2021</div><div><h3>Hydroxylic, sulfur-containing and amidic amino acids in water solution: Atomic charges parameters for computational modeling using molecular dynamics simulation and DFT calculations</h3><p class="authors">Leonardo B.A. Oliveira, Wesley B. Cardoso, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 339, 116815</p><a href="https://doi.org/10.1016/j.molliq.2021.116815" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.116815 ↗</a></div></article><article class="publication" data-person-publication data-year="2021"><div class="pub-year">2021</div><div><h3>Atomistic molecular dynamics study on the influence of high temperatures on the structure of peptide nanomembranes candidates for organic supercapacitor electrode</h3><p class="authors">Eyber D. Alves, Douglas X. de Andrade, Agnaldo R. de Almeida, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 334, 116126</p><a href="https://doi.org/10.1016/j.molliq.2021.116126" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.116126 ↗</a></div></article><article class="publication" data-person-publication data-year="2020"><div class="pub-year">2020</div><div><h3>The influence of polar and non-polar interactions on the self-assembly of peptide nanomembranes and their applications: An atomistic study using classical molecular dynamics</h3><p class="authors">Douglas Andrade, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 318, 114263</p><a href="https://doi.org/10.1016/j.molliq.2020.114263" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.114263 ↗</a></div></article><article class="publication" data-person-publication data-year="2020"><div class="pub-year">2020</div><div><h3>Design and analysis of polypeptide nanofiber using full atomistic Molecular Dynamic</h3><p class="authors">Douglas Andrade, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 302, 112610</p><a href="https://doi.org/10.1016/j.molliq.2020.112610" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.112610 ↗</a></div></article><article class="publication" data-person-publication data-year="2020"><div class="pub-year">2020</div><div><h3>Can CHARMM36 atomic charges described correctly the interaction between amino acid and water molecules by molecular dynamics simulations?</h3><p class="authors">Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 317, 113919</p><a href="https://doi.org/10.1016/j.molliq.2020.113919" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.113919 ↗</a></div></article><article class="publication" data-person-publication data-year="2020"><div class="pub-year">2020</div><div><h3>Assessing the DOPC-cholesterol interactions and their influence on fullerene C60 partitioning in lipid bilayers</h3><p class="authors">Eyber Domingos Alves, Guilherme Colherinhas, Sebastião Antonio Mendanha</p><p class="journal">Journal of Molecular Liquids, v. 315, 113698</p><a href="https://doi.org/10.1016/j.molliq.2020.113698" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.113698 ↗</a></div></article><article class="publication" data-person-publication data-year="2020"><div class="pub-year">2020</div><div><h3>A6H polypeptide membranes: Molecular dynamics simulation, GIAO-DFT-NMR and TD-DFT spectroscopy analysis</h3><p class="authors">Douglas Andrade, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 316, 113850</p><a href="https://doi.org/10.1016/j.molliq.2020.113850" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2020.113850 ↗</a></div></article><article class="publication" data-person-publication data-year="2019"><div class="pub-year">2019</div><div><h3>Understanding the stability of polypeptide membranes in ionic liquids: a theoretical molecular dynamics study</h3><p class="authors">Eyber Domingos Alves, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">New Journal of Chemistry, v. 43, n. 25, 10151-10161</p><a href="https://doi.org/10.1039/c9nj01512d" target="_blank" rel="noopener">DOI: 10.1039/c9nj01512d ↗</a></div></article><article class="publication" data-person-publication data-year="2019"><div class="pub-year">2019</div><div><h3>Solvent effects on the spectroscopic properties of Damascone derivatives: A sequential Monte Carlo/Quantum Mechanics study</h3><p class="authors">Agnaldo Rosa de Almeida, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 730, 531-537</p><a href="https://doi.org/10.1016/j.cplett.2019.05.028" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2019.05.028 ↗</a></div></article><article class="publication" data-person-publication data-year="2019"><div class="pub-year">2019</div><div><h3>Robust Entanglement Generation in Lithium Ions Mediated by Graphene Quantum Dots Interaction</h3><p class="authors">Wesley B. Cardoso, Ardiley T. Avelar, Norton G. de Almeida, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry A, v. 123, n. 9, 1790-1795</p><a href="https://doi.org/10.1021/acs.jpca.8b11354" target="_blank" rel="noopener">DOI: 10.1021/acs.jpca.8b11354 ↗</a></div></article><article class="publication" data-person-publication data-year="2019"><div class="pub-year">2019</div><div><h3>On the calculation of magnetic properties of nucleic acids in liquid water with the sequential QM/MM method</h3><p class="authors">G. Colherinhas, L.B.A. Oliveira, M.A. Castro, T.L. Fonseca, K. Coutinho, S. Canuto</p><p class="journal">Journal of Molecular Liquids, v. 294, 111611</p><a href="https://doi.org/10.1016/j.molliq.2019.111611" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2019.111611 ↗</a></div></article><article class="publication" data-person-publication data-year="2019"><div class="pub-year">2019</div><div><h3>Investigating the asymmetry in the EDL response of C 60 /graphene supercapacitors</h3><p class="authors">Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Physical Chemistry Chemical Physics, v. 21, n. 28, 15362-15371</p><a href="https://doi.org/10.1039/c9cp02664a" target="_blank" rel="noopener">DOI: 10.1039/c9cp02664a ↗</a></div></article><article class="publication" data-person-publication data-year="2019"><div class="pub-year">2019</div><div><h3>Elucidating NH2-I3V3A3G3K3-COOH and NH2-K3G3A3V3I3-COOH polypeptide membranes: A classical molecular dynamics study</h3><p class="authors">Douglas Andrade, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 279, 740-749</p><a href="https://doi.org/10.1016/j.molliq.2019.02.006" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2019.02.006 ↗</a></div></article><article class="publication" data-person-publication data-year="2018"><div class="pub-year">2018</div><div><h3>The influence of flexibility on the spectroscopic properties for organic molecules in solution: A theoretical study applied to A3R polypeptide</h3><p class="authors">Leonardo B.A. Oliveira, Richard C. Prado, Luizmar A. Júnior, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 263, 334-341</p><a href="https://doi.org/10.1016/j.molliq.2018.05.007" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2018.05.007 ↗</a></div></article><article class="publication" data-person-publication data-year="2018"><div class="pub-year">2018</div><div><h3>Storing Energy in Biodegradable Electrochemical Supercapacitors</h3><p class="authors">Guilherme Colherinhas, Thaciana Malaspina, Eudes Eterno Fileti</p><p class="journal">ACS Omega, v. 3, n. 10, 13869-13875</p><a href="https://doi.org/10.1021/acsomega.8b01980" target="_blank" rel="noopener">DOI: 10.1021/acsomega.8b01980 ↗</a></div></article><article class="publication" data-person-publication data-year="2018"><div class="pub-year">2018</div><div><h3>Storing Energy in Biodegradable Electrochemical Supercapacitors</h3><p class="authors">Guilherme Colherinhas, Thaciana Malaspina, Eudes Eterno Fileti</p><p class="journal">ACS Omega</p><a href="https://doi.org/10.1021/acsomega.8b01980.s001" target="_blank" rel="noopener">DOI: 10.1021/acsomega.8b01980.s001 ↗</a></div></article><article class="publication" data-person-publication data-year="2018"><div class="pub-year">2018</div><div><h3>Stability and Structural Analysis of A 6 R Polypeptide Nanosheets: A Theoretical Study Using the Classical Molecular Dynamics Simulation</h3><p class="authors">Bárbara Proença, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry C, v. 122, n. 42, 24445-24453</p><a href="https://doi.org/10.1021/acs.jpcc.8b07927" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.8b07927 ↗</a></div></article><article class="publication" data-person-publication data-year="2018"><div class="pub-year">2018</div><div><h3>Spectroscopic properties and solute–solvent structural analyses for A N R polypeptides in water solution: a sequential Monte Carlo/quantum mechanics (S-MC/QM) theoretical study</h3><p class="authors">Richard Costa Prado, Guilherme Colherinhas, Leonardo Bruno Assis Oliveira</p><p class="journal">New Journal of Chemistry, v. 42, n. 24, 19692-19700</p><a href="https://doi.org/10.1039/c8nj03070g" target="_blank" rel="noopener">DOI: 10.1039/c8nj03070g ↗</a></div></article><article class="publication" data-person-publication data-year="2018"><div class="pub-year">2018</div><div><h3>Solvent effects on the electrical and magnetic spectroscopic properties of azo-enaminone derivatives in methanol and in water</h3><p class="authors">Leonardo Bruno Assis Oliveira, Luizmar Adriano Júnior, Guilherme Colherinhas</p><p class="journal">New Journal of Chemistry, v. 42, n. 14, 12032-12044</p><a href="https://doi.org/10.1039/c8nj01842a" target="_blank" rel="noopener">DOI: 10.1039/c8nj01842a ↗</a></div></article><article class="publication" data-person-publication data-year="2018"><div class="pub-year">2018</div><div><h3>Matemática básica aplicada ao ensino de física: relação entre competências e habilidades técnicas necessárias para a resolução de problemas de física segundo o Inep</h3><p class="authors">Patrícia Cardoso de Andrade, Guilherme Colherinhas de Oliveira</p><p class="journal">Ensino e Tecnologia em Revista, v. 2, n. 1, 3</p><a href="https://doi.org/10.3895/etr.v2n1.5961" target="_blank" rel="noopener">DOI: 10.3895/etr.v2n1.5961 ↗</a></div></article><article class="publication" data-person-publication data-year="2018"><div class="pub-year">2018</div><div><h3>GIAO-DFT-NMR characterization of fullerene-cucurbituril complex: the effects of the C60@CB[9] host-guest mutual interactions</h3><p class="authors">Guilherme Colherinhas, Eudes Eterno Fileti, Thaciana Malaspina</p><p class="journal">Journal of Molecular Modeling, v. 24, n. 7, 181</p><a href="https://doi.org/10.1007/s00894-018-3719-3" target="_blank" rel="noopener">DOI: 10.1007/s00894-018-3719-3 ↗</a></div></article><article class="publication" data-person-publication data-year="2017"><div class="pub-year">2017</div><div><h3>TD-DFT and GIAO-NMR spectroscopy studies for maltose and (α- and β)-glucose in water solution using S-MC/QM polarization methodology</h3><p class="authors">Leonardo B.A. Oliveira, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 237, 295-303</p><a href="https://doi.org/10.1016/j.molliq.2017.04.108" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2017.04.108 ↗</a></div></article><article class="publication" data-person-publication data-year="2017"><div class="pub-year">2017</div><div><h3>Hydration properties of the polyalanines by atomistic molecular dynamics</h3><p class="authors">Thaciana Malaspina, Felipe de Oliveira Outi, Guilherme Colherinhas, Eudes E. Fileti</p><p class="journal">Journal of Molecular Liquids, v. 244, 285-290</p><a href="https://doi.org/10.1016/j.molliq.2017.09.003" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2017.09.003 ↗</a></div></article><article class="publication" data-person-publication data-year="2017"><div class="pub-year">2017</div><div><h3>Elucidating the stability of bolaamphiphilic polypeptide nanosheets using atomistic molecular dynamics</h3><p class="authors">T. Malaspina, E. E. Fileti, G. Colherinhas</p><p class="journal">Physical Chemistry Chemical Physics, v. 19, n. 47, 31921-31928</p><a href="https://doi.org/10.1039/c7cp06284b" target="_blank" rel="noopener">DOI: 10.1039/c7cp06284b ↗</a></div></article><article class="publication" data-person-publication data-year="2017"><div class="pub-year">2017</div><div><h3>Assessing the interaction between surfactant-like peptides and lipid membranes</h3><p class="authors">Thaciana Malaspina, Guilherme Colherinhas, Felipe de Oliveira Outi, Eudes E. Fileti</p><p class="journal">RSC Advances, v. 7, n. 57, 35973-35981</p><a href="https://doi.org/10.1039/c7ra04537a" target="_blank" rel="noopener">DOI: 10.1039/c7ra04537a ↗</a></div></article><article class="publication" data-person-publication data-year="2017"><div class="pub-year">2017</div><div><h3>All-boron fullerene exhibits a strong affinity to inorganic anions</h3><p class="authors">Guilherme Colherinhas, Eudes Eterno Fileti, Vitaly V. Chaban</p><p class="journal">Chemical Physics Letters, v. 671, 107-112</p><a href="https://doi.org/10.1016/j.cplett.2017.01.025" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2017.01.025 ↗</a></div></article><article class="publication" data-person-publication data-year="2016"><div class="pub-year">2016</div><div><h3>Versatile interactions of boron fullerene B 80 with gas molecules</h3><p class="authors">Guilherme Colherinhas, Eudes Eterno Fileti, Vitaly V. Chaban</p><p class="journal">RSC Advances, v. 6, n. 82, 78684-78691</p><a href="https://doi.org/10.1039/c6ra15793a" target="_blank" rel="noopener">DOI: 10.1039/c6ra15793a ↗</a></div></article><article class="publication" data-person-publication data-year="2016"><div class="pub-year">2016</div><div><h3>Potential energy surface of excited semiconductors: Graphene quantum dot and BODIPY</h3><p class="authors">Guilherme Colherinhas, Eudes Eterno Fileti, Vitaly V. Chaban</p><p class="journal">Chemical Physics, v. 474, 1-6</p><a href="https://doi.org/10.1016/j.chemphys.2016.05.011" target="_blank" rel="noopener">DOI: 10.1016/j.chemphys.2016.05.011 ↗</a></div></article><article class="publication" data-person-publication data-year="2016"><div class="pub-year">2016</div><div><h3>GIAO⿿DFT isotropic magnetic shielding constants and spin⿿spin coupling of tartaric acid in water solution</h3><p class="authors">Bruna Fideles, Leonardo B.A. Oliveira, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 644, 205-211</p><a href="https://doi.org/10.1016/j.cplett.2015.12.003" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2015.12.003 ↗</a></div></article><article class="publication" data-person-publication data-year="2015"><div class="pub-year">2015</div><div><h3>The Band Gap of Graphene Is Efficiently Tuned by Monovalent Ions</h3><p class="authors">Guilherme Colherinhas, Eudes Eterno Fileti, Vitaly V. Chaban</p><p class="journal">The Journal of Physical Chemistry Letters, v. 6, n. 2, 302-307</p><a href="https://doi.org/10.1021/jz502601z" target="_blank" rel="noopener">DOI: 10.1021/jz502601z ↗</a></div></article><article class="publication" data-person-publication data-year="2015"><div class="pub-year">2015</div><div><h3>Spectroscopic properties of vitamin E models in solution</h3><p class="authors">L.B.A. Oliveira, G. Colherinhas, T.L. Fonseca, M.A. Castro</p><p class="journal">Chemical Physics Letters, v. 628, 49-53</p><a href="https://doi.org/10.1016/j.cplett.2015.03.045" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2015.03.045 ↗</a></div></article><article class="publication" data-person-publication data-year="2015"><div class="pub-year">2015</div><div><h3>Can inorganic salts tune electronic properties of graphene quantum dots?</h3><p class="authors">Guilherme Colherinhas, Eudes Eterno Fileti, Vitaly V. Chaban</p><p class="journal">Physical Chemistry Chemical Physics, v. 17, n. 26, 17413-17420</p><a href="https://doi.org/10.1039/c5cp02083b" target="_blank" rel="noopener">DOI: 10.1039/c5cp02083b ↗</a></div></article><article class="publication" data-person-publication data-year="2015"><div class="pub-year">2015</div><div><h3>Can Inorganic Salts Tune Electronic Properties of Graphene?</h3><p class="authors">Colherinhas, Guilherme, Eterno Fileti, Eudes, V. Chaban, Vitaly</p><p class="journal">ArXiv</p><a href="https://publons.com/wos-op/publon/1284748/" target="_blank" rel="noopener">Abrir registro ↗</a></div></article><article class="publication" data-person-publication data-year="2014"><div class="pub-year">2014</div><div><h3>Solvent effects on the first hyperpolarizability of retinal derivatives</h3><p class="authors">L.A. Junior, G. Colherinhas, T.L. Fonseca, M.A. Castro</p><p class="journal">Chemical Physics Letters, v. 598, 43-47</p><a href="https://doi.org/10.1016/j.cplett.2014.02.051" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2014.02.051 ↗</a></div></article><article class="publication" data-person-publication data-year="2014"><div class="pub-year">2014</div><div><h3>Predicting the properties of a new class of host–guest complexes: C 60 fullerene and CB[9] cucurbituril</h3><p class="authors">Eudes Fileti, Guilherme Colherinhas, Thaciana Malaspina</p><p class="journal">Phys. Chem. Chem. Phys., v. 16, n. 41, 22823-22829</p><a href="https://doi.org/10.1039/c4cp03299c" target="_blank" rel="noopener">DOI: 10.1039/c4cp03299c ↗</a></div></article><article class="publication" data-person-publication data-year="2014"><div class="pub-year">2014</div><div><h3>Molecular Dynamics Study of Surfactant-Like Peptide Based Nanostructures</h3><p class="authors">Guilherme Colherinhas, Eudes Fileti</p><p class="journal">The Journal of Physical Chemistry B, v. 118, n. 42, 12215-12222</p><a href="https://doi.org/10.1021/jp5082593" target="_blank" rel="noopener">DOI: 10.1021/jp5082593 ↗</a></div></article><article class="publication" data-person-publication data-year="2014"><div class="pub-year">2014</div><div><h3>Molecular Description of Surfactant-like Peptide Based Membranes</h3><p class="authors">Guilherme Colherinhas, Eudes Fileti</p><p class="journal">The Journal of Physical Chemistry C, v. 118, n. 18, 9598-9603</p><a href="https://doi.org/10.1021/jp502420x" target="_blank" rel="noopener">DOI: 10.1021/jp502420x ↗</a></div></article><article class="publication" data-person-publication data-year="2013"><div class="pub-year">2013</div><div><h3>Isotropic magnetic shielding constants of retinal derivatives in aprotic and protic solvents</h3><p class="authors">G. Colherinhas, T. L. Fonseca, M. A. Castro, K. Coutinho, S. Canuto</p><p class="journal">The Journal of Chemical Physics, v. 139, n. 9, 094502</p><a href="https://doi.org/10.1063/1.4819694" target="_blank" rel="noopener">DOI: 10.1063/1.4819694 ↗</a></div></article><article class="publication" data-person-publication data-year="2011"><div class="pub-year">2011</div><div><h3>Theoretical analysis of the hydration of C60 in normal and supercritical conditions</h3><p class="authors">Guilherme Colherinhas, Tertius L. Fonseca, Eudes E. Fileti</p><p class="journal">Carbon, v. 49, n. 1, 187-192</p><a href="https://doi.org/10.1016/j.carbon.2010.09.002" target="_blank" rel="noopener">DOI: 10.1016/j.carbon.2010.09.002 ↗</a></div></article><article class="publication" data-person-publication data-year="2011"><div class="pub-year">2011</div><div><h3>Isomerization effects on chemical shifts and spin‐spin coupling constants of polyacetylene chains: A GIAO‐DFT study</h3><p class="authors">G. Colherinhas, T. L. Fonseca, H. C. Georg, M. A. Castro</p><p class="journal">International Journal of Quantum Chemistry, v. 111, n. 7-8, 1616-1625</p><a href="https://doi.org/10.1002/qua.22672" target="_blank" rel="noopener">DOI: 10.1002/qua.22672 ↗</a></div></article><article class="publication" data-person-publication data-year="2011"><div class="pub-year">2011</div><div><h3>13C chemical shifts of polyacetylene chains with charged conformational defects: A GIAO–DFT study</h3><p class="authors">G. Colherinhas, T.L. Fonseca, M.A. Castro</p><p class="journal">Chemical Physics Letters, v. 503, n. 4-6, 191-196</p><a href="https://doi.org/10.1016/j.cplett.2011.01.014" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2011.01.014 ↗</a></div></article><article class="publication" data-person-publication data-year="2007"><div class="pub-year">2007</div><div><h3>INTERACTION OF A TWO-LEVEL ATOM WITH A SQUEEZED DISPLACED NUMBER STATE</h3><p class="authors">GUILHERME C. DE OLIVEIRA, CÉLIA M. A. DANTAS, JOSÉ S. SALES</p><p class="journal">International Journal of Modern Physics B, v. 21, n. 16, 2723-2733</p><a href="https://doi.org/10.1142/s0217979207037260" target="_blank" rel="noopener">DOI: 10.1142/s0217979207037260 ↗</a></div></article><article class="publication" data-person-publication data-year="2006"><div class="pub-year">2006</div><div><h3>SCATTERING OF ATOMS BY LIGHT: MEASURING THE QUANTUM STATE OF THE FIELD IN A CAVITY</h3><p class="authors">GUILHERME C. DE OLIVEIRA, AGNALDO R. DE ALMEIDA, MARTA J. F. S. SOUZA, ARTHUR M. MORAES, CELIA M. A. DANTAS</p><p class="journal">International Journal of Modern Physics B, v. 20, n. 03, 325-339</p><a href="https://doi.org/10.1142/s0217979206033231" target="_blank" rel="noopener">DOI: 10.1142/s0217979206033231 ↗</a></div></article><article class="publication" data-person-publication data-year="2006"><div class="pub-year">2006</div><div><h3>NONLINEAR EVEN AND ODD DISPLACED NUMBER STATE</h3><p class="authors">GUILHERME C. DE OLIVEIRA, AGAMENON L. DO VALE, CELIA M. A. DANTAS</p><p class="journal">Modern Physics Letters B, v. 20, n. 18, 1135-1146</p><a href="https://doi.org/10.1142/s021798490601161x" target="_blank" rel="noopener">DOI: 10.1142/s021798490601161x ↗</a></div></article><article class="publication" data-person-publication data-year="2005"><div class="pub-year">2005</div><div><h3>Nonlinear displaced number states</h3><p class="authors">Guilherme C. de Oliveira, Agnaldo R. de Almeida, Célia M.A. Dantas, Arthur M. Moraes</p><p class="journal">Physics Letters A, v. 339, n. 3-5, 275-282</p><a href="https://doi.org/10.1016/j.physleta.2005.03.033" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2005.03.033 ↗</a></div></article><article class="publication" data-person-publication data-year="2005"><div class="pub-year">2005</div><div><h3>EVEN AND ODD DISPLACED NUMBER STATE</h3><p class="authors">GUILHERME C. DE OLIVEIRA, PAULO S. MELO, CELIA M. A. DANTAS, ELIAS DE S. LEITE</p><p class="journal">Modern Physics Letters B, v. 19, n. 26, 1347-1360</p><a href="https://doi.org/10.1142/s021798490500916x" target="_blank" rel="noopener">DOI: 10.1142/s021798490500916x ↗</a></div></article><article class="publication" data-person-publication data-year="2005"><div class="pub-year">2005</div><div><h3>Alternative proposal for the generation of the displaced number state</h3><p class="authors">Guilherme C. de Oliveira, Agnaldo R. de Almeida, Iara P. de Queirós, Arthur M. Moraes, Célia M.A. Dantas</p><p class="journal">Physica A: Statistical Mechanics and its Applications, v. 351, n. 2-4, 251-259</p><a href="https://doi.org/10.1016/j.physa.2004.11.066" target="_blank" rel="noopener">DOI: 10.1016/j.physa.2004.11.066 ↗</a></div></article></div>
+      <div class="empty-state profile-year-empty" data-person-year-empty hidden><strong>Nenhuma produção encontrada para o ano selecionado.</strong><p>Use o seletor acima para consultar as produções dos demais anos.</p></div>
+    </section>
   </div>
-</section>
+  <aside class="profile-aside"><div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2018</dd></div><div><dt>Saída</dt><dd>—</dd></div><div><dt>Bolsa</dt><dd>CNPq - Produtividade em Pesquisa, Nível 2</dd></div></dl></div><div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Licenciatura em Física - PUC Goiás (2003)</dd></div><div><dt>Graduação adicional</dt><dd>Big Data e Inteligência Artificial - PUC Goiás (2023)</dd></div><div><dt>Especialização</dt><dd>Ensino de Ciências e Matemática - PUC Goiás (2004)</dd></div><div><dt>Mestrado</dt><dd>Física - UFG (2006)</dd></div><div><dt>Doutorado</dt><dd>Física - UFG (2012)</dd></div></dl></div></aside>
+</div></section>
 </main>
 
 <footer class="site-footer">
@@ -1177,7 +342,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 04/09/2026 01:25</div>
+    <div class="footer-meta">Atualização do site: 04/09/2026 01:32</div>
   </div>
 </footer>
 <script>(() => {
@@ -1272,6 +437,37 @@ a{color:var(--brand)}
   };
   select.addEventListener('change', apply);
   apply();
+})();
+
+(() => {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('#main-menu');
+  if (!toggle || !menu) return;
+  const close = () => {menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open');};
+  toggle.addEventListener('click', () => document.body.classList.toggle('menu-open', menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+  document.addEventListener('keydown', event => {if (event.key === 'Escape') close();});
+  document.addEventListener('click', event => {if (menu.classList.contains('open') && !menu.contains(event.target) && !toggle.contains(event.target)) close();});
+})();
+
+(() => {
+  const select = document.querySelector('[data-person-year-filter]');
+  const items = [...document.querySelectorAll('[data-person-publication]')];
+  const summary = document.querySelector('[data-person-year-summary]');
+  if (!select || !items.length || !summary) return;
+  const counts = new Map();
+  items.forEach(item => {const year=(item.dataset.year||'').trim();counts.set(year,(counts.get(year)||0)+1);});
+  const currentYear = String(new Date().getFullYear());
+  const numericYears = [...counts.keys()].filter(year => /^\d{4}$/.test(year)).sort((a,b) => Number(b)-Number(a));
+  const years = [currentYear,...numericYears.filter(year => year !== currentYear)];
+  if (counts.has('')) years.push('');
+  const refresh = () => {
+    const selected = select.value;
+    summary.innerHTML = years.map(year => `<button class="profile-year-chip${year===selected?' active':''}" type="button" data-profile-year-chip="${year}"><span>${year||'Sem ano'}</span><strong>${counts.get(year)||0}</strong></button>`).join('');
+    summary.querySelectorAll('[data-profile-year-chip]').forEach(button => button.addEventListener('click', () => {select.value=button.dataset.profileYearChip;select.dispatchEvent(new Event('change'));refresh();}));
+  };
+  select.addEventListener('change', refresh);
+  requestAnimationFrame(refresh);
 })();
 </script>
 </body>

@@ -226,6 +226,56 @@ a{color:var(--brand)}
   .profile-tabs{width:100%}.profile-tab{flex:1;justify-content:center;padding-inline:10px}.profile-publication-toolbar{align-items:stretch;flex-direction:column}.profile-year-control{justify-content:space-between}
 }
 @media(max-width:420px){.publication-filter-section .publication{grid-template-columns:1fr}.award{grid-template-columns:1fr}.award-cover img,.cover-placeholder{width:110px}}
+
+/* v12 — indicadores informativos e acabamento mobile. */
+.people-metrics-section,.publication-metrics-section{background:#edf3f9;border-bottom:1px solid var(--line)}
+.people-metrics,.publication-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:18px 0}
+.people-metric,.publication-metric{position:relative;overflow:hidden;min-width:0;padding:17px 19px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(7,20,38,.045)}
+.people-metric::before,.publication-metric::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(var(--accent),var(--brand))}
+.people-metric strong,.publication-metric strong{display:block;color:var(--brand);font-size:1.45rem;line-height:1;font-weight:900;letter-spacing:-.035em}
+.people-metric span,.publication-metric span{display:block;margin-top:7px;color:var(--muted);font-size:.76rem;font-weight:750}
+.person-card-copy{min-width:0}.person-card-copy h3,.person-card-copy p{overflow-wrap:anywhere}
+.person-mini-metrics{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.person-mini-metrics span{display:inline-flex;align-items:center;min-height:23px;padding:3px 8px;border-radius:999px;background:#edf4ff;color:#48647f;font-size:.67rem;font-weight:850}
+.person-mini-metrics .orcid-pill{margin-top:0;background:#eff8e9;color:#4e7a2a}
+.profile-tab .tab-count.projects{background:#e8f7ff;color:#1874a6}.profile-tab.active .tab-count.projects{background:#1685bd;color:#fff}
+.profile-production-metrics{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap}
+.profile-production-metric{min-width:128px;padding:10px 13px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.profile-production-metric strong{display:block;color:var(--brand);font-size:1.35rem;line-height:1;font-weight:900}.profile-production-metric span{display:block;margin-top:5px;color:var(--muted);font-size:.72rem;font-weight:750}
+.profile-year-summary{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 18px}
+.profile-year-chip{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#53677c;font:inherit;font-size:.72rem;font-weight:850;cursor:pointer}
+.profile-year-chip strong{color:var(--brand)}.profile-year-chip.active{border-color:rgba(21,94,232,.32);background:#edf4ff;color:var(--brand)}
+.profile-year-chip:focus-visible,.profile-tab:focus-visible,.nav-toggle:focus-visible,.button:focus-visible,.select-shell select:focus-visible,.profile-year-control select:focus-visible{outline:3px solid rgba(69,214,255,.45);outline-offset:2px}
+.publication-metrics-section{background:#f5f7fb}
+.publication-metric{padding-block:18px}.publication-metric small{display:block;margin-top:4px;color:#8a9bad;font-size:.64rem;font-weight:800}
+.publication-filter-section .publication-body a,.profile-main .publication a,.registration{overflow-wrap:anywhere;word-break:break-word}
+.machine-table-wrap,.recent-histogram-card{overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.button,.nav-toggle,.profile-links a,.profile-tab,.profile-year-chip,.select-shell select,.profile-year-control select{touch-action:manipulation}
+@media(max-width:980px){.people-metrics,.publication-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){
+  body{font-size:15px}.container{width:min(var(--max),calc(100% - 28px))}.section{padding:50px 0}.compact-section{padding:28px 0}
+  .nav-toggle{min-width:48px;min-height:44px;align-items:center;justify-content:center;font-weight:850}
+  .nav-links.open{top:50px;padding:10px;border-radius:0 0 18px 18px;box-shadow:0 20px 44px rgba(7,20,38,.16)}
+  .nav-links a{display:flex;align-items:center;min-height:46px;padding:10px 12px}body.menu-open{overflow:hidden}
+  .button,.profile-links a{min-height:44px}.hero-actions{gap:9px}.hero-actions .button{flex:1 1 180px}
+  .people-metrics-section,.publication-metrics-section{overflow:hidden}
+  .people-metrics,.publication-metrics{display:flex;gap:10px;overflow-x:auto;padding:14px 14px 16px;scroll-snap-type:x proximity;scrollbar-width:none}
+  .people-metrics::-webkit-scrollbar,.publication-metrics::-webkit-scrollbar,.profile-year-summary::-webkit-scrollbar{display:none}
+  .people-metric,.publication-metric{flex:0 0 158px;scroll-snap-align:start;padding:15px 16px}.people-metric strong,.publication-metric strong{font-size:1.3rem}
+  .person-card-link{gap:13px;padding:15px 16px}.person-card h3{font-size:.98rem}.muted{font-size:.8rem}.person-mini-metrics{gap:5px}.person-mini-metrics span{font-size:.64rem}
+  .profile-grid{gap:22px}.profile-links{gap:8px}.profile-tabs{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.profile-tabs::-webkit-scrollbar{display:none}.profile-tab{min-height:44px;white-space:nowrap}
+  .profile-publication-toolbar{gap:12px}.profile-production-metrics{display:grid;grid-template-columns:1fr 1fr;width:100%}.profile-production-metric{min-width:0}.profile-year-control select{min-height:44px}
+  .profile-year-summary{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px;scroll-snap-type:x proximity;scrollbar-width:none}.profile-year-chip{flex:0 0 auto;scroll-snap-align:start;min-height:40px}
+  .publication-filter-section{padding:44px 0 68px}.publication-year-filter{margin-bottom:28px;padding:15px 16px}.publication-filter-section .publication{transform:none!important}.publication-filter-section .publication-body h3{font-size:1rem}
+  .recent-histogram-card{scrollbar-width:thin}.machine-table-wrap{border-radius:12px;scrollbar-width:thin}.machine-table th,.machine-table td{padding:11px 12px}
+  .software-card{padding:24px;border-radius:22px}.award{border-radius:22px}.site-footer{padding:28px 0}.footer-grid{gap:18px}
+}
+@media(max-width:520px){
+  .hero-actions .button{flex-basis:100%}.profile-links a{flex:1 1 100%;justify-content:center}
+  .profile-production-metrics{grid-template-columns:1fr 1fr}.profile-year-control{align-items:stretch;flex-direction:column}.profile-year-control select{width:100%}
+  .publication-filter-section .year-heading{align-items:flex-start;flex-direction:column;gap:6px}.publication-filter-section .year-heading h2{font-size:2.8rem}.award-body h2{font-size:1.18rem}
+}
+@media(hover:none){.button:hover,.publication-filter-section .publication:hover{transform:none;box-shadow:inherit}}
 </style>
 </head>
 <body>
@@ -257,157 +307,32 @@ a{color:var(--brand)}
   </nav>
 </header>
 
-<main><section class="profile-hero">
-  <div class="container profile-grid">
-    <div class="profile-photo">
-<img src="data:image/webp;base64,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" alt="Foto de Henrique de Araujo Chagas" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">      <span class="avatar-fallback large" style="display:none">H</span>
+<main><section class="profile-hero"><div class="container profile-grid">
+  <div class="profile-photo"><img src="data:image/webp;base64,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" alt="Foto de Henrique de Araujo Chagas" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><span class="avatar-fallback large" style="display:none">H</span></div>
+  <div><span class="eyebrow">Estudantes de Pós-Graduação · Atual</span><h1>Henrique de Araujo Chagas</h1><p class="lead">Doutorando</p><p>PPGF/IF-UFG</p><div class="profile-links"><a href="mailto:hhchagas@gmail.com">E-mail</a><a href="http://lattes.cnpq.br/1522466138848893" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0000-0002-7696-010X" target="_blank" rel="noopener">ORCID 0000-0002-7696-010X ↗</a></div></div>
+</div></section>
+<section class="section"><div class="container profile-content">
+  <div class="profile-main">
+    <div class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">
+      <button class="profile-tab active" type="button" role="tab" aria-selected="true" aria-controls="profile-projects" id="tab-projects" data-profile-tab="projects">Projetos <span class="tab-count projects">4</span></button>
+      <button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-productions" id="tab-productions" data-profile-tab="productions">Produções <span class="tab-count">12</span></button>
     </div>
-    <div>
-      <span class="eyebrow">Estudantes de Pós-Graduação · Atual</span>
-      <h1>Henrique de Araujo Chagas</h1>
-      <p class="lead">Doutorando</p>
-      <p>PPGF/IF-UFG</p>
-      <div class="profile-links">
-<a href="mailto:hhchagas@gmail.com">E-mail</a><a href="http://lattes.cnpq.br/1522466138848893" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0000-0002-7696-010X" target="_blank" rel="noopener">ORCID 0000-0002-7696-010X ↗</a>      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container profile-content">
-    <div class="profile-main">
-      <div class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">
-        <button class="profile-tab active" type="button" role="tab" aria-selected="true" aria-controls="profile-projects" id="tab-projects" data-profile-tab="projects">Projetos</button>
-        <button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-productions" id="tab-productions" data-profile-tab="productions">Produções <span class="tab-count">12</span></button>
+    <section class="profile-tab-panel" id="profile-projects" role="tabpanel" aria-labelledby="tab-projects" data-profile-tab-panel="projects">
+      <div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div>
+<div class="project-list"><div class="project-verbatim">Modelagem Molecular de Supercapacitores e Interfaces Eletroquímicas: Investigação computacional dos mecanismos moleculares responsáveis pelo armazenamento eletrostático de energia em supercapacitores, utilizando principalmente simulações de dinâmica molecular. A pesquisa caracteriza a formação da dupla camada elétrica na interface eletrodo–eletrólito, analisando distribuição espacial de íons, perfis de potencial eletrostático, energias de interação, capacitância e densidade de energia. São estudados dispositivos constituídos por eletrodos de materiais bidimensionais e diferentes classes de eletrólitos, buscando estabelecer relações entre organização molecular da interface e desempenho eletroquímico. O objetivo central é identificar princípios físico-químicos que permitam otimizar a eficiência energética de supercapacitores por meio do controle das propriedades do eletrodo, do eletrólito e da interface.</div><div class="project-verbatim">Hidratação, Temperatura e Composição de Eletrólitos em Supercapacitores: Estudo sistemático dos efeitos da hidratação, temperatura e composição química dos eletrólitos sobre a estrutura da dupla camada elétrica e o desempenho de supercapacitores. A pesquisa investiga líquidos iônicos como [emim][BF4], [cho][gly] e outros sistemas hidratados, avaliando como a presença de água modifica mobilidade iônica, coordenação, organização interfacial, interações eletrodo–eletrólito, capacitância e densidade de energia. Também são analisadas variações de temperatura e modificações na composição aniônica, incluindo combinações de cloreto e brometo. Essas investigações buscam determinar condições nas quais maior mobilidade e reorganização molecular do eletrólito possam ser obtidas sem comprometer a estabilidade da dupla camada elétrica e a eficiência do dispositivo.</div><div class="project-verbatim">Engenharia de Eletrodos e Arquiteturas de Supercapacitores: Investigação do papel desempenhado pela composição, geometria e arquitetura dos eletrodos sobre as propriedades eletroquímicas de supercapacitores. A linha compreende estudos comparativos entre grafeno e grafino, avaliação do espaçamento entre superfícies eletrificadas e desenvolvimento de arquiteturas contendo camadas ou condutores internos integrados ao dispositivo. As simulações permitem analisar como modificações estruturais alteram confinamento iônico, distribuição de potencial, formação da dupla camada elétrica, capacitância e diferentes medidas de densidade de energia. O objetivo é distinguir efeitos genuinamente interfaciais de efeitos associados à geometria global do dispositivo e identificar estratégias de engenharia capazes de maximizar o aproveitamento energético dos materiais utilizados nos eletrodos.</div><div class="project-verbatim">Eletrólitos Sustentáveis para Armazenamento Eletroquímico de Energia: Desenvolvimento e avaliação computacional de eletrólitos de menor impacto ambiental para aplicação em supercapacitores, incluindo líquidos iônicos biocompatíveis e biodegradáveis derivados de aminoácidos e solventes eutéticos profundos naturais (NADES). Por meio de dinâmica molecular, são investigadas propriedades como organização estrutural, mobilidade molecular, redes de ligações de hidrogênio, formação da dupla camada elétrica, interação com eletrodos de carbono, capacitância e densidade de energia. A pesquisa busca determinar de que maneira a composição molecular desses eletrólitos pode ser ajustada para conciliar biocompatibilidade, estabilidade, transporte iônico e desempenho eletroquímico, contribuindo para o desenvolvimento de tecnologias mais sustentáveis de armazenamento de energia.</div></div>    </section>
+    <section class="profile-tab-panel" id="profile-productions" role="tabpanel" aria-labelledby="tab-productions" data-profile-tab-panel="productions" hidden>
+      <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
+      <div class="profile-publication-toolbar">
+        <div class="profile-production-metrics" aria-live="polite"><div class="profile-production-metric"><strong data-person-current-count>0</strong><span>no ano corrente</span></div><div class="profile-production-metric"><strong>12</strong><span>total no perfil</span></div></div>
+        <label class="profile-year-control"><span>Exibir ano</span><select data-person-year-filter aria-label="Filtrar produções por ano"></select></label>
       </div>
-
-      <section class="profile-tab-panel" id="profile-projects" role="tabpanel" aria-labelledby="tab-projects" data-profile-tab-panel="projects">
-        <div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div>
-        <div class="project-list"><div class="project-verbatim">Modelagem Molecular de Supercapacitores e Interfaces Eletroquímicas: Investigação computacional dos mecanismos moleculares responsáveis pelo armazenamento eletrostático de energia em supercapacitores, utilizando principalmente simulações de dinâmica molecular. A pesquisa caracteriza a formação da dupla camada elétrica na interface eletrodo–eletrólito, analisando distribuição espacial de íons, perfis de potencial eletrostático, energias de interação, capacitância e densidade de energia. São estudados dispositivos constituídos por eletrodos de materiais bidimensionais e diferentes classes de eletrólitos, buscando estabelecer relações entre organização molecular da interface e desempenho eletroquímico. O objetivo central é identificar princípios físico-químicos que permitam otimizar a eficiência energética de supercapacitores por meio do controle das propriedades do eletrodo, do eletrólito e da interface.</div><div class="project-verbatim">Hidratação, Temperatura e Composição de Eletrólitos em Supercapacitores: Estudo sistemático dos efeitos da hidratação, temperatura e composição química dos eletrólitos sobre a estrutura da dupla camada elétrica e o desempenho de supercapacitores. A pesquisa investiga líquidos iônicos como [emim][BF4], [cho][gly] e outros sistemas hidratados, avaliando como a presença de água modifica mobilidade iônica, coordenação, organização interfacial, interações eletrodo–eletrólito, capacitância e densidade de energia. Também são analisadas variações de temperatura e modificações na composição aniônica, incluindo combinações de cloreto e brometo. Essas investigações buscam determinar condições nas quais maior mobilidade e reorganização molecular do eletrólito possam ser obtidas sem comprometer a estabilidade da dupla camada elétrica e a eficiência do dispositivo.</div><div class="project-verbatim">Engenharia de Eletrodos e Arquiteturas de Supercapacitores: Investigação do papel desempenhado pela composição, geometria e arquitetura dos eletrodos sobre as propriedades eletroquímicas de supercapacitores. A linha compreende estudos comparativos entre grafeno e grafino, avaliação do espaçamento entre superfícies eletrificadas e desenvolvimento de arquiteturas contendo camadas ou condutores internos integrados ao dispositivo. As simulações permitem analisar como modificações estruturais alteram confinamento iônico, distribuição de potencial, formação da dupla camada elétrica, capacitância e diferentes medidas de densidade de energia. O objetivo é distinguir efeitos genuinamente interfaciais de efeitos associados à geometria global do dispositivo e identificar estratégias de engenharia capazes de maximizar o aproveitamento energético dos materiais utilizados nos eletrodos.</div><div class="project-verbatim">Eletrólitos Sustentáveis para Armazenamento Eletroquímico de Energia: Desenvolvimento e avaliação computacional de eletrólitos de menor impacto ambiental para aplicação em supercapacitores, incluindo líquidos iônicos biocompatíveis e biodegradáveis derivados de aminoácidos e solventes eutéticos profundos naturais (NADES). Por meio de dinâmica molecular, são investigadas propriedades como organização estrutural, mobilidade molecular, redes de ligações de hidrogênio, formação da dupla camada elétrica, interação com eletrodos de carbono, capacitância e densidade de energia. A pesquisa busca determinar de que maneira a composição molecular desses eletrólitos pode ser ajustada para conciliar biocompatibilidade, estabilidade, transporte iônico e desempenho eletroquímico, contribuindo para o desenvolvimento de tecnologias mais sustentáveis de armazenamento de energia.</div></div>
-      </section>
-
-      <section class="profile-tab-panel" id="profile-productions" role="tabpanel" aria-labelledby="tab-productions" data-profile-tab-panel="productions" hidden>
-        <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
-        <div class="profile-publication-toolbar">
-          <div class="profile-publication-indicator" aria-live="polite">
-            <strong data-person-current-count>0</strong>
-            <span>artigo(s) no ano corrente</span>
-          </div>
-          <label class="profile-year-control">
-            <span>Exibir ano</span>
-            <select data-person-year-filter aria-label="Filtrar produções por ano"></select>
-          </label>
-        </div>
-        <div class="publication-list" data-person-publications>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Unveiling the Potential of Natural Deep Eutectic Solvents in Electrochemical Energy Storage Applications</h3>
-              <p class="authors">Henrique de Araujo Chagas, Guilherme Colherinhas, Eudes E. Fileti</p>
-              <p class="journal">ACS Physical Chemistry Au, v. 6, n. 1, 29-37</p>
-<a href="https://doi.org/10.1021/acsphyschemau.5c00063" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00063 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2026">
-            <div class="pub-year">2026</div>
-            <div>
-              <h3>Does Electrode Spacing Truly Control Capacitance and Energy Density in Graphene-Based Supercapacitors? A Molecular Simulation Perspective</h3>
-              <p class="authors">Davi de Oliveira Guedes, Henrique de Araujo Chagas, Iuliia V. Voroshylova, Guilherme Colherinhas</p>
-              <p class="journal">ACS Omega, v. 11, n. 22, 33072-33085</p>
-<a href="https://doi.org/10.1021/acsomega.6c02890" target="_blank" rel="noopener">DOI: 10.1021/acsomega.6c02890 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Temperature dependence of electric double-layer structure and electrochemical properties in graphene supercapacitors with [emim][BF₄] electrolyte: A molecular dynamics study</h3>
-              <p class="authors">Henrique de Araujo Chagas, Guilherme Colherinhas</p>
-              <p class="journal">Chemical Physics Letters, v. 877, 142325</p>
-<a href="https://doi.org/10.1016/j.cplett.2025.142325" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142325 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Sustainable supercapacitors using advanced hydrated amino acid ionic liquids: A novel approach to biodegradable energy storage</h3>
-              <p class="authors">Lucas de S. Silva, Henrique de A. Chagas, G. Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 417, 126638</p>
-<a href="https://doi.org/10.1016/j.molliq.2024.126638" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126638 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Quantum Molecular Dynamics Approach to Understanding Interactions in Betaine Chloride and Amino Acid Natural Deep Eutectic Solvents</h3>
-              <p class="authors">Eudes Eterno Fileti, Henrique de Araujo Chagas, Guilherme Colherinhas, Thaciana Malaspina</p>
-              <p class="journal">ACS Physical Chemistry Au, v. 5, n. 1, 72-79</p>
-<a href="https://doi.org/10.1021/acsphyschemau.4c00072" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.4c00072 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Performance Analysis of Supercapacitors With Graphene and Graphyne Electrodes</h3>
-              <p class="authors">Henrique de Araujo Chagas, Thaciana Malaspina, Eudes Eterno Fileti, Guilherme Colherinhas</p>
-              <p class="journal">Energy Storage, v. 7, n. 1, e70114</p>
-<a href="https://doi.org/10.1002/est2.70114" target="_blank" rel="noopener">DOI: 10.1002/est2.70114 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Modeling supercapacitors with integrated conductors via molecular dynamics: Optimization and impacts on energy efficiency</h3>
-              <p class="authors">Henrique de Araujo Chagas, Tertius Lima Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Power Sources, v. 656, 238100</p>
-<a href="https://doi.org/10.1016/j.jpowsour.2025.238100" target="_blank" rel="noopener">DOI: 10.1016/j.jpowsour.2025.238100 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Impact of Chloride and Bromide Composition in Ionic Liquid/Water Electrolytes on the Electrochemical Performance of Graphene-Based Supercapacitors: A Molecular Dynamics Study</h3>
-              <p class="authors">Leonardo B. A. Oliveira, Lucas de S Silva, Henrique de Araujo Chagas, Tertius L. Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">The Journal of Physical Chemistry C, v. 129, n. 30, 13532-13541</p>
-<a href="https://doi.org/10.1021/acs.jpcc.5c01816" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.5c01816 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2025">
-            <div class="pub-year">2025</div>
-            <div>
-              <h3>Biodegradable ionic liquids in energy storage: Molecular insights into hydration-controlled performance in graphene-based supercapacitors</h3>
-              <p class="authors">Matheus R.N. Dias, Matheus A. Arebalo, Henrique A. Chagas, Wesley B. Cardoso, Guilherme Colherinhas</p>
-              <p class="journal">Chemical Physics Letters, v. 881, 142440</p>
-<a href="https://doi.org/10.1016/j.cplett.2025.142440" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142440 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2024">
-            <div class="pub-year">2024</div>
-            <div>
-              <h3>Systematic analysis to evaluate the impact of hydration on electrolytes [emim][BF4] and [cho][gly] in supercapacitors formed by graphene or graphyne electrodes</h3>
-              <p class="authors">Henrique de Araujo Chagas, Leonardo B.A. Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 415, 126280</p>
-<a href="https://doi.org/10.1016/j.molliq.2024.126280" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126280 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2023">
-            <div class="pub-year">2023</div>
-            <div>
-              <h3>Comparing supercapacitors with graphene/graphyne electrodes and [Bmim][PF6], [Emim][BF4], [Ch][Gly] and [Pyr][Tfsi] ionic liquids using molecular dynamics</h3>
-              <p class="authors">Henrique de Araujo Chagas, Eudes Eterno Fileti, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 379, 121703</p>
-<a href="https://doi.org/10.1016/j.molliq.2023.121703" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.121703 ↗</a>            </div>
-          </article>
-          <article class="publication" data-person-publication data-year="2022">
-            <div class="pub-year">2022</div>
-            <div>
-              <h3>A molecular dynamics study of graphyne-based electrode and biocompatible ionic liquid for supercapacitor applications</h3>
-              <p class="authors">Henrique de Araujo Chagas, Eudes Eterno Fileti, Guilherme Colherinhas</p>
-              <p class="journal">Journal of Molecular Liquids, v. 360, 119494</p>
-<a href="https://doi.org/10.1016/j.molliq.2022.119494" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.119494 ↗</a>            </div>
-          </article>
-        </div>
-        <div class="empty-state profile-year-empty" data-person-year-empty hidden>
-          <strong>Nenhuma produção encontrada para o ano selecionado.</strong>
-          <p>Use o seletor acima para consultar as produções dos demais anos.</p>
-        </div>
-      </section>
-    </div>
-
-    <aside class="profile-aside">
-      <div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2021</dd></div><div><dt>Saída</dt><dd>—</dd></div><div><dt>Bolsa</dt><dd>CAPES - Doutorado</dd></div></dl></div>
-<div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Física - UFG</dd></div><div><dt>Mestrado</dt><dd>Física - UFG (2023)</dd></div><div><dt>Doutorado</dt><dd>Física - UFG, em andamento desde 2023</dd></div></dl></div>    </aside>
+      <div class="profile-year-summary" data-person-year-summary aria-label="Produções distribuídas por ano"></div>
+      <div class="publication-list" data-person-publications><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Unveiling the Potential of Natural Deep Eutectic Solvents in Electrochemical Energy Storage Applications</h3><p class="authors">Henrique de Araujo Chagas, Guilherme Colherinhas, Eudes E. Fileti</p><p class="journal">ACS Physical Chemistry Au, v. 6, n. 1, 29-37</p><a href="https://doi.org/10.1021/acsphyschemau.5c00063" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00063 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Does Electrode Spacing Truly Control Capacitance and Energy Density in Graphene-Based Supercapacitors? A Molecular Simulation Perspective</h3><p class="authors">Davi de Oliveira Guedes, Henrique de Araujo Chagas, Iuliia V. Voroshylova, Guilherme Colherinhas</p><p class="journal">ACS Omega, v. 11, n. 22, 33072-33085</p><a href="https://doi.org/10.1021/acsomega.6c02890" target="_blank" rel="noopener">DOI: 10.1021/acsomega.6c02890 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Temperature dependence of electric double-layer structure and electrochemical properties in graphene supercapacitors with [emim][BF₄] electrolyte: A molecular dynamics study</h3><p class="authors">Henrique de Araujo Chagas, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 877, 142325</p><a href="https://doi.org/10.1016/j.cplett.2025.142325" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142325 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Sustainable supercapacitors using advanced hydrated amino acid ionic liquids: A novel approach to biodegradable energy storage</h3><p class="authors">Lucas de S. Silva, Henrique de A. Chagas, G. Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 417, 126638</p><a href="https://doi.org/10.1016/j.molliq.2024.126638" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126638 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Quantum Molecular Dynamics Approach to Understanding Interactions in Betaine Chloride and Amino Acid Natural Deep Eutectic Solvents</h3><p class="authors">Eudes Eterno Fileti, Henrique de Araujo Chagas, Guilherme Colherinhas, Thaciana Malaspina</p><p class="journal">ACS Physical Chemistry Au, v. 5, n. 1, 72-79</p><a href="https://doi.org/10.1021/acsphyschemau.4c00072" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.4c00072 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Performance Analysis of Supercapacitors With Graphene and Graphyne Electrodes</h3><p class="authors">Henrique de Araujo Chagas, Thaciana Malaspina, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Energy Storage, v. 7, n. 1, e70114</p><a href="https://doi.org/10.1002/est2.70114" target="_blank" rel="noopener">DOI: 10.1002/est2.70114 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Modeling supercapacitors with integrated conductors via molecular dynamics: Optimization and impacts on energy efficiency</h3><p class="authors">Henrique de Araujo Chagas, Tertius Lima Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Power Sources, v. 656, 238100</p><a href="https://doi.org/10.1016/j.jpowsour.2025.238100" target="_blank" rel="noopener">DOI: 10.1016/j.jpowsour.2025.238100 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Impact of Chloride and Bromide Composition in Ionic Liquid/Water Electrolytes on the Electrochemical Performance of Graphene-Based Supercapacitors: A Molecular Dynamics Study</h3><p class="authors">Leonardo B. A. Oliveira, Lucas de S Silva, Henrique de Araujo Chagas, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry C, v. 129, n. 30, 13532-13541</p><a href="https://doi.org/10.1021/acs.jpcc.5c01816" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.5c01816 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Biodegradable ionic liquids in energy storage: Molecular insights into hydration-controlled performance in graphene-based supercapacitors</h3><p class="authors">Matheus R.N. Dias, Matheus A. Arebalo, Henrique A. Chagas, Wesley B. Cardoso, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 881, 142440</p><a href="https://doi.org/10.1016/j.cplett.2025.142440" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142440 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Systematic analysis to evaluate the impact of hydration on electrolytes [emim][BF4] and [cho][gly] in supercapacitors formed by graphene or graphyne electrodes</h3><p class="authors">Henrique de Araujo Chagas, Leonardo B.A. Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 415, 126280</p><a href="https://doi.org/10.1016/j.molliq.2024.126280" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126280 ↗</a></div></article><article class="publication" data-person-publication data-year="2023"><div class="pub-year">2023</div><div><h3>Comparing supercapacitors with graphene/graphyne electrodes and [Bmim][PF6], [Emim][BF4], [Ch][Gly] and [Pyr][Tfsi] ionic liquids using molecular dynamics</h3><p class="authors">Henrique de Araujo Chagas, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 379, 121703</p><a href="https://doi.org/10.1016/j.molliq.2023.121703" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.121703 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>A molecular dynamics study of graphyne-based electrode and biocompatible ionic liquid for supercapacitor applications</h3><p class="authors">Henrique de Araujo Chagas, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 360, 119494</p><a href="https://doi.org/10.1016/j.molliq.2022.119494" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.119494 ↗</a></div></article></div>
+      <div class="empty-state profile-year-empty" data-person-year-empty hidden><strong>Nenhuma produção encontrada para o ano selecionado.</strong><p>Use o seletor acima para consultar as produções dos demais anos.</p></div>
+    </section>
   </div>
-</section>
+  <aside class="profile-aside"><div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2021</dd></div><div><dt>Saída</dt><dd>—</dd></div><div><dt>Bolsa</dt><dd>CAPES - Doutorado</dd></div></dl></div><div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Física - UFG</dd></div><div><dt>Mestrado</dt><dd>Física - UFG (2023)</dd></div><div><dt>Doutorado</dt><dd>Física - UFG, em andamento desde 2023</dd></div></dl></div></aside>
+</div></section>
 </main>
 
 <footer class="site-footer">
@@ -417,7 +342,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 04/09/2026 01:25</div>
+    <div class="footer-meta">Atualização do site: 04/09/2026 01:32</div>
   </div>
 </footer>
 <script>(() => {
@@ -512,6 +437,37 @@ a{color:var(--brand)}
   };
   select.addEventListener('change', apply);
   apply();
+})();
+
+(() => {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('#main-menu');
+  if (!toggle || !menu) return;
+  const close = () => {menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open');};
+  toggle.addEventListener('click', () => document.body.classList.toggle('menu-open', menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+  document.addEventListener('keydown', event => {if (event.key === 'Escape') close();});
+  document.addEventListener('click', event => {if (menu.classList.contains('open') && !menu.contains(event.target) && !toggle.contains(event.target)) close();});
+})();
+
+(() => {
+  const select = document.querySelector('[data-person-year-filter]');
+  const items = [...document.querySelectorAll('[data-person-publication]')];
+  const summary = document.querySelector('[data-person-year-summary]');
+  if (!select || !items.length || !summary) return;
+  const counts = new Map();
+  items.forEach(item => {const year=(item.dataset.year||'').trim();counts.set(year,(counts.get(year)||0)+1);});
+  const currentYear = String(new Date().getFullYear());
+  const numericYears = [...counts.keys()].filter(year => /^\d{4}$/.test(year)).sort((a,b) => Number(b)-Number(a));
+  const years = [currentYear,...numericYears.filter(year => year !== currentYear)];
+  if (counts.has('')) years.push('');
+  const refresh = () => {
+    const selected = select.value;
+    summary.innerHTML = years.map(year => `<button class="profile-year-chip${year===selected?' active':''}" type="button" data-profile-year-chip="${year}"><span>${year||'Sem ano'}</span><strong>${counts.get(year)||0}</strong></button>`).join('');
+    summary.querySelectorAll('[data-profile-year-chip]').forEach(button => button.addEventListener('click', () => {select.value=button.dataset.profileYearChip;select.dispatchEvent(new Event('change'));refresh();}));
+  };
+  select.addEventListener('change', refresh);
+  requestAnimationFrame(refresh);
 })();
 </script>
 </body>
