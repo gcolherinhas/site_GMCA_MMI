@@ -76,6 +76,35 @@ main{padding-top:162px}
   .publication-year-nav{position:static}.year-section,.publication-statistics{scroll-margin-top:20px}.histogram-wrap{padding:18px}.contribution-table th:first-child,.contribution-table td:first-child{position:static}
 }
 
+/* Ajuste dos cards de pessoas: borda inspirada nos cards de Software + foto 5% maior */
+.person-card{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:28px;
+  box-shadow:0 12px 38px rgba(7,20,38,.07);
+}
+.person-card::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:4px;
+  background:linear-gradient(var(--accent),var(--brand));
+  z-index:1;
+}
+.person-card-link{
+  grid-template-columns:96px 1fr;
+  padding:16px 18px;
+}
+.avatar-wrap{
+  width:92.4px;
+  height:92.4px;
+}
+@media(max-width:720px){
+  .person-card-link{grid-template-columns:96px 1fr}
+  .avatar-wrap{width:92.4px;height:92.4px}
+}
+
 /* v8: produção científica simplificada */
 .publication-overview{padding:42px 0 28px;background:var(--surface-alt);border-bottom:1px solid var(--line)}
 .publication-overview .section-heading{margin-bottom:18px}
@@ -277,7 +306,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 04/09/2026 01:20</div>
+    <div class="footer-meta">Atualização do site: 04/09/2026 01:25</div>
   </div>
 </footer>
 <script>(() => {
