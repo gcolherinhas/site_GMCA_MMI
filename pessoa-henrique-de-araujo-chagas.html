@@ -38,72 +38,6 @@ main{padding-top:151px}.hero{background:linear-gradient(135deg,#eff6fd 0%,#fff 5
 .nav-links a{font-size:1.09rem;padding:12px 15px}
 main{padding-top:162px}
 
-/* Navegação e estatísticas de Produções Científicas */
-.publication-year-nav{position:sticky;top:162px;z-index:18;background:rgba(247,249,252,.96);backdrop-filter:blur(9px);border-bottom:1px solid var(--line);padding:14px 0}
-.publication-year-nav .container{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
-.publication-year-nav .nav-label{font-size:.8rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-right:3px}
-.year-jump,.statistics-jump{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:7px 12px;border-radius:999px;border:1px solid #bfd0e2;background:white;color:#23425f;font-size:.9rem;font-weight:800}
-.year-jump:hover,.statistics-jump:hover{background:#edf4fb;text-decoration:none}
-.statistics-jump{background:var(--brand);border-color:var(--brand);color:white}
-.statistics-jump:hover{background:var(--brand-dark);color:white}
-.year-section{scroll-margin-top:225px}
-.publication-statistics{scroll-margin-top:225px;border-top:1px solid var(--line)}
-.statistics-intro{color:var(--muted);max-width:800px}
-.histogram-wrap{margin-top:28px;background:white;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);overflow-x:auto}
-.histogram-title{margin:0 0 18px;font-size:1.25rem}
-.histogram{display:flex;align-items:flex-end;gap:12px;height:310px;min-width:max-content;padding:24px 10px 0;border-bottom:2px solid #aebed0}
-.hist-column{width:54px;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:7px}
-.hist-value{font-size:.78rem;font-weight:900;color:var(--brand-dark)}
-.hist-bar-track{height:230px;width:34px;display:flex;align-items:flex-end;background:#edf3f8;border-radius:8px 8px 0 0;overflow:hidden}
-.hist-bar-fill{width:100%;min-height:4px;background:linear-gradient(180deg,var(--accent),var(--brand-dark));border-radius:8px 8px 0 0}
-.hist-year{font-size:.78rem;font-weight:800;color:#42566e;white-space:nowrap}
-.contribution-block{margin-top:34px}
-.contribution-block h3{margin-bottom:7px;font-size:1.35rem}
-.contribution-table-wrap{overflow-x:auto;background:white;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-.contribution-table{width:100%;border-collapse:collapse;min-width:760px}
-.contribution-table th,.contribution-table td{padding:11px 12px;border-bottom:1px solid var(--line);border-right:1px solid #edf1f5;text-align:center;font-size:.88rem}
-.contribution-table th:first-child,.contribution-table td:first-child{text-align:left;position:sticky;left:0;background:white;min-width:250px;z-index:2}
-.contribution-table thead th{background:#eef4fa;font-weight:900;color:#29445f}
-.contribution-table thead th:first-child{background:#e7f0f8;z-index:3}
-.contribution-table tbody tr:last-child td{border-bottom:0}
-.contribution-table .contribution-total{font-weight:900;color:var(--brand-dark);background:#f4f8fc}
-.contribution-zero{color:#a5afba}
-
-@media (max-width:900px){
-  .brandbar{height:106px}.brand-logo-if{width:101px;max-height:66px}.brand-logo-ufg{width:122px;max-height:62px}.group-brand img{width:250px;max-height:84px}.institution-title strong{font-size:1.13rem}.institution-title span{font-size:.98rem}.nav-links a{font-size:1rem}.publication-year-nav{top:155px}main{padding-top:155px}.year-section,.publication-statistics{scroll-margin-top:220px}
-}
-@media (max-width:768px){
-  .publication-year-nav{position:static}.year-section,.publication-statistics{scroll-margin-top:20px}.histogram-wrap{padding:18px}.contribution-table th:first-child,.contribution-table td:first-child{position:static}
-}
-
-/* Ajuste dos cards de pessoas: borda inspirada nos cards de Software + foto 5% maior */
-.person-card{
-  position:relative;
-  overflow:hidden;
-  border:1px solid var(--line);
-  border-radius:28px;
-  box-shadow:0 12px 38px rgba(7,20,38,.07);
-}
-.person-card::before{
-  content:"";
-  position:absolute;
-  inset:0 auto 0 0;
-  width:4px;
-  background:linear-gradient(var(--accent),var(--brand));
-  z-index:1;
-}
-.person-card-link{
-  grid-template-columns:96px 1fr;
-  padding:16px 18px;
-}
-.avatar-wrap{
-  width:92.4px;
-  height:92.4px;
-}
-@media(max-width:720px){
-  .person-card-link{grid-template-columns:96px 1fr}
-  .avatar-wrap{width:92.4px;height:92.4px}
-}
 
 /* v8: produção científica simplificada */
 .publication-overview{padding:42px 0 28px;background:var(--surface-alt);border-bottom:1px solid var(--line)}
@@ -136,291 +70,6 @@ main>.profile-hero+.section{padding-top:42px}
 .hero-grid{min-height:430px;padding:50px 0}
 @media(max-width:980px){.page-hero{padding:34px 0 28px}.profile-hero{padding:36px 0}.hero-grid{padding:42px 0;min-height:auto}}
 @media(max-width:720px){.page-hero{padding:28px 0 24px}.profile-hero{padding:30px 0}main>.page-hero+.section{padding-top:30px}main>.page-hero+.section.compact-section{padding-top:24px}main>.profile-hero+.section{padding-top:30px}.hero-grid{padding:34px 0}}
-
-/* v11 seletivo — paleta do último modelo, preservando a estrutura original onde solicitado. */
-:root{--bg:#f5f7fb;--surface:#fff;--surface-alt:#edf3f9;--ink:#0b1424;--muted:#66758a;--line:rgba(12,31,55,.12);--brand:#155ee8;--brand-dark:#0b2440;--accent:#45d6ff;--night:#07111f;--cyan:#65e3ff;--lime:#b7ff5c;--shadow:0 24px 70px rgba(7,20,38,.10)}
-body{background:var(--bg);color:var(--ink)}
-a{color:var(--brand)}
-.site-header{background:rgba(245,247,251,.96);border-bottom-color:var(--line);box-shadow:0 8px 28px rgba(7,20,38,.06)}
-.main-nav{background:rgba(255,255,255,.72);border-top-color:rgba(12,31,55,.08)}
-.nav-links a{color:#28394e}.nav-links a:hover{background:#fff;color:var(--brand)}
-.nav-toggle{background:#fff;border-color:var(--line);color:var(--ink)}.brand-separator{background:rgba(12,31,55,.15)}
-.hero{background:radial-gradient(circle at 86% 8%,rgba(69,214,255,.18),transparent 30%),linear-gradient(135deg,#07111f,#0b2440);border-bottom-color:rgba(255,255,255,.08);color:#fff}
-.hero .eyebrow{color:#8deaff}.hero .lead{color:#c7d7e7}.hero-logo img{filter:drop-shadow(0 20px 38px rgba(0,0,0,.22))}
-.button{border-color:rgba(21,94,232,.22);color:#17314f;background:#fff}.button.primary{background:var(--brand);border-color:var(--brand);color:#fff}.button:hover{box-shadow:0 10px 26px rgba(7,20,38,.11)}
-.text-link{color:var(--brand)}.section-alt{background:var(--surface-alt);border-color:var(--line)}
-.stat,.research-card,.lmcc-preview,.person-card,.project-list>div,.info-card,.publication,.software-card,.award,.machine-table-wrap{background:#fff;border-color:var(--line)}
-.stat strong{color:var(--brand)}.card-number{color:#8ca8c5}.eyebrow{color:var(--brand)}.role{color:var(--brand)}
-.muted,.section-heading p,.software-description,.page-hero p{color:var(--muted)}
-.avatar-wrap{background:#e5eef8}.avatar-fallback{background:linear-gradient(135deg,#dceaff,#eef7ff);color:var(--brand)}.orcid-pill{background:#eff8e9;color:#4e7a2a}
-.page-hero,.profile-hero{background:radial-gradient(circle at 86% 0%,rgba(69,214,255,.18),transparent 32%),linear-gradient(135deg,#07111f,#0b2440);border-bottom-color:rgba(255,255,255,.08);color:#fff}
-.page-hero .eyebrow,.profile-hero .eyebrow{color:#8deaff}.page-hero p,.profile-hero p{color:#a7bed4}.profile-hero .lead{color:#eef7ff}
-.profile-links a{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:#e4f1fb}.profile-links a:hover{background:rgba(255,255,255,.14)}
-.people-section>h2{border-bottom-color:var(--line)}.person-card-link{color:var(--ink)}.person-card-link:hover{background:#f8fbff}
-.info-card dt{color:#7d8da0}.info-card dl div,.info-card hr{border-color:var(--line)}
-.project-list>div{box-shadow:0 10px 28px rgba(7,20,38,.04)}.publication{box-shadow:0 10px 28px rgba(7,20,38,.04)}
-.pub-year,.pub-index{color:var(--brand)}.authors{color:#3f536a}.journal{color:#798a9c}.member-tags span{background:#edf4ff;color:#48647f}
-.empty-state{background:#fff;border-color:#b8c6d5;color:var(--muted)}.empty-state strong{color:var(--ink)}
-.machine-table th{background:#eef4fb;color:#53677c}.machine-table th,.machine-table td{border-bottom-color:var(--line)}.sticky-card{background:#fff}
-.site-footer{background:#06101c;color:#fff}.site-footer p,.footer-meta{color:#8299af}.footer-admin{color:#c4d3e1}
-
-/* Cabeçalho moderno somente nas páginas cujo formato foi solicitado. */
-.page-hero-modern{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(circle at 85% 0%,rgba(61,138,255,.26),transparent 30%),linear-gradient(135deg,#07111f,#0b2440);color:#fff;border:0;padding:0}
-.page-hero-grid{position:absolute;inset:0;z-index:-1;opacity:.27;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:52px 52px}
-.page-hero-inner{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:40px;align-items:center;min-height:298px;padding:38px 0 30px}
-.page-hero-inner h1{font-size:clamp(2.2rem,4vw,3.7rem);line-height:1.03;letter-spacing:-.045em;margin:.32rem 0 .55rem}
-.page-hero-inner>p{margin:0;color:#a7bed4;font-size:1.02rem;max-width:520px}
-.eyebrow-light{color:#8deaff}
-
-/* Produções científicas — formato do último modelo. */
-.publication-overview{padding:62px 0;background:#edf3f9;border:0}
-.publication-dashboard{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);gap:42px;align-items:stretch}
-.publication-dashboard-copy h2{font-size:clamp(2rem,3.7vw,3.8rem);line-height:1.02;letter-spacing:-.045em;margin:.55rem 0 1rem}.publication-dashboard-copy p{color:var(--muted)}
-.recent-histogram-card{padding:26px 28px 22px;border-radius:28px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 38px rgba(7,20,38,.07)}
-.chart-head{display:flex;justify-content:space-between;align-items:center}.chart-head span{font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:#8697aa}.chart-head strong{font-size:.78rem;color:var(--brand)}
-.recent-histogram{height:260px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:end;border-bottom:1px solid #cad5e1;padding:18px 8px 0;min-width:0}
-.recent-hist-column{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:7px}.recent-hist-value{font-size:.8rem;font-weight:900;color:#33475d}
-.recent-hist-track{height:185px;width:min(48px,72%);display:flex;align-items:flex-end;border-radius:999px 999px 0 0;background:#edf2f7;overflow:hidden}.recent-hist-fill{width:100%;min-height:4px;border-radius:999px 999px 0 0;background:linear-gradient(180deg,#55dcff,#155ee8)}.recent-hist-year{padding-bottom:8px;font-size:.75rem;font-weight:900;color:#68798b}
-.publication-filter-section{padding:56px 0 100px}
-.publication-year-filter{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:40px;padding:18px 20px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.88);box-shadow:0 12px 38px rgba(7,20,38,.07)}
-.publication-year-filter>div{display:flex;flex-direction:column}.toolbar-label{font-size:.65rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#8b9db0}.publication-year-filter strong{font-size:1rem}
-.select-shell{position:relative;display:flex;align-items:center}.select-shell select{appearance:none;min-width:160px;min-height:46px;padding:10px 42px 10px 16px;border:1px solid var(--line);border-radius:999px;background:#f4f7fb;color:var(--ink);font:inherit;font-weight:850;cursor:pointer}.select-shell span{position:absolute;right:16px;pointer-events:none;color:#8091a3}
-.publication-year-result[hidden]{display:none!important}
-.publication-filter-section .year-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid #cfd9e4}
-.year-kicker{display:block;font-size:.64rem;text-transform:uppercase;letter-spacing:.13em;color:#8b9caf;font-weight:900}.publication-filter-section .year-heading h2{margin:4px 0 0;font-size:clamp(2.5rem,5vw,5rem);line-height:.85;letter-spacing:-.05em}.publication-filter-section .year-heading>span{color:var(--muted);font-size:.8rem}
-.publication-filter-section .publication-list{display:grid;gap:12px}.publication-filter-section .publication{display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;padding:22px 24px;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px rgba(7,20,38,.035);transition:.25s}
-.publication-filter-section .publication:hover{border-color:rgba(21,94,232,.25);transform:translateX(3px)}.publication-filter-section .pub-index{padding-top:3px;font-size:.68rem;font-weight:900;letter-spacing:.1em;color:var(--brand)}
-.publication-filter-section .publication-body h3{margin:0 0 9px;font-size:1.05rem;line-height:1.38}.publication-filter-section .publication-body p{margin:4px 0}.publication-filter-section .publication-body a{display:inline-flex;gap:7px;margin-top:9px;color:var(--brand);font-size:.8rem;font-weight:850}
-
-/* Programas/softwares — cards do último modelo. */
-.softwares-page{background:linear-gradient(#f5f7fb,#f8fbff)}.software-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.software-card{position:relative;overflow:hidden;padding:30px;border-radius:28px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 38px rgba(7,20,38,.07)}
-.software-card::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(var(--accent),var(--brand))}
-.software-card-top{display:flex;align-items:center;justify-content:space-between;gap:16px}.software-index{font-size:.68rem;font-weight:900;color:var(--brand);letter-spacing:.14em}.software-date{font-size:.7rem;color:#8899aa}
-.software-card h2{font-size:1.4rem;line-height:1.22;margin:24px 0 9px}.registration{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;color:#3a5270;font-weight:850}.software-description{color:var(--muted);margin:14px 0 24px}
-
-/* Premiações — formato editorial do último modelo. */
-.awards-page{background:linear-gradient(#f5f7fb,#f8fbff)}.award-timeline{display:grid;gap:22px}
-.award{position:relative;display:grid;grid-template-columns:90px 190px minmax(0,1fr);gap:34px;align-items:center;padding:26px;border-radius:30px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 38px rgba(7,20,38,.07)}
-.award::before{content:"";position:absolute;left:44px;top:0;bottom:0;width:1px;background:linear-gradient(transparent,#d8e2eb,transparent)}
-.award-year{position:relative;z-index:2;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#07111f;color:#fff;font-size:.9rem;font-weight:900;box-shadow:0 10px 25px rgba(7,17,31,.20)}
-.award-cover img,.cover-placeholder{width:170px;aspect-ratio:3/4;object-fit:cover;border-radius:16px;box-shadow:0 16px 36px rgba(7,20,38,.16)}.cover-placeholder{display:grid;place-items:center;background:#e7eef5;color:#7f8fa0}.award-body h2{font-size:1.4rem;line-height:1.25;margin:10px 0}.award-meta{color:var(--muted);font-size:.82rem}
-
-/* Perfil individual — estrutura original + abas solicitadas. */
-.profile-tabs{display:flex;gap:8px;margin-bottom:30px;padding:6px;border:1px solid var(--line);border-radius:14px;background:#eaf0f6;width:max-content;max-width:100%}
-.profile-tab{display:inline-flex;align-items:center;gap:9px;border:0;border-radius:10px;background:transparent;color:#53677c;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
-.profile-tab.active{background:#fff;color:var(--brand);box-shadow:0 5px 16px rgba(7,20,38,.08)}.tab-count{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 7px;border-radius:999px;background:#e8f0ff;color:var(--brand);font-size:.72rem;font-weight:900}.profile-tab.active .tab-count{background:var(--brand);color:#fff}
-.profile-tab-panel[hidden]{display:none!important}
-.profile-publication-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:20px;padding:15px 17px;border:1px solid var(--line);border-radius:13px;background:#f8fbff}
-.profile-publication-indicator{display:flex;align-items:baseline;gap:8px}.profile-publication-indicator strong{font-size:1.45rem;line-height:1;color:var(--brand)}.profile-publication-indicator span{color:var(--muted);font-size:.84rem}
-.profile-year-control{display:flex;align-items:center;gap:10px;color:#52657a;font-size:.82rem;font-weight:800}.profile-year-control select{min-width:130px;border:1px solid var(--line);border-radius:9px;padding:9px 34px 9px 11px;background:#fff;color:var(--ink);font:inherit;font-weight:750}
-.profile-year-empty{margin-top:16px}.profile-main .publication[hidden]{display:none!important}
-
-@media(max-width:980px){.page-hero-inner,.publication-dashboard{grid-template-columns:1fr}.page-hero-inner{gap:12px;min-height:auto;padding:34px 0 28px}.software-grid{grid-template-columns:1fr}.award{grid-template-columns:76px 160px minmax(0,1fr)}}
-@media(max-width:720px){
-  .page-hero-modern{padding:0}.page-hero-inner{gap:10px;padding:28px 0 24px}.page-hero-inner h1{font-size:clamp(2.1rem,9vw,2.8rem);line-height:1.04}.page-hero-inner>p{font-size:.95rem}
-  .recent-histogram-card{padding:20px 12px;overflow-x:auto}.recent-histogram{min-width:470px;height:225px}.recent-hist-track{height:150px}
-  .publication-year-filter{align-items:stretch;flex-direction:column}.select-shell,.select-shell select{width:100%}
-  .publication-filter-section .publication{grid-template-columns:40px minmax(0,1fr);gap:10px;padding:16px}
-  .award{grid-template-columns:100px minmax(0,1fr);padding:20px;gap:18px}.award::before{display:none}.award-year{grid-column:1/-1;width:auto;height:auto;display:block;background:none;color:var(--brand);box-shadow:none;font-size:.76rem}.award-cover img,.cover-placeholder{width:100px;border-radius:12px}
-  .profile-tabs{width:100%}.profile-tab{flex:1;justify-content:center;padding-inline:10px}.profile-publication-toolbar{align-items:stretch;flex-direction:column}.profile-year-control{justify-content:space-between}
-}
-@media(max-width:420px){.publication-filter-section .publication{grid-template-columns:1fr}.award{grid-template-columns:1fr}.award-cover img,.cover-placeholder{width:110px}}
-
-/* v12 — indicadores informativos e acabamento mobile. */
-.people-metrics-section,.publication-metrics-section{background:#edf3f9;border-bottom:1px solid var(--line)}
-.people-metrics,.publication-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:18px 0}
-.people-metric,.publication-metric{position:relative;overflow:hidden;min-width:0;padding:17px 19px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(7,20,38,.045)}
-.people-metric::before,.publication-metric::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(var(--accent),var(--brand))}
-.people-metric strong,.publication-metric strong{display:block;color:var(--brand);font-size:1.45rem;line-height:1;font-weight:900;letter-spacing:-.035em}
-.people-metric span,.publication-metric span{display:block;margin-top:7px;color:var(--muted);font-size:.76rem;font-weight:750}
-.person-card-copy{min-width:0}.person-card-copy h3,.person-card-copy p{overflow-wrap:anywhere}
-.person-mini-metrics{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
-.person-mini-metrics span{display:inline-flex;align-items:center;min-height:23px;padding:3px 8px;border-radius:999px;background:#edf4ff;color:#48647f;font-size:.67rem;font-weight:850}
-
-.profile-tab .tab-count.projects{background:#e8f7ff;color:#1874a6}.profile-tab.active .tab-count.projects{background:#1685bd;color:#fff}
-.profile-production-metrics{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap}
-.profile-production-metric{min-width:128px;padding:10px 13px;border:1px solid var(--line);border-radius:11px;background:#fff}
-.profile-production-metric strong{display:block;color:var(--brand);font-size:1.35rem;line-height:1;font-weight:900}.profile-production-metric span{display:block;margin-top:5px;color:var(--muted);font-size:.72rem;font-weight:750}
-.profile-year-summary{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 18px}
-.profile-year-chip{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#53677c;font:inherit;font-size:.72rem;font-weight:850;cursor:pointer}
-.profile-year-chip strong{color:var(--brand)}.profile-year-chip.active{border-color:rgba(21,94,232,.32);background:#edf4ff;color:var(--brand)}
-.profile-year-chip:focus-visible,.profile-tab:focus-visible,.nav-toggle:focus-visible,.button:focus-visible,.select-shell select:focus-visible,.profile-year-control select:focus-visible{outline:3px solid rgba(69,214,255,.45);outline-offset:2px}
-.publication-metrics-section{background:#f5f7fb}
-.publication-metric{padding-block:18px}.publication-metric small{display:block;margin-top:4px;color:#8a9bad;font-size:.64rem;font-weight:800}
-.publication-filter-section .publication-body a,.profile-main .publication a,.registration{overflow-wrap:anywhere;word-break:break-word}
-.machine-table-wrap,.recent-histogram-card{overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
-.button,.nav-toggle,.profile-links a,.profile-tab,.profile-year-chip,.select-shell select,.profile-year-control select{touch-action:manipulation}
-@media(max-width:980px){.people-metrics,.publication-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:720px){
-  body{font-size:15px}.container{width:min(var(--max),calc(100% - 28px))}.section{padding:50px 0}.compact-section{padding:28px 0}
-  .nav-toggle{min-width:48px;min-height:44px;align-items:center;justify-content:center;font-weight:850}
-  .nav-links.open{top:50px;padding:10px;border-radius:0 0 18px 18px;box-shadow:0 20px 44px rgba(7,20,38,.16)}
-  .nav-links a{display:flex;align-items:center;min-height:46px;padding:10px 12px}body.menu-open{overflow:hidden}
-  .button,.profile-links a{min-height:44px}.hero-actions{gap:9px}.hero-actions .button{flex:1 1 180px}
-  .people-metrics-section,.publication-metrics-section{overflow:hidden}
-  .people-metrics,.publication-metrics{display:flex;gap:10px;overflow-x:auto;padding:14px 14px 16px;scroll-snap-type:x proximity;scrollbar-width:none}
-  .people-metrics::-webkit-scrollbar,.publication-metrics::-webkit-scrollbar,.profile-year-summary::-webkit-scrollbar{display:none}
-  .people-metric,.publication-metric{flex:0 0 158px;scroll-snap-align:start;padding:15px 16px}.people-metric strong,.publication-metric strong{font-size:1.3rem}
-  .person-card-link{gap:13px;padding:15px 16px}.person-card h3{font-size:.98rem}.muted{font-size:.8rem}.person-mini-metrics{gap:5px}.person-mini-metrics span{font-size:.64rem}
-  .profile-grid{gap:22px}.profile-links{gap:8px}.profile-tabs{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.profile-tabs::-webkit-scrollbar{display:none}.profile-tab{min-height:44px;white-space:nowrap}
-  .profile-publication-toolbar{gap:12px}.profile-production-metrics{display:grid;grid-template-columns:1fr 1fr;width:100%}.profile-production-metric{min-width:0}.profile-year-control select{min-height:44px}
-  .profile-year-summary{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px;scroll-snap-type:x proximity;scrollbar-width:none}.profile-year-chip{flex:0 0 auto;scroll-snap-align:start;min-height:40px}
-  .publication-filter-section{padding:44px 0 68px}.publication-year-filter{margin-bottom:28px;padding:15px 16px}.publication-filter-section .publication{transform:none!important}.publication-filter-section .publication-body h3{font-size:1rem}
-  .recent-histogram-card{scrollbar-width:thin}.machine-table-wrap{border-radius:12px;scrollbar-width:thin}.machine-table th,.machine-table td{padding:11px 12px}
-  .software-card{padding:24px;border-radius:22px}.award{border-radius:22px}.site-footer{padding:28px 0}.footer-grid{gap:18px}
-}
-@media(max-width:520px){
-  .hero-actions .button{flex-basis:100%}.profile-links a{flex:1 1 100%;justify-content:center}
-  .profile-production-metrics{grid-template-columns:1fr 1fr}.profile-year-control{align-items:stretch;flex-direction:column}.profile-year-control select{width:100%}
-  .publication-filter-section .year-heading{align-items:flex-start;flex-direction:column;gap:6px}.publication-filter-section .year-heading h2{font-size:2.8rem}.award-body h2{font-size:1.18rem}
-}
-@media(hover:none){.button:hover,.publication-filter-section .publication:hover{transform:none;box-shadow:inherit}}
-
-/* v14 — ajustes solicitados no Pessoal e no Painel de Dados. */
-.person-card-link{grid-template-columns:87px 1fr}
-.avatar-wrap{width:83.16px;height:83.16px}
-.participation-table{min-width:1180px}
-.matrix-person{min-width:250px}.matrix-person-profile{display:flex;align-items:center;gap:11px}
-.matrix-avatar{flex:0 0 46px;width:46px;height:46px;border-radius:50%;overflow:hidden;background:#e6edf5;border:1px solid var(--line)}
-.matrix-avatar img{width:100%;height:100%;object-fit:cover}.matrix-avatar span{width:100%;height:100%;display:grid;place-items:center;color:var(--brand);font-weight:900;background:#edf4ff}
-.matrix-person-copy{min-width:0}.matrix-person-copy strong{overflow-wrap:anywhere}
-.matrix-focus{min-width:230px}.matrix-focus strong{display:block;color:var(--brand-dark);font-size:.82rem}.matrix-focus span{display:block;margin-top:4px;color:var(--muted);font-size:.7rem;line-height:1.45}
-.matrix-cell{min-width:180px}
-@media(max-width:720px){
-  .person-card-link{grid-template-columns:87px 1fr}
-  .avatar-wrap{width:83.16px;height:83.16px}
-  .participation-table{min-width:1120px}
-}
-
-/* v13 — painel de gestão do grupo. */
-.panel-metrics-section{background:#edf3f9;border-bottom:1px solid var(--line)}
-.panel-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:18px 0}
-.panel-metric{position:relative;overflow:hidden;min-width:0;padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(7,20,38,.045)}
-.panel-metric::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(var(--accent),var(--brand))}
-.panel-metric strong{display:block;color:var(--brand);font-size:1.55rem;line-height:1;font-weight:900;letter-spacing:-.04em}.panel-metric span{display:block;margin-top:7px;color:var(--muted);font-size:.76rem;font-weight:750}
-.panel-section{padding:62px 0}.panel-section-alt{background:var(--surface-alt);border-block:1px solid var(--line)}
-.panel-intro{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:28px}.panel-intro .section-heading{margin:0}.panel-intro-note{max-width:430px;margin:0;color:var(--muted);font-size:.9rem}
-.axis-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.axis-card{position:relative;overflow:hidden;padding:24px;border:1px solid var(--line);border-radius:24px;background:#fff;box-shadow:0 10px 30px rgba(7,20,38,.055)}
-.axis-card::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(var(--accent),var(--brand))}.axis-card h3{margin:5px 0 8px;font-size:1.35rem}.axis-card p{margin:0;color:var(--muted);font-size:.88rem}
-.axis-numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0 16px}.axis-number{padding:10px;border-radius:12px;background:#f5f8fc;text-align:center}.axis-number strong{display:block;color:var(--brand);font-size:1.18rem}.axis-number span{display:block;margin-top:3px;color:var(--muted);font-size:.65rem;font-weight:800}
-.theme-tags{display:flex;gap:6px;flex-wrap:wrap}.theme-tags span{padding:4px 8px;border-radius:999px;background:#edf4ff;color:#48647f;font-size:.67rem;font-weight:800}
-.matrix-wrap{overflow:auto;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 8px 26px rgba(7,20,38,.045);overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}.participation-table{width:100%;min-width:980px;border-collapse:collapse}.participation-table th,.participation-table td{padding:14px 15px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}.participation-table th{position:sticky;top:0;background:#edf3f9;color:#42566d;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;z-index:2}.participation-table tr:last-child td{border-bottom:0}.matrix-person{min-width:210px}.matrix-person strong{display:block;color:var(--ink)}.matrix-person span{display:block;margin-top:3px;color:var(--muted);font-size:.72rem}.matrix-status{display:inline-flex!important;width:max-content;margin-top:7px!important;padding:3px 7px;border-radius:999px;background:#eef4fb;color:#4e647a!important;font-size:.64rem!important;font-weight:850}.matrix-status.active{background:#eaf7ee;color:#37794b!important}
-.matrix-cell{min-width:220px}.matrix-cell-top{display:flex;gap:10px;align-items:center;margin-bottom:7px}.matrix-score{display:inline-flex;align-items:center;justify-content:center;min-width:31px;height:31px;border-radius:9px;background:#edf4ff;color:var(--brand);font-weight:900}.matrix-breakdown{color:#53677c;font-size:.7rem;font-weight:800}.matrix-themes{display:flex;gap:4px;flex-wrap:wrap}.matrix-themes span{padding:3px 6px;border-radius:999px;background:#f3f6f9;color:#627487;font-size:.62rem;font-weight:750}.matrix-empty{color:#a2afbc}
-.evolution-shell{padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 8px 26px rgba(7,20,38,.045)}.evolution-head{display:flex;justify-content:space-between;gap:20px;align-items:start;margin-bottom:20px}.evolution-head p{max-width:590px;margin:0;color:var(--muted);font-size:.85rem}.evolution-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.72rem;font-weight:800;color:#53677c}.legend-item{display:inline-flex;align-items:center;gap:6px}.legend-dot{width:9px;height:9px;border-radius:50%;background:var(--brand)}.legend-dot.publications{background:var(--accent)}
-.evolution-scroll{overflow-x:auto;padding-bottom:6px;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}.evolution-chart{display:flex;align-items:end;gap:12px;min-width:max-content;height:250px;padding:12px 6px 0;border-bottom:2px solid #c5d1dd}.evolution-year{width:66px;flex:0 0 66px;text-align:center}.evolution-bars{height:174px;display:flex;align-items:end;justify-content:center;gap:5px}.evolution-bar{width:18px;min-height:3px;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#4584f4,var(--brand))}.evolution-bar.publications{background:linear-gradient(180deg,var(--accent),#1685bd)}.evolution-values{display:flex;justify-content:center;gap:8px;margin:6px 0 4px;color:#53677c;font-size:.62rem;font-weight:850}.evolution-label{display:block;color:#42566e;font-size:.72rem;font-weight:900}.evolution-flow{display:block;margin-top:4px;color:#8696a6;font-size:.58rem;font-weight:750;white-space:nowrap}
-.panel-method{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:start}.method-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff}.method-card h3{margin:0 0 9px}.method-card p{margin:0;color:var(--muted);font-size:.86rem}.method-list{display:grid;gap:9px}.method-line{display:flex;justify-content:space-between;gap:20px;padding-bottom:9px;border-bottom:1px solid var(--line);font-size:.78rem}.method-line:last-child{padding-bottom:0;border-bottom:0}.method-line span{color:var(--muted)}.method-line strong{color:var(--brand-dark)}
-@media(max-width:980px){.panel-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.axis-grid{grid-template-columns:1fr}.panel-method{grid-template-columns:1fr}.panel-intro{align-items:start;flex-direction:column}.panel-intro-note{max-width:720px}}
-@media(max-width:720px){.panel-metrics-section{overflow:hidden}.panel-metrics{display:flex;gap:10px;overflow-x:auto;padding:14px;scroll-snap-type:x proximity;scrollbar-width:none}.panel-metrics::-webkit-scrollbar{display:none}.panel-metric{flex:0 0 158px;scroll-snap-align:start;padding:15px 16px}.panel-metric strong{font-size:1.35rem}.panel-section{padding:48px 0}.axis-card{padding:20px;border-radius:20px}.axis-numbers{gap:6px}.axis-number{padding:9px 6px}.matrix-wrap{border-radius:14px;scrollbar-width:thin}.evolution-shell{padding:18px 14px;border-radius:18px}.evolution-head{flex-direction:column}.evolution-chart{height:230px}.method-card{padding:18px}.method-line{align-items:flex-start;flex-direction:column;gap:3px}}
-
-/* v16 — correções efetivas de alinhamento e dimensionamento. */
-
-/* Página inicial: textos das linhas de atuação realmente justificados. */
-.research-card .project-verbatim,
-.research-card p{
-  width:100%;
-  padding-right:0;
-  text-align:justify !important;
-  text-align-last:left;
-  text-justify:inter-word;
-  hyphens:auto;
-}
-
-/* Software: descrição realmente justificada dentro de todo o card. */
-.softwares-page .software-description,
-.software-card .software-description{
-  width:100%;
-  text-align:justify !important;
-  text-align-last:left;
-  text-justify:inter-word;
-  hyphens:auto;
-}
-
-/* Produções, Softwares e Premiações: chamada em uma única coluna.
-   O texto explicativo fica obrigatoriamente abaixo do título. */
-.page-hero-modern .page-hero-inner{
-  display:flex !important;
-  flex-direction:column !important;
-  align-items:flex-start !important;
-  justify-content:center !important;
-  gap:0 !important;
-  min-height:0 !important;
-  padding:38px 0 30px !important;
-}
-.page-hero-modern .page-hero-inner>div{
-  width:100%;
-}
-.page-hero-modern .page-hero-inner>p{
-  width:min(820px,100%) !important;
-  max-width:820px !important;
-  margin:.72rem 0 0 !important;
-  color:#a7bed4;
-}
-
-/* Histórico: dez colunas ocupam integralmente a largura útil do painel. */
-.evolution-scroll{
-  width:100%;
-  overflow-x:visible;
-}
-.evolution-chart{
-  display:grid !important;
-  grid-template-columns:repeat(10,minmax(0,1fr)) !important;
-  align-items:end;
-  width:100% !important;
-  min-width:0 !important;
-  max-width:none !important;
-  gap:clamp(10px,1.5vw,26px) !important;
-  padding:12px 6px 0;
-}
-.evolution-year{
-  width:100% !important;
-  min-width:0 !important;
-  max-width:none !important;
-  flex:none !important;
-}
-.evolution-bars{
-  width:100%;
-  height:174px;
-  justify-content:center;
-}
-.evolution-values{
-  width:100%;
-}
-@media(max-width:980px){
-  .page-hero-modern .page-hero-inner{
-    padding:34px 0 28px !important;
-  }
-}
-@media(max-width:720px){
-  .page-hero-modern .page-hero-inner{
-    padding:28px 0 24px !important;
-  }
-  .evolution-scroll{
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-  }
-  .evolution-chart{
-    grid-template-columns:repeat(10,66px) !important;
-    width:max-content !important;
-    min-width:760px !important;
-    gap:10px !important;
-  }
-  .evolution-year{
-    width:66px !important;
-    min-width:66px !important;
-  }
-}
-
-/* v17 — otimização de premiações e justificação dos projetos individuais. */
-.profile-main .project-list .project-verbatim{
-  text-align:justify !important;
-  text-align-last:left;
-  text-justify:inter-word;
-  hyphens:auto;
-}
-.award-cover a{display:block;width:max-content;max-width:100%;border-radius:16px}
-.award-cover a:hover{text-decoration:none}
-.award-cover a:focus-visible{outline:3px solid rgba(69,214,255,.45);outline-offset:4px}
 </style>
 </head>
 <body>
@@ -442,7 +91,6 @@ a{color:var(--brand)}
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
       <div class="nav-links" id="main-menu">
             <a href="pessoal.html">Pessoal</a>
-            <a href="painel.html">Painel de Dados</a>
             <a href="producoes.html">Produções Científicas</a>
             <a href="softwares.html">Softwares</a>
             <a href="premiacoes.html">Premiações</a>
@@ -453,32 +101,36 @@ a{color:var(--brand)}
   </nav>
 </header>
 
-<main><section class="profile-hero"><div class="container profile-grid">
-  <div class="profile-photo"><img src="data:image/webp;base64,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" alt="Foto de Henrique de Araujo Chagas" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><span class="avatar-fallback large" style="display:none">H</span></div>
-  <div><span class="eyebrow">Estudantes de Pós-Graduação · Atual</span><h1>Henrique de Araujo Chagas</h1><p class="lead">Doutorando</p><p>PPGF/IF-UFG</p><div class="profile-links"><a href="mailto:hhchagas@gmail.com">E-mail</a><a href="http://lattes.cnpq.br/1522466138848893" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0000-0002-7696-010X" target="_blank" rel="noopener">ORCID 0000-0002-7696-010X ↗</a></div></div>
-</div></section>
-<section class="section"><div class="container profile-content">
-  <div class="profile-main">
-    <div class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">
-      <button class="profile-tab active" type="button" role="tab" aria-selected="true" aria-controls="profile-projects" id="tab-projects" data-profile-tab="projects">Projetos <span class="tab-count projects">4</span></button>
-      <button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-productions" id="tab-productions" data-profile-tab="productions">Produções <span class="tab-count">12</span></button>
+<main><section class="profile-hero">
+  <div class="container profile-grid">
+    <div class="profile-photo">
+<img src="data:image/webp;base64,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" alt="Foto de Henrique de Araujo Chagas" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">      <span class="avatar-fallback large" style="display:none">H</span>
     </div>
-    <section class="profile-tab-panel" id="profile-projects" role="tabpanel" aria-labelledby="tab-projects" data-profile-tab-panel="projects">
-      <div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div>
-<div class="project-list"><div class="project-verbatim">Modelagem Molecular de Supercapacitores e Interfaces Eletroquímicas: Investigação computacional dos mecanismos moleculares responsáveis pelo armazenamento eletrostático de energia em supercapacitores, utilizando principalmente simulações de dinâmica molecular. A pesquisa caracteriza a formação da dupla camada elétrica na interface eletrodo–eletrólito, analisando distribuição espacial de íons, perfis de potencial eletrostático, energias de interação, capacitância e densidade de energia. São estudados dispositivos constituídos por eletrodos de materiais bidimensionais e diferentes classes de eletrólitos, buscando estabelecer relações entre organização molecular da interface e desempenho eletroquímico. O objetivo central é identificar princípios físico-químicos que permitam otimizar a eficiência energética de supercapacitores por meio do controle das propriedades do eletrodo, do eletrólito e da interface.</div><div class="project-verbatim">Hidratação, Temperatura e Composição de Eletrólitos em Supercapacitores: Estudo sistemático dos efeitos da hidratação, temperatura e composição química dos eletrólitos sobre a estrutura da dupla camada elétrica e o desempenho de supercapacitores. A pesquisa investiga líquidos iônicos como [emim][BF4], [cho][gly] e outros sistemas hidratados, avaliando como a presença de água modifica mobilidade iônica, coordenação, organização interfacial, interações eletrodo–eletrólito, capacitância e densidade de energia. Também são analisadas variações de temperatura e modificações na composição aniônica, incluindo combinações de cloreto e brometo. Essas investigações buscam determinar condições nas quais maior mobilidade e reorganização molecular do eletrólito possam ser obtidas sem comprometer a estabilidade da dupla camada elétrica e a eficiência do dispositivo.</div><div class="project-verbatim">Engenharia de Eletrodos e Arquiteturas de Supercapacitores: Investigação do papel desempenhado pela composição, geometria e arquitetura dos eletrodos sobre as propriedades eletroquímicas de supercapacitores. A linha compreende estudos comparativos entre grafeno e grafino, avaliação do espaçamento entre superfícies eletrificadas e desenvolvimento de arquiteturas contendo camadas ou condutores internos integrados ao dispositivo. As simulações permitem analisar como modificações estruturais alteram confinamento iônico, distribuição de potencial, formação da dupla camada elétrica, capacitância e diferentes medidas de densidade de energia. O objetivo é distinguir efeitos genuinamente interfaciais de efeitos associados à geometria global do dispositivo e identificar estratégias de engenharia capazes de maximizar o aproveitamento energético dos materiais utilizados nos eletrodos.</div><div class="project-verbatim">Eletrólitos Sustentáveis para Armazenamento Eletroquímico de Energia: Desenvolvimento e avaliação computacional de eletrólitos de menor impacto ambiental para aplicação em supercapacitores, incluindo líquidos iônicos biocompatíveis e biodegradáveis derivados de aminoácidos e solventes eutéticos profundos naturais (NADES). Por meio de dinâmica molecular, são investigadas propriedades como organização estrutural, mobilidade molecular, redes de ligações de hidrogênio, formação da dupla camada elétrica, interação com eletrodos de carbono, capacitância e densidade de energia. A pesquisa busca determinar de que maneira a composição molecular desses eletrólitos pode ser ajustada para conciliar biocompatibilidade, estabilidade, transporte iônico e desempenho eletroquímico, contribuindo para o desenvolvimento de tecnologias mais sustentáveis de armazenamento de energia.</div></div>    </section>
-    <section class="profile-tab-panel" id="profile-productions" role="tabpanel" aria-labelledby="tab-productions" data-profile-tab-panel="productions" hidden>
-      <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
-      <div class="profile-publication-toolbar">
-        <div class="profile-production-metrics" aria-live="polite"><div class="profile-production-metric"><strong data-person-current-count>0</strong><span>no ano corrente</span></div><div class="profile-production-metric"><strong>12</strong><span>total no perfil</span></div></div>
-        <label class="profile-year-control"><span>Exibir ano</span><select data-person-year-filter aria-label="Filtrar produções por ano"></select></label>
-      </div>
-      <div class="profile-year-summary" data-person-year-summary aria-label="Produções distribuídas por ano"></div>
-      <div class="publication-list" data-person-publications><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Unveiling the Potential of Natural Deep Eutectic Solvents in Electrochemical Energy Storage Applications</h3><p class="authors">Henrique de Araujo Chagas, Guilherme Colherinhas, Eudes E. Fileti</p><p class="journal">ACS Physical Chemistry Au, v. 6, n. 1, 29-37</p><a href="https://doi.org/10.1021/acsphyschemau.5c00063" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00063 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Does Electrode Spacing Truly Control Capacitance and Energy Density in Graphene-Based Supercapacitors? A Molecular Simulation Perspective</h3><p class="authors">Davi de Oliveira Guedes, Henrique de Araujo Chagas, Iuliia V. Voroshylova, Guilherme Colherinhas</p><p class="journal">ACS Omega, v. 11, n. 22, 33072-33085</p><a href="https://doi.org/10.1021/acsomega.6c02890" target="_blank" rel="noopener">DOI: 10.1021/acsomega.6c02890 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Temperature dependence of electric double-layer structure and electrochemical properties in graphene supercapacitors with [emim][BF₄] electrolyte: A molecular dynamics study</h3><p class="authors">Henrique de Araujo Chagas, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 877, 142325</p><a href="https://doi.org/10.1016/j.cplett.2025.142325" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142325 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Sustainable supercapacitors using advanced hydrated amino acid ionic liquids: A novel approach to biodegradable energy storage</h3><p class="authors">Lucas de S. Silva, Henrique de A. Chagas, G. Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 417, 126638</p><a href="https://doi.org/10.1016/j.molliq.2024.126638" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126638 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Quantum Molecular Dynamics Approach to Understanding Interactions in Betaine Chloride and Amino Acid Natural Deep Eutectic Solvents</h3><p class="authors">Eudes Eterno Fileti, Henrique de Araujo Chagas, Guilherme Colherinhas, Thaciana Malaspina</p><p class="journal">ACS Physical Chemistry Au, v. 5, n. 1, 72-79</p><a href="https://doi.org/10.1021/acsphyschemau.4c00072" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.4c00072 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Performance Analysis of Supercapacitors With Graphene and Graphyne Electrodes</h3><p class="authors">Henrique de Araujo Chagas, Thaciana Malaspina, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Energy Storage, v. 7, n. 1, e70114</p><a href="https://doi.org/10.1002/est2.70114" target="_blank" rel="noopener">DOI: 10.1002/est2.70114 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Modeling supercapacitors with integrated conductors via molecular dynamics: Optimization and impacts on energy efficiency</h3><p class="authors">Henrique de Araujo Chagas, Tertius Lima Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Power Sources, v. 656, 238100</p><a href="https://doi.org/10.1016/j.jpowsour.2025.238100" target="_blank" rel="noopener">DOI: 10.1016/j.jpowsour.2025.238100 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Impact of Chloride and Bromide Composition in Ionic Liquid/Water Electrolytes on the Electrochemical Performance of Graphene-Based Supercapacitors: A Molecular Dynamics Study</h3><p class="authors">Leonardo B. A. Oliveira, Lucas de S Silva, Henrique de Araujo Chagas, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry C, v. 129, n. 30, 13532-13541</p><a href="https://doi.org/10.1021/acs.jpcc.5c01816" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.5c01816 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Biodegradable ionic liquids in energy storage: Molecular insights into hydration-controlled performance in graphene-based supercapacitors</h3><p class="authors">Matheus R.N. Dias, Matheus A. Arebalo, Henrique A. Chagas, Wesley B. Cardoso, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 881, 142440</p><a href="https://doi.org/10.1016/j.cplett.2025.142440" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142440 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Systematic analysis to evaluate the impact of hydration on electrolytes [emim][BF4] and [cho][gly] in supercapacitors formed by graphene or graphyne electrodes</h3><p class="authors">Henrique de Araujo Chagas, Leonardo B.A. Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 415, 126280</p><a href="https://doi.org/10.1016/j.molliq.2024.126280" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126280 ↗</a></div></article><article class="publication" data-person-publication data-year="2023"><div class="pub-year">2023</div><div><h3>Comparing supercapacitors with graphene/graphyne electrodes and [Bmim][PF6], [Emim][BF4], [Ch][Gly] and [Pyr][Tfsi] ionic liquids using molecular dynamics</h3><p class="authors">Henrique de Araujo Chagas, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 379, 121703</p><a href="https://doi.org/10.1016/j.molliq.2023.121703" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.121703 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>A molecular dynamics study of graphyne-based electrode and biocompatible ionic liquid for supercapacitor applications</h3><p class="authors">Henrique de Araujo Chagas, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 360, 119494</p><a href="https://doi.org/10.1016/j.molliq.2022.119494" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.119494 ↗</a></div></article></div>
-      <div class="empty-state profile-year-empty" data-person-year-empty hidden><strong>Nenhuma produção encontrada para o ano selecionado.</strong><p>Use o seletor acima para consultar as produções dos demais anos.</p></div>
-    </section>
+    <div>
+      <span class="eyebrow">Estudantes de Pós-Graduação · Atual</span>
+      <h1>Henrique de Araujo Chagas</h1>
+      <p class="lead">Doutorando</p>
+      <p>PPGF/IF-UFG</p>
+      <div class="profile-links">
+<a href="mailto:hhchagas@gmail.com">E-mail</a><a href="http://lattes.cnpq.br/1522466138848893" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0000-0002-7696-010X" target="_blank" rel="noopener">ORCID 0000-0002-7696-010X ↗</a>      </div>
+    </div>
   </div>
-  <aside class="profile-aside"><div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2021</dd></div><div><dt>Saída</dt><dd>—</dd></div><div><dt>Bolsa</dt><dd>CAPES - Doutorado</dd></div></dl></div><div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Física - UFG</dd></div><div><dt>Mestrado</dt><dd>Física - UFG (2023)</dd></div><div><dt>Doutorado</dt><dd>Física - UFG, em andamento desde 2023</dd></div></dl></div></aside>
-</div></section>
+</section>
+
+<section class="section">
+  <div class="container profile-content">
+    <div class="profile-main">
+<section><div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div><div class="project-list"><div class="project-verbatim">Modelagem Molecular de Supercapacitores e Interfaces Eletroquímicas: Investigação computacional dos mecanismos moleculares responsáveis pelo armazenamento eletrostático de energia em supercapacitores, utilizando principalmente simulações de dinâmica molecular. A pesquisa caracteriza a formação da dupla camada elétrica na interface eletrodo–eletrólito, analisando distribuição espacial de íons, perfis de potencial eletrostático, energias de interação, capacitância e densidade de energia. São estudados dispositivos constituídos por eletrodos de materiais bidimensionais e diferentes classes de eletrólitos, buscando estabelecer relações entre organização molecular da interface e desempenho eletroquímico. O objetivo central é identificar princípios físico-químicos que permitam otimizar a eficiência energética de supercapacitores por meio do controle das propriedades do eletrodo, do eletrólito e da interface.</div><div class="project-verbatim">Hidratação, Temperatura e Composição de Eletrólitos em Supercapacitores: Estudo sistemático dos efeitos da hidratação, temperatura e composição química dos eletrólitos sobre a estrutura da dupla camada elétrica e o desempenho de supercapacitores. A pesquisa investiga líquidos iônicos como [emim][BF4], [cho][gly] e outros sistemas hidratados, avaliando como a presença de água modifica mobilidade iônica, coordenação, organização interfacial, interações eletrodo–eletrólito, capacitância e densidade de energia. Também são analisadas variações de temperatura e modificações na composição aniônica, incluindo combinações de cloreto e brometo. Essas investigações buscam determinar condições nas quais maior mobilidade e reorganização molecular do eletrólito possam ser obtidas sem comprometer a estabilidade da dupla camada elétrica e a eficiência do dispositivo.</div><div class="project-verbatim">Engenharia de Eletrodos e Arquiteturas de Supercapacitores: Investigação do papel desempenhado pela composição, geometria e arquitetura dos eletrodos sobre as propriedades eletroquímicas de supercapacitores. A linha compreende estudos comparativos entre grafeno e grafino, avaliação do espaçamento entre superfícies eletrificadas e desenvolvimento de arquiteturas contendo camadas ou condutores internos integrados ao dispositivo. As simulações permitem analisar como modificações estruturais alteram confinamento iônico, distribuição de potencial, formação da dupla camada elétrica, capacitância e diferentes medidas de densidade de energia. O objetivo é distinguir efeitos genuinamente interfaciais de efeitos associados à geometria global do dispositivo e identificar estratégias de engenharia capazes de maximizar o aproveitamento energético dos materiais utilizados nos eletrodos.</div><div class="project-verbatim">Eletrólitos Sustentáveis para Armazenamento Eletroquímico de Energia: Desenvolvimento e avaliação computacional de eletrólitos de menor impacto ambiental para aplicação em supercapacitores, incluindo líquidos iônicos biocompatíveis e biodegradáveis derivados de aminoácidos e solventes eutéticos profundos naturais (NADES). Por meio de dinâmica molecular, são investigadas propriedades como organização estrutural, mobilidade molecular, redes de ligações de hidrogênio, formação da dupla camada elétrica, interação com eletrodos de carbono, capacitância e densidade de energia. A pesquisa busca determinar de que maneira a composição molecular desses eletrólitos pode ser ajustada para conciliar biocompatibilidade, estabilidade, transporte iônico e desempenho eletroquímico, contribuindo para o desenvolvimento de tecnologias mais sustentáveis de armazenamento de energia.</div></div></section>      <section class="profile-publications">
+        <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
+          <div class="publication-list">
+<article class="publication"><div class="pub-year">2026</div><div><h3>Unveiling the Potential of Natural Deep Eutectic Solvents in Electrochemical Energy Storage Applications</h3><p class="authors">Henrique de Araujo Chagas, Guilherme Colherinhas, Eudes E. Fileti</p><p class="journal">ACS Physical Chemistry Au, v. 6, n. 1, 29-37</p><a href="https://doi.org/10.1021/acsphyschemau.5c00063" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00063 ↗</a></div></article><article class="publication"><div class="pub-year">2026</div><div><h3>Does Electrode Spacing Truly Control Capacitance and Energy Density in Graphene-Based Supercapacitors? A Molecular Simulation Perspective</h3><p class="authors">Davi de Oliveira Guedes, Henrique de Araujo Chagas, Iuliia V. Voroshylova, Guilherme Colherinhas</p><p class="journal">ACS Omega, v. 11, n. 22, 33072-33085</p><a href="https://doi.org/10.1021/acsomega.6c02890" target="_blank" rel="noopener">DOI: 10.1021/acsomega.6c02890 ↗</a></div></article><article class="publication"><div class="pub-year">2025</div><div><h3>Temperature dependence of electric double-layer structure and electrochemical properties in graphene supercapacitors with [emim][BF₄] electrolyte: A molecular dynamics study</h3><p class="authors">Henrique de Araujo Chagas, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 877, 142325</p><a href="https://doi.org/10.1016/j.cplett.2025.142325" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142325 ↗</a></div></article><article class="publication"><div class="pub-year">2025</div><div><h3>Sustainable supercapacitors using advanced hydrated amino acid ionic liquids: A novel approach to biodegradable energy storage</h3><p class="authors">Lucas de S. Silva, Henrique de A. Chagas, G. Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 417, 126638</p><a href="https://doi.org/10.1016/j.molliq.2024.126638" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126638 ↗</a></div></article><article class="publication"><div class="pub-year">2025</div><div><h3>Quantum Molecular Dynamics Approach to Understanding Interactions in Betaine Chloride and Amino Acid Natural Deep Eutectic Solvents</h3><p class="authors">Eudes Eterno Fileti, Henrique de Araujo Chagas, Guilherme Colherinhas, Thaciana Malaspina</p><p class="journal">ACS Physical Chemistry Au, v. 5, n. 1, 72-79</p><a href="https://doi.org/10.1021/acsphyschemau.4c00072" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.4c00072 ↗</a></div></article><article class="publication"><div class="pub-year">2025</div><div><h3>Performance Analysis of Supercapacitors With Graphene and Graphyne Electrodes</h3><p class="authors">Henrique de Araujo Chagas, Thaciana Malaspina, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Energy Storage, v. 7, n. 1, e70114</p><a href="https://doi.org/10.1002/est2.70114" target="_blank" rel="noopener">DOI: 10.1002/est2.70114 ↗</a></div></article><article class="publication"><div class="pub-year">2025</div><div><h3>Modeling supercapacitors with integrated conductors via molecular dynamics: Optimization and impacts on energy efficiency</h3><p class="authors">Henrique de Araujo Chagas, Tertius Lima Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Power Sources, v. 656, 238100</p><a href="https://doi.org/10.1016/j.jpowsour.2025.238100" target="_blank" rel="noopener">DOI: 10.1016/j.jpowsour.2025.238100 ↗</a></div></article><article class="publication"><div class="pub-year">2025</div><div><h3>Impact of Chloride and Bromide Composition in Ionic Liquid/Water Electrolytes on the Electrochemical Performance of Graphene-Based Supercapacitors: A Molecular Dynamics Study</h3><p class="authors">Leonardo B. A. Oliveira, Lucas de S Silva, Henrique de Araujo Chagas, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry C, v. 129, n. 30, 13532-13541</p><a href="https://doi.org/10.1021/acs.jpcc.5c01816" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.5c01816 ↗</a></div></article><article class="publication"><div class="pub-year">2025</div><div><h3>Biodegradable ionic liquids in energy storage: Molecular insights into hydration-controlled performance in graphene-based supercapacitors</h3><p class="authors">Matheus R.N. Dias, Matheus A. Arebalo, Henrique A. Chagas, Wesley B. Cardoso, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 881, 142440</p><a href="https://doi.org/10.1016/j.cplett.2025.142440" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142440 ↗</a></div></article><article class="publication"><div class="pub-year">2024</div><div><h3>Systematic analysis to evaluate the impact of hydration on electrolytes [emim][BF4] and [cho][gly] in supercapacitors formed by graphene or graphyne electrodes</h3><p class="authors">Henrique de Araujo Chagas, Leonardo B.A. Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 415, 126280</p><a href="https://doi.org/10.1016/j.molliq.2024.126280" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126280 ↗</a></div></article><article class="publication"><div class="pub-year">2023</div><div><h3>Comparing supercapacitors with graphene/graphyne electrodes and [Bmim][PF6], [Emim][BF4], [Ch][Gly] and [Pyr][Tfsi] ionic liquids using molecular dynamics</h3><p class="authors">Henrique de Araujo Chagas, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 379, 121703</p><a href="https://doi.org/10.1016/j.molliq.2023.121703" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.121703 ↗</a></div></article><article class="publication"><div class="pub-year">2022</div><div><h3>A molecular dynamics study of graphyne-based electrode and biocompatible ionic liquid for supercapacitor applications</h3><p class="authors">Henrique de Araujo Chagas, Eudes Eterno Fileti, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 360, 119494</p><a href="https://doi.org/10.1016/j.molliq.2022.119494" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.119494 ↗</a></div></article>          </div>
+      </section>
+    </div>
+    <aside class="profile-aside">
+      <div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2021</dd></div><div><dt>Saída</dt><dd>—</dd></div><div><dt>Bolsa</dt><dd>CAPES - Doutorado</dd></div></dl></div>
+<div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Física - UFG</dd></div><div><dt>Mestrado</dt><dd>Física - UFG (2023)</dd></div><div><dt>Doutorado</dt><dd>Física - UFG, em andamento desde 2023</dd></div></dl></div>    </aside>
+  </div>
+</section>
 </main>
 
 <footer class="site-footer">
@@ -488,7 +140,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 04/09/2026 16:32</div>
+    <div class="footer-meta">Atualização do site: 04/09/2026 18:06</div>
   </div>
 </footer>
 <script>(() => {
@@ -530,90 +182,6 @@ a{color:var(--brand)}
   };
   select.addEventListener('change', showSelectedYear);
   showSelectedYear();
-})();
-
-(() => {
-  const tabs = [...document.querySelectorAll('[data-profile-tab]')];
-  const panels = [...document.querySelectorAll('[data-profile-tab-panel]')];
-  if (!tabs.length || !panels.length) return;
-  const activate = name => {
-    tabs.forEach(tab => {
-      const active = tab.dataset.profileTab === name;
-      tab.classList.toggle('active', active);
-      tab.setAttribute('aria-selected', String(active));
-      tab.tabIndex = active ? 0 : -1;
-    });
-    panels.forEach(panel => { panel.hidden = panel.dataset.profileTabPanel !== name; });
-  };
-  tabs.forEach(tab => tab.addEventListener('click', () => activate(tab.dataset.profileTab)));
-  activate(location.hash === '#producoes' ? 'productions' : 'projects');
-})();
-
-(() => {
-  const select = document.querySelector('[data-person-year-filter]');
-  const items = [...document.querySelectorAll('[data-person-publication]')];
-  if (!select || !items.length) return;
-  const empty = document.querySelector('[data-person-year-empty]');
-  const currentCount = document.querySelector('[data-person-current-count]');
-  const currentYear = String(new Date().getFullYear());
-  const counts = new Map();
-  items.forEach(item => {
-    const year = (item.dataset.year || '').trim();
-    counts.set(year, (counts.get(year) || 0) + 1);
-  });
-  const numericYears = [...counts.keys()].filter(year => /^\d{4}$/.test(year)).sort((a, b) => Number(b) - Number(a));
-  const options = [currentYear, ...numericYears.filter(year => year !== currentYear)];
-  if (counts.has('')) options.push('');
-  select.innerHTML = options.map(year => {
-    const count = counts.get(year) || 0;
-    const label = year ? (year === currentYear ? `${year} · ano corrente (${count})` : `${year} (${count})`) : `Sem ano informado (${count})`;
-    return `<option value="${year}">${label}</option>`;
-  }).join('');
-  select.value = currentYear;
-  if (currentCount) currentCount.textContent = String(counts.get(currentYear) || 0);
-  const apply = () => {
-    const selected = select.value;
-    let visible = 0;
-    items.forEach(item => {
-      const show = (item.dataset.year || '').trim() === selected;
-      item.hidden = !show;
-      if (show) visible += 1;
-    });
-    if (empty) empty.hidden = visible !== 0;
-  };
-  select.addEventListener('change', apply);
-  apply();
-})();
-
-(() => {
-  const toggle = document.querySelector('.nav-toggle');
-  const menu = document.querySelector('#main-menu');
-  if (!toggle || !menu) return;
-  const close = () => {menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open');};
-  toggle.addEventListener('click', () => document.body.classList.toggle('menu-open', menu.classList.contains('open')));
-  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
-  document.addEventListener('keydown', event => {if (event.key === 'Escape') close();});
-  document.addEventListener('click', event => {if (menu.classList.contains('open') && !menu.contains(event.target) && !toggle.contains(event.target)) close();});
-})();
-
-(() => {
-  const select = document.querySelector('[data-person-year-filter]');
-  const items = [...document.querySelectorAll('[data-person-publication]')];
-  const summary = document.querySelector('[data-person-year-summary]');
-  if (!select || !items.length || !summary) return;
-  const counts = new Map();
-  items.forEach(item => {const year=(item.dataset.year||'').trim();counts.set(year,(counts.get(year)||0)+1);});
-  const currentYear = String(new Date().getFullYear());
-  const numericYears = [...counts.keys()].filter(year => /^\d{4}$/.test(year)).sort((a,b) => Number(b)-Number(a));
-  const years = [currentYear,...numericYears.filter(year => year !== currentYear)];
-  if (counts.has('')) years.push('');
-  const refresh = () => {
-    const selected = select.value;
-    summary.innerHTML = years.map(year => `<button class="profile-year-chip${year===selected?' active':''}" type="button" data-profile-year-chip="${year}"><span>${year||'Sem ano'}</span><strong>${counts.get(year)||0}</strong></button>`).join('');
-    summary.querySelectorAll('[data-profile-year-chip]').forEach(button => button.addEventListener('click', () => {select.value=button.dataset.profileYearChip;select.dispatchEvent(new Event('change'));refresh();}));
-  };
-  select.addEventListener('change', refresh);
-  requestAnimationFrame(refresh);
 })();
 </script>
 </body>
