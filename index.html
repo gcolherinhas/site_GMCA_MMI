@@ -277,6 +277,22 @@ a{color:var(--brand)}
 }
 @media(hover:none){.button:hover,.publication-filter-section .publication:hover{transform:none;box-shadow:inherit}}
 
+/* v14 — ajustes solicitados no Pessoal e no Painel de Dados. */
+.person-card-link{grid-template-columns:87px 1fr}
+.avatar-wrap{width:83.16px;height:83.16px}
+.participation-table{min-width:1180px}
+.matrix-person{min-width:250px}.matrix-person-profile{display:flex;align-items:center;gap:11px}
+.matrix-avatar{flex:0 0 46px;width:46px;height:46px;border-radius:50%;overflow:hidden;background:#e6edf5;border:1px solid var(--line)}
+.matrix-avatar img{width:100%;height:100%;object-fit:cover}.matrix-avatar span{width:100%;height:100%;display:grid;place-items:center;color:var(--brand);font-weight:900;background:#edf4ff}
+.matrix-person-copy{min-width:0}.matrix-person-copy strong{overflow-wrap:anywhere}
+.matrix-focus{min-width:230px}.matrix-focus strong{display:block;color:var(--brand-dark);font-size:.82rem}.matrix-focus span{display:block;margin-top:4px;color:var(--muted);font-size:.7rem;line-height:1.45}
+.matrix-cell{min-width:180px}
+@media(max-width:720px){
+  .person-card-link{grid-template-columns:87px 1fr}
+  .avatar-wrap{width:83.16px;height:83.16px}
+  .participation-table{min-width:1120px}
+}
+
 /* v13 — painel de gestão do grupo. */
 .panel-metrics-section{background:#edf3f9;border-bottom:1px solid var(--line)}
 .panel-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:18px 0}
@@ -381,7 +397,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 04/09/2026 09:52</div>
+    <div class="footer-meta">Atualização do site: 04/09/2026 10:35</div>
   </div>
 </footer>
 <script>(() => {
