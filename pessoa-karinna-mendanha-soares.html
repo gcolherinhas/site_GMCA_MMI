@@ -38,6 +38,72 @@ main{padding-top:151px}.hero{background:linear-gradient(135deg,#eff6fd 0%,#fff 5
 .nav-links a{font-size:1.09rem;padding:12px 15px}
 main{padding-top:162px}
 
+/* Navegação e estatísticas de Produções Científicas */
+.publication-year-nav{position:sticky;top:162px;z-index:18;background:rgba(247,249,252,.96);backdrop-filter:blur(9px);border-bottom:1px solid var(--line);padding:14px 0}
+.publication-year-nav .container{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.publication-year-nav .nav-label{font-size:.8rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-right:3px}
+.year-jump,.statistics-jump{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:7px 12px;border-radius:999px;border:1px solid #bfd0e2;background:white;color:#23425f;font-size:.9rem;font-weight:800}
+.year-jump:hover,.statistics-jump:hover{background:#edf4fb;text-decoration:none}
+.statistics-jump{background:var(--brand);border-color:var(--brand);color:white}
+.statistics-jump:hover{background:var(--brand-dark);color:white}
+.year-section{scroll-margin-top:225px}
+.publication-statistics{scroll-margin-top:225px;border-top:1px solid var(--line)}
+.statistics-intro{color:var(--muted);max-width:800px}
+.histogram-wrap{margin-top:28px;background:white;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);overflow-x:auto}
+.histogram-title{margin:0 0 18px;font-size:1.25rem}
+.histogram{display:flex;align-items:flex-end;gap:12px;height:310px;min-width:max-content;padding:24px 10px 0;border-bottom:2px solid #aebed0}
+.hist-column{width:54px;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:7px}
+.hist-value{font-size:.78rem;font-weight:900;color:var(--brand-dark)}
+.hist-bar-track{height:230px;width:34px;display:flex;align-items:flex-end;background:#edf3f8;border-radius:8px 8px 0 0;overflow:hidden}
+.hist-bar-fill{width:100%;min-height:4px;background:linear-gradient(180deg,var(--accent),var(--brand-dark));border-radius:8px 8px 0 0}
+.hist-year{font-size:.78rem;font-weight:800;color:#42566e;white-space:nowrap}
+.contribution-block{margin-top:34px}
+.contribution-block h3{margin-bottom:7px;font-size:1.35rem}
+.contribution-table-wrap{overflow-x:auto;background:white;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.contribution-table{width:100%;border-collapse:collapse;min-width:760px}
+.contribution-table th,.contribution-table td{padding:11px 12px;border-bottom:1px solid var(--line);border-right:1px solid #edf1f5;text-align:center;font-size:.88rem}
+.contribution-table th:first-child,.contribution-table td:first-child{text-align:left;position:sticky;left:0;background:white;min-width:250px;z-index:2}
+.contribution-table thead th{background:#eef4fa;font-weight:900;color:#29445f}
+.contribution-table thead th:first-child{background:#e7f0f8;z-index:3}
+.contribution-table tbody tr:last-child td{border-bottom:0}
+.contribution-table .contribution-total{font-weight:900;color:var(--brand-dark);background:#f4f8fc}
+.contribution-zero{color:#a5afba}
+
+@media (max-width:900px){
+  .brandbar{height:106px}.brand-logo-if{width:101px;max-height:66px}.brand-logo-ufg{width:122px;max-height:62px}.group-brand img{width:250px;max-height:84px}.institution-title strong{font-size:1.13rem}.institution-title span{font-size:.98rem}.nav-links a{font-size:1rem}.publication-year-nav{top:155px}main{padding-top:155px}.year-section,.publication-statistics{scroll-margin-top:220px}
+}
+@media (max-width:768px){
+  .publication-year-nav{position:static}.year-section,.publication-statistics{scroll-margin-top:20px}.histogram-wrap{padding:18px}.contribution-table th:first-child,.contribution-table td:first-child{position:static}
+}
+
+/* Ajuste dos cards de pessoas: borda inspirada nos cards de Software + foto 5% maior */
+.person-card{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:28px;
+  box-shadow:0 12px 38px rgba(7,20,38,.07);
+}
+.person-card::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:4px;
+  background:linear-gradient(var(--accent),var(--brand));
+  z-index:1;
+}
+.person-card-link{
+  grid-template-columns:96px 1fr;
+  padding:16px 18px;
+}
+.avatar-wrap{
+  width:92.4px;
+  height:92.4px;
+}
+@media(max-width:720px){
+  .person-card-link{grid-template-columns:96px 1fr}
+  .avatar-wrap{width:92.4px;height:92.4px}
+}
 
 /* v8: produção científica simplificada */
 .publication-overview{padding:42px 0 28px;background:var(--surface-alt);border-bottom:1px solid var(--line)}
@@ -70,6 +136,291 @@ main>.profile-hero+.section{padding-top:42px}
 .hero-grid{min-height:430px;padding:50px 0}
 @media(max-width:980px){.page-hero{padding:34px 0 28px}.profile-hero{padding:36px 0}.hero-grid{padding:42px 0;min-height:auto}}
 @media(max-width:720px){.page-hero{padding:28px 0 24px}.profile-hero{padding:30px 0}main>.page-hero+.section{padding-top:30px}main>.page-hero+.section.compact-section{padding-top:24px}main>.profile-hero+.section{padding-top:30px}.hero-grid{padding:34px 0}}
+
+/* v11 seletivo — paleta do último modelo, preservando a estrutura original onde solicitado. */
+:root{--bg:#f5f7fb;--surface:#fff;--surface-alt:#edf3f9;--ink:#0b1424;--muted:#66758a;--line:rgba(12,31,55,.12);--brand:#155ee8;--brand-dark:#0b2440;--accent:#45d6ff;--night:#07111f;--cyan:#65e3ff;--lime:#b7ff5c;--shadow:0 24px 70px rgba(7,20,38,.10)}
+body{background:var(--bg);color:var(--ink)}
+a{color:var(--brand)}
+.site-header{background:rgba(245,247,251,.96);border-bottom-color:var(--line);box-shadow:0 8px 28px rgba(7,20,38,.06)}
+.main-nav{background:rgba(255,255,255,.72);border-top-color:rgba(12,31,55,.08)}
+.nav-links a{color:#28394e}.nav-links a:hover{background:#fff;color:var(--brand)}
+.nav-toggle{background:#fff;border-color:var(--line);color:var(--ink)}.brand-separator{background:rgba(12,31,55,.15)}
+.hero{background:radial-gradient(circle at 86% 8%,rgba(69,214,255,.18),transparent 30%),linear-gradient(135deg,#07111f,#0b2440);border-bottom-color:rgba(255,255,255,.08);color:#fff}
+.hero .eyebrow{color:#8deaff}.hero .lead{color:#c7d7e7}.hero-logo img{filter:drop-shadow(0 20px 38px rgba(0,0,0,.22))}
+.button{border-color:rgba(21,94,232,.22);color:#17314f;background:#fff}.button.primary{background:var(--brand);border-color:var(--brand);color:#fff}.button:hover{box-shadow:0 10px 26px rgba(7,20,38,.11)}
+.text-link{color:var(--brand)}.section-alt{background:var(--surface-alt);border-color:var(--line)}
+.stat,.research-card,.lmcc-preview,.person-card,.project-list>div,.info-card,.publication,.software-card,.award,.machine-table-wrap{background:#fff;border-color:var(--line)}
+.stat strong{color:var(--brand)}.card-number{color:#8ca8c5}.eyebrow{color:var(--brand)}.role{color:var(--brand)}
+.muted,.section-heading p,.software-description,.page-hero p{color:var(--muted)}
+.avatar-wrap{background:#e5eef8}.avatar-fallback{background:linear-gradient(135deg,#dceaff,#eef7ff);color:var(--brand)}.orcid-pill{background:#eff8e9;color:#4e7a2a}
+.page-hero,.profile-hero{background:radial-gradient(circle at 86% 0%,rgba(69,214,255,.18),transparent 32%),linear-gradient(135deg,#07111f,#0b2440);border-bottom-color:rgba(255,255,255,.08);color:#fff}
+.page-hero .eyebrow,.profile-hero .eyebrow{color:#8deaff}.page-hero p,.profile-hero p{color:#a7bed4}.profile-hero .lead{color:#eef7ff}
+.profile-links a{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:#e4f1fb}.profile-links a:hover{background:rgba(255,255,255,.14)}
+.people-section>h2{border-bottom-color:var(--line)}.person-card-link{color:var(--ink)}.person-card-link:hover{background:#f8fbff}
+.info-card dt{color:#7d8da0}.info-card dl div,.info-card hr{border-color:var(--line)}
+.project-list>div{box-shadow:0 10px 28px rgba(7,20,38,.04)}.publication{box-shadow:0 10px 28px rgba(7,20,38,.04)}
+.pub-year,.pub-index{color:var(--brand)}.authors{color:#3f536a}.journal{color:#798a9c}.member-tags span{background:#edf4ff;color:#48647f}
+.empty-state{background:#fff;border-color:#b8c6d5;color:var(--muted)}.empty-state strong{color:var(--ink)}
+.machine-table th{background:#eef4fb;color:#53677c}.machine-table th,.machine-table td{border-bottom-color:var(--line)}.sticky-card{background:#fff}
+.site-footer{background:#06101c;color:#fff}.site-footer p,.footer-meta{color:#8299af}.footer-admin{color:#c4d3e1}
+
+/* Cabeçalho moderno somente nas páginas cujo formato foi solicitado. */
+.page-hero-modern{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(circle at 85% 0%,rgba(61,138,255,.26),transparent 30%),linear-gradient(135deg,#07111f,#0b2440);color:#fff;border:0;padding:0}
+.page-hero-grid{position:absolute;inset:0;z-index:-1;opacity:.27;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:52px 52px}
+.page-hero-inner{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:40px;align-items:center;min-height:298px;padding:38px 0 30px}
+.page-hero-inner h1{font-size:clamp(2.2rem,4vw,3.7rem);line-height:1.03;letter-spacing:-.045em;margin:.32rem 0 .55rem}
+.page-hero-inner>p{margin:0;color:#a7bed4;font-size:1.02rem;max-width:520px}
+.eyebrow-light{color:#8deaff}
+
+/* Produções científicas — formato do último modelo. */
+.publication-overview{padding:62px 0;background:#edf3f9;border:0}
+.publication-dashboard{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);gap:42px;align-items:stretch}
+.publication-dashboard-copy h2{font-size:clamp(2rem,3.7vw,3.8rem);line-height:1.02;letter-spacing:-.045em;margin:.55rem 0 1rem}.publication-dashboard-copy p{color:var(--muted)}
+.recent-histogram-card{padding:26px 28px 22px;border-radius:28px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 38px rgba(7,20,38,.07)}
+.chart-head{display:flex;justify-content:space-between;align-items:center}.chart-head span{font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:#8697aa}.chart-head strong{font-size:.78rem;color:var(--brand)}
+.recent-histogram{height:260px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:end;border-bottom:1px solid #cad5e1;padding:18px 8px 0;min-width:0}
+.recent-hist-column{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:7px}.recent-hist-value{font-size:.8rem;font-weight:900;color:#33475d}
+.recent-hist-track{height:185px;width:min(48px,72%);display:flex;align-items:flex-end;border-radius:999px 999px 0 0;background:#edf2f7;overflow:hidden}.recent-hist-fill{width:100%;min-height:4px;border-radius:999px 999px 0 0;background:linear-gradient(180deg,#55dcff,#155ee8)}.recent-hist-year{padding-bottom:8px;font-size:.75rem;font-weight:900;color:#68798b}
+.publication-filter-section{padding:56px 0 100px}
+.publication-year-filter{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:40px;padding:18px 20px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.88);box-shadow:0 12px 38px rgba(7,20,38,.07)}
+.publication-year-filter>div{display:flex;flex-direction:column}.toolbar-label{font-size:.65rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#8b9db0}.publication-year-filter strong{font-size:1rem}
+.select-shell{position:relative;display:flex;align-items:center}.select-shell select{appearance:none;min-width:160px;min-height:46px;padding:10px 42px 10px 16px;border:1px solid var(--line);border-radius:999px;background:#f4f7fb;color:var(--ink);font:inherit;font-weight:850;cursor:pointer}.select-shell span{position:absolute;right:16px;pointer-events:none;color:#8091a3}
+.publication-year-result[hidden]{display:none!important}
+.publication-filter-section .year-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid #cfd9e4}
+.year-kicker{display:block;font-size:.64rem;text-transform:uppercase;letter-spacing:.13em;color:#8b9caf;font-weight:900}.publication-filter-section .year-heading h2{margin:4px 0 0;font-size:clamp(2.5rem,5vw,5rem);line-height:.85;letter-spacing:-.05em}.publication-filter-section .year-heading>span{color:var(--muted);font-size:.8rem}
+.publication-filter-section .publication-list{display:grid;gap:12px}.publication-filter-section .publication{display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;padding:22px 24px;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px rgba(7,20,38,.035);transition:.25s}
+.publication-filter-section .publication:hover{border-color:rgba(21,94,232,.25);transform:translateX(3px)}.publication-filter-section .pub-index{padding-top:3px;font-size:.68rem;font-weight:900;letter-spacing:.1em;color:var(--brand)}
+.publication-filter-section .publication-body h3{margin:0 0 9px;font-size:1.05rem;line-height:1.38}.publication-filter-section .publication-body p{margin:4px 0}.publication-filter-section .publication-body a{display:inline-flex;gap:7px;margin-top:9px;color:var(--brand);font-size:.8rem;font-weight:850}
+
+/* Programas/softwares — cards do último modelo. */
+.softwares-page{background:linear-gradient(#f5f7fb,#f8fbff)}.software-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.software-card{position:relative;overflow:hidden;padding:30px;border-radius:28px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 38px rgba(7,20,38,.07)}
+.software-card::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(var(--accent),var(--brand))}
+.software-card-top{display:flex;align-items:center;justify-content:space-between;gap:16px}.software-index{font-size:.68rem;font-weight:900;color:var(--brand);letter-spacing:.14em}.software-date{font-size:.7rem;color:#8899aa}
+.software-card h2{font-size:1.4rem;line-height:1.22;margin:24px 0 9px}.registration{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;color:#3a5270;font-weight:850}.software-description{color:var(--muted);margin:14px 0 24px}
+
+/* Premiações — formato editorial do último modelo. */
+.awards-page{background:linear-gradient(#f5f7fb,#f8fbff)}.award-timeline{display:grid;gap:22px}
+.award{position:relative;display:grid;grid-template-columns:90px 190px minmax(0,1fr);gap:34px;align-items:center;padding:26px;border-radius:30px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 38px rgba(7,20,38,.07)}
+.award::before{content:"";position:absolute;left:44px;top:0;bottom:0;width:1px;background:linear-gradient(transparent,#d8e2eb,transparent)}
+.award-year{position:relative;z-index:2;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#07111f;color:#fff;font-size:.9rem;font-weight:900;box-shadow:0 10px 25px rgba(7,17,31,.20)}
+.award-cover img,.cover-placeholder{width:170px;aspect-ratio:3/4;object-fit:cover;border-radius:16px;box-shadow:0 16px 36px rgba(7,20,38,.16)}.cover-placeholder{display:grid;place-items:center;background:#e7eef5;color:#7f8fa0}.award-body h2{font-size:1.4rem;line-height:1.25;margin:10px 0}.award-meta{color:var(--muted);font-size:.82rem}
+
+/* Perfil individual — estrutura original + abas solicitadas. */
+.profile-tabs{display:flex;gap:8px;margin-bottom:30px;padding:6px;border:1px solid var(--line);border-radius:14px;background:#eaf0f6;width:max-content;max-width:100%}
+.profile-tab{display:inline-flex;align-items:center;gap:9px;border:0;border-radius:10px;background:transparent;color:#53677c;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+.profile-tab.active{background:#fff;color:var(--brand);box-shadow:0 5px 16px rgba(7,20,38,.08)}.tab-count{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 7px;border-radius:999px;background:#e8f0ff;color:var(--brand);font-size:.72rem;font-weight:900}.profile-tab.active .tab-count{background:var(--brand);color:#fff}
+.profile-tab-panel[hidden]{display:none!important}
+.profile-publication-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:20px;padding:15px 17px;border:1px solid var(--line);border-radius:13px;background:#f8fbff}
+.profile-publication-indicator{display:flex;align-items:baseline;gap:8px}.profile-publication-indicator strong{font-size:1.45rem;line-height:1;color:var(--brand)}.profile-publication-indicator span{color:var(--muted);font-size:.84rem}
+.profile-year-control{display:flex;align-items:center;gap:10px;color:#52657a;font-size:.82rem;font-weight:800}.profile-year-control select{min-width:130px;border:1px solid var(--line);border-radius:9px;padding:9px 34px 9px 11px;background:#fff;color:var(--ink);font:inherit;font-weight:750}
+.profile-year-empty{margin-top:16px}.profile-main .publication[hidden]{display:none!important}
+
+@media(max-width:980px){.page-hero-inner,.publication-dashboard{grid-template-columns:1fr}.page-hero-inner{gap:12px;min-height:auto;padding:34px 0 28px}.software-grid{grid-template-columns:1fr}.award{grid-template-columns:76px 160px minmax(0,1fr)}}
+@media(max-width:720px){
+  .page-hero-modern{padding:0}.page-hero-inner{gap:10px;padding:28px 0 24px}.page-hero-inner h1{font-size:clamp(2.1rem,9vw,2.8rem);line-height:1.04}.page-hero-inner>p{font-size:.95rem}
+  .recent-histogram-card{padding:20px 12px;overflow-x:auto}.recent-histogram{min-width:470px;height:225px}.recent-hist-track{height:150px}
+  .publication-year-filter{align-items:stretch;flex-direction:column}.select-shell,.select-shell select{width:100%}
+  .publication-filter-section .publication{grid-template-columns:40px minmax(0,1fr);gap:10px;padding:16px}
+  .award{grid-template-columns:100px minmax(0,1fr);padding:20px;gap:18px}.award::before{display:none}.award-year{grid-column:1/-1;width:auto;height:auto;display:block;background:none;color:var(--brand);box-shadow:none;font-size:.76rem}.award-cover img,.cover-placeholder{width:100px;border-radius:12px}
+  .profile-tabs{width:100%}.profile-tab{flex:1;justify-content:center;padding-inline:10px}.profile-publication-toolbar{align-items:stretch;flex-direction:column}.profile-year-control{justify-content:space-between}
+}
+@media(max-width:420px){.publication-filter-section .publication{grid-template-columns:1fr}.award{grid-template-columns:1fr}.award-cover img,.cover-placeholder{width:110px}}
+
+/* v12 — indicadores informativos e acabamento mobile. */
+.people-metrics-section,.publication-metrics-section{background:#edf3f9;border-bottom:1px solid var(--line)}
+.people-metrics,.publication-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:18px 0}
+.people-metric,.publication-metric{position:relative;overflow:hidden;min-width:0;padding:17px 19px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(7,20,38,.045)}
+.people-metric::before,.publication-metric::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(var(--accent),var(--brand))}
+.people-metric strong,.publication-metric strong{display:block;color:var(--brand);font-size:1.45rem;line-height:1;font-weight:900;letter-spacing:-.035em}
+.people-metric span,.publication-metric span{display:block;margin-top:7px;color:var(--muted);font-size:.76rem;font-weight:750}
+.person-card-copy{min-width:0}.person-card-copy h3,.person-card-copy p{overflow-wrap:anywhere}
+.person-mini-metrics{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.person-mini-metrics span{display:inline-flex;align-items:center;min-height:23px;padding:3px 8px;border-radius:999px;background:#edf4ff;color:#48647f;font-size:.67rem;font-weight:850}
+
+.profile-tab .tab-count.projects{background:#e8f7ff;color:#1874a6}.profile-tab.active .tab-count.projects{background:#1685bd;color:#fff}
+.profile-production-metrics{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap}
+.profile-production-metric{min-width:128px;padding:10px 13px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.profile-production-metric strong{display:block;color:var(--brand);font-size:1.35rem;line-height:1;font-weight:900}.profile-production-metric span{display:block;margin-top:5px;color:var(--muted);font-size:.72rem;font-weight:750}
+.profile-year-summary{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 18px}
+.profile-year-chip{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#53677c;font:inherit;font-size:.72rem;font-weight:850;cursor:pointer}
+.profile-year-chip strong{color:var(--brand)}.profile-year-chip.active{border-color:rgba(21,94,232,.32);background:#edf4ff;color:var(--brand)}
+.profile-year-chip:focus-visible,.profile-tab:focus-visible,.nav-toggle:focus-visible,.button:focus-visible,.select-shell select:focus-visible,.profile-year-control select:focus-visible{outline:3px solid rgba(69,214,255,.45);outline-offset:2px}
+.publication-metrics-section{background:#f5f7fb}
+.publication-metric{padding-block:18px}.publication-metric small{display:block;margin-top:4px;color:#8a9bad;font-size:.64rem;font-weight:800}
+.publication-filter-section .publication-body a,.profile-main .publication a,.registration{overflow-wrap:anywhere;word-break:break-word}
+.machine-table-wrap,.recent-histogram-card{overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.button,.nav-toggle,.profile-links a,.profile-tab,.profile-year-chip,.select-shell select,.profile-year-control select{touch-action:manipulation}
+@media(max-width:980px){.people-metrics,.publication-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){
+  body{font-size:15px}.container{width:min(var(--max),calc(100% - 28px))}.section{padding:50px 0}.compact-section{padding:28px 0}
+  .nav-toggle{min-width:48px;min-height:44px;align-items:center;justify-content:center;font-weight:850}
+  .nav-links.open{top:50px;padding:10px;border-radius:0 0 18px 18px;box-shadow:0 20px 44px rgba(7,20,38,.16)}
+  .nav-links a{display:flex;align-items:center;min-height:46px;padding:10px 12px}body.menu-open{overflow:hidden}
+  .button,.profile-links a{min-height:44px}.hero-actions{gap:9px}.hero-actions .button{flex:1 1 180px}
+  .people-metrics-section,.publication-metrics-section{overflow:hidden}
+  .people-metrics,.publication-metrics{display:flex;gap:10px;overflow-x:auto;padding:14px 14px 16px;scroll-snap-type:x proximity;scrollbar-width:none}
+  .people-metrics::-webkit-scrollbar,.publication-metrics::-webkit-scrollbar,.profile-year-summary::-webkit-scrollbar{display:none}
+  .people-metric,.publication-metric{flex:0 0 158px;scroll-snap-align:start;padding:15px 16px}.people-metric strong,.publication-metric strong{font-size:1.3rem}
+  .person-card-link{gap:13px;padding:15px 16px}.person-card h3{font-size:.98rem}.muted{font-size:.8rem}.person-mini-metrics{gap:5px}.person-mini-metrics span{font-size:.64rem}
+  .profile-grid{gap:22px}.profile-links{gap:8px}.profile-tabs{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.profile-tabs::-webkit-scrollbar{display:none}.profile-tab{min-height:44px;white-space:nowrap}
+  .profile-publication-toolbar{gap:12px}.profile-production-metrics{display:grid;grid-template-columns:1fr 1fr;width:100%}.profile-production-metric{min-width:0}.profile-year-control select{min-height:44px}
+  .profile-year-summary{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px;scroll-snap-type:x proximity;scrollbar-width:none}.profile-year-chip{flex:0 0 auto;scroll-snap-align:start;min-height:40px}
+  .publication-filter-section{padding:44px 0 68px}.publication-year-filter{margin-bottom:28px;padding:15px 16px}.publication-filter-section .publication{transform:none!important}.publication-filter-section .publication-body h3{font-size:1rem}
+  .recent-histogram-card{scrollbar-width:thin}.machine-table-wrap{border-radius:12px;scrollbar-width:thin}.machine-table th,.machine-table td{padding:11px 12px}
+  .software-card{padding:24px;border-radius:22px}.award{border-radius:22px}.site-footer{padding:28px 0}.footer-grid{gap:18px}
+}
+@media(max-width:520px){
+  .hero-actions .button{flex-basis:100%}.profile-links a{flex:1 1 100%;justify-content:center}
+  .profile-production-metrics{grid-template-columns:1fr 1fr}.profile-year-control{align-items:stretch;flex-direction:column}.profile-year-control select{width:100%}
+  .publication-filter-section .year-heading{align-items:flex-start;flex-direction:column;gap:6px}.publication-filter-section .year-heading h2{font-size:2.8rem}.award-body h2{font-size:1.18rem}
+}
+@media(hover:none){.button:hover,.publication-filter-section .publication:hover{transform:none;box-shadow:inherit}}
+
+/* v14 — ajustes solicitados no Pessoal e no Painel de Dados. */
+.person-card-link{grid-template-columns:87px 1fr}
+.avatar-wrap{width:83.16px;height:83.16px}
+.participation-table{min-width:1180px}
+.matrix-person{min-width:250px}.matrix-person-profile{display:flex;align-items:center;gap:11px}
+.matrix-avatar{flex:0 0 46px;width:46px;height:46px;border-radius:50%;overflow:hidden;background:#e6edf5;border:1px solid var(--line)}
+.matrix-avatar img{width:100%;height:100%;object-fit:cover}.matrix-avatar span{width:100%;height:100%;display:grid;place-items:center;color:var(--brand);font-weight:900;background:#edf4ff}
+.matrix-person-copy{min-width:0}.matrix-person-copy strong{overflow-wrap:anywhere}
+.matrix-focus{min-width:230px}.matrix-focus strong{display:block;color:var(--brand-dark);font-size:.82rem}.matrix-focus span{display:block;margin-top:4px;color:var(--muted);font-size:.7rem;line-height:1.45}
+.matrix-cell{min-width:180px}
+@media(max-width:720px){
+  .person-card-link{grid-template-columns:87px 1fr}
+  .avatar-wrap{width:83.16px;height:83.16px}
+  .participation-table{min-width:1120px}
+}
+
+/* v13 — painel de gestão do grupo. */
+.panel-metrics-section{background:#edf3f9;border-bottom:1px solid var(--line)}
+.panel-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:18px 0}
+.panel-metric{position:relative;overflow:hidden;min-width:0;padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(7,20,38,.045)}
+.panel-metric::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(var(--accent),var(--brand))}
+.panel-metric strong{display:block;color:var(--brand);font-size:1.55rem;line-height:1;font-weight:900;letter-spacing:-.04em}.panel-metric span{display:block;margin-top:7px;color:var(--muted);font-size:.76rem;font-weight:750}
+.panel-section{padding:62px 0}.panel-section-alt{background:var(--surface-alt);border-block:1px solid var(--line)}
+.panel-intro{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:28px}.panel-intro .section-heading{margin:0}.panel-intro-note{max-width:430px;margin:0;color:var(--muted);font-size:.9rem}
+.axis-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.axis-card{position:relative;overflow:hidden;padding:24px;border:1px solid var(--line);border-radius:24px;background:#fff;box-shadow:0 10px 30px rgba(7,20,38,.055)}
+.axis-card::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(var(--accent),var(--brand))}.axis-card h3{margin:5px 0 8px;font-size:1.35rem}.axis-card p{margin:0;color:var(--muted);font-size:.88rem}
+.axis-numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0 16px}.axis-number{padding:10px;border-radius:12px;background:#f5f8fc;text-align:center}.axis-number strong{display:block;color:var(--brand);font-size:1.18rem}.axis-number span{display:block;margin-top:3px;color:var(--muted);font-size:.65rem;font-weight:800}
+.theme-tags{display:flex;gap:6px;flex-wrap:wrap}.theme-tags span{padding:4px 8px;border-radius:999px;background:#edf4ff;color:#48647f;font-size:.67rem;font-weight:800}
+.matrix-wrap{overflow:auto;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 8px 26px rgba(7,20,38,.045);overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}.participation-table{width:100%;min-width:980px;border-collapse:collapse}.participation-table th,.participation-table td{padding:14px 15px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}.participation-table th{position:sticky;top:0;background:#edf3f9;color:#42566d;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;z-index:2}.participation-table tr:last-child td{border-bottom:0}.matrix-person{min-width:210px}.matrix-person strong{display:block;color:var(--ink)}.matrix-person span{display:block;margin-top:3px;color:var(--muted);font-size:.72rem}.matrix-status{display:inline-flex!important;width:max-content;margin-top:7px!important;padding:3px 7px;border-radius:999px;background:#eef4fb;color:#4e647a!important;font-size:.64rem!important;font-weight:850}.matrix-status.active{background:#eaf7ee;color:#37794b!important}
+.matrix-cell{min-width:220px}.matrix-cell-top{display:flex;gap:10px;align-items:center;margin-bottom:7px}.matrix-score{display:inline-flex;align-items:center;justify-content:center;min-width:31px;height:31px;border-radius:9px;background:#edf4ff;color:var(--brand);font-weight:900}.matrix-breakdown{color:#53677c;font-size:.7rem;font-weight:800}.matrix-themes{display:flex;gap:4px;flex-wrap:wrap}.matrix-themes span{padding:3px 6px;border-radius:999px;background:#f3f6f9;color:#627487;font-size:.62rem;font-weight:750}.matrix-empty{color:#a2afbc}
+.evolution-shell{padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 8px 26px rgba(7,20,38,.045)}.evolution-head{display:flex;justify-content:space-between;gap:20px;align-items:start;margin-bottom:20px}.evolution-head p{max-width:590px;margin:0;color:var(--muted);font-size:.85rem}.evolution-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.72rem;font-weight:800;color:#53677c}.legend-item{display:inline-flex;align-items:center;gap:6px}.legend-dot{width:9px;height:9px;border-radius:50%;background:var(--brand)}.legend-dot.publications{background:var(--accent)}
+.evolution-scroll{overflow-x:auto;padding-bottom:6px;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}.evolution-chart{display:flex;align-items:end;gap:12px;min-width:max-content;height:250px;padding:12px 6px 0;border-bottom:2px solid #c5d1dd}.evolution-year{width:66px;flex:0 0 66px;text-align:center}.evolution-bars{height:174px;display:flex;align-items:end;justify-content:center;gap:5px}.evolution-bar{width:18px;min-height:3px;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#4584f4,var(--brand))}.evolution-bar.publications{background:linear-gradient(180deg,var(--accent),#1685bd)}.evolution-values{display:flex;justify-content:center;gap:8px;margin:6px 0 4px;color:#53677c;font-size:.62rem;font-weight:850}.evolution-label{display:block;color:#42566e;font-size:.72rem;font-weight:900}.evolution-flow{display:block;margin-top:4px;color:#8696a6;font-size:.58rem;font-weight:750;white-space:nowrap}
+.panel-method{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:start}.method-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff}.method-card h3{margin:0 0 9px}.method-card p{margin:0;color:var(--muted);font-size:.86rem}.method-list{display:grid;gap:9px}.method-line{display:flex;justify-content:space-between;gap:20px;padding-bottom:9px;border-bottom:1px solid var(--line);font-size:.78rem}.method-line:last-child{padding-bottom:0;border-bottom:0}.method-line span{color:var(--muted)}.method-line strong{color:var(--brand-dark)}
+@media(max-width:980px){.panel-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.axis-grid{grid-template-columns:1fr}.panel-method{grid-template-columns:1fr}.panel-intro{align-items:start;flex-direction:column}.panel-intro-note{max-width:720px}}
+@media(max-width:720px){.panel-metrics-section{overflow:hidden}.panel-metrics{display:flex;gap:10px;overflow-x:auto;padding:14px;scroll-snap-type:x proximity;scrollbar-width:none}.panel-metrics::-webkit-scrollbar{display:none}.panel-metric{flex:0 0 158px;scroll-snap-align:start;padding:15px 16px}.panel-metric strong{font-size:1.35rem}.panel-section{padding:48px 0}.axis-card{padding:20px;border-radius:20px}.axis-numbers{gap:6px}.axis-number{padding:9px 6px}.matrix-wrap{border-radius:14px;scrollbar-width:thin}.evolution-shell{padding:18px 14px;border-radius:18px}.evolution-head{flex-direction:column}.evolution-chart{height:230px}.method-card{padding:18px}.method-line{align-items:flex-start;flex-direction:column;gap:3px}}
+
+/* v16 — correções efetivas de alinhamento e dimensionamento. */
+
+/* Página inicial: textos das linhas de atuação realmente justificados. */
+.research-card .project-verbatim,
+.research-card p{
+  width:100%;
+  padding-right:0;
+  text-align:justify !important;
+  text-align-last:left;
+  text-justify:inter-word;
+  hyphens:auto;
+}
+
+/* Software: descrição realmente justificada dentro de todo o card. */
+.softwares-page .software-description,
+.software-card .software-description{
+  width:100%;
+  text-align:justify !important;
+  text-align-last:left;
+  text-justify:inter-word;
+  hyphens:auto;
+}
+
+/* Produções, Softwares e Premiações: chamada em uma única coluna.
+   O texto explicativo fica obrigatoriamente abaixo do título. */
+.page-hero-modern .page-hero-inner{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  justify-content:center !important;
+  gap:0 !important;
+  min-height:0 !important;
+  padding:38px 0 30px !important;
+}
+.page-hero-modern .page-hero-inner>div{
+  width:100%;
+}
+.page-hero-modern .page-hero-inner>p{
+  width:min(820px,100%) !important;
+  max-width:820px !important;
+  margin:.72rem 0 0 !important;
+  color:#a7bed4;
+}
+
+/* Histórico: dez colunas ocupam integralmente a largura útil do painel. */
+.evolution-scroll{
+  width:100%;
+  overflow-x:visible;
+}
+.evolution-chart{
+  display:grid !important;
+  grid-template-columns:repeat(10,minmax(0,1fr)) !important;
+  align-items:end;
+  width:100% !important;
+  min-width:0 !important;
+  max-width:none !important;
+  gap:clamp(10px,1.5vw,26px) !important;
+  padding:12px 6px 0;
+}
+.evolution-year{
+  width:100% !important;
+  min-width:0 !important;
+  max-width:none !important;
+  flex:none !important;
+}
+.evolution-bars{
+  width:100%;
+  height:174px;
+  justify-content:center;
+}
+.evolution-values{
+  width:100%;
+}
+@media(max-width:980px){
+  .page-hero-modern .page-hero-inner{
+    padding:34px 0 28px !important;
+  }
+}
+@media(max-width:720px){
+  .page-hero-modern .page-hero-inner{
+    padding:28px 0 24px !important;
+  }
+  .evolution-scroll{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  .evolution-chart{
+    grid-template-columns:repeat(10,66px) !important;
+    width:max-content !important;
+    min-width:760px !important;
+    gap:10px !important;
+  }
+  .evolution-year{
+    width:66px !important;
+    min-width:66px !important;
+  }
+}
+
+/* v17 — otimização de premiações e justificação dos projetos individuais. */
+.profile-main .project-list .project-verbatim{
+  text-align:justify !important;
+  text-align-last:left;
+  text-justify:inter-word;
+  hyphens:auto;
+}
+.award-cover a{display:block;width:max-content;max-width:100%;border-radius:16px}
+.award-cover a:hover{text-decoration:none}
+.award-cover a:focus-visible{outline:3px solid rgba(69,214,255,.45);outline-offset:4px}
 </style>
 </head>
 <body>
@@ -91,6 +442,7 @@ main>.profile-hero+.section{padding-top:42px}
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
       <div class="nav-links" id="main-menu">
             <a href="pessoal.html">Pessoal</a>
+            <a href="painel.html">Painel de Dados</a>
             <a href="producoes.html">Produções Científicas</a>
             <a href="softwares.html">Softwares</a>
             <a href="premiacoes.html">Premiações</a>
@@ -101,36 +453,32 @@ main>.profile-hero+.section{padding-top:42px}
   </nav>
 </header>
 
-<main><section class="profile-hero">
-  <div class="container profile-grid">
-    <div class="profile-photo">
-<img src="data:image/webp;base64,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" alt="Foto de Karinna Mendanha Soares" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">      <span class="avatar-fallback large" style="display:none">K</span>
+<main><section class="profile-hero"><div class="container profile-grid">
+  <div class="profile-photo"><img src="data:image/webp;base64,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" alt="Foto de Karinna Mendanha Soares" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><span class="avatar-fallback large" style="display:none">K</span></div>
+  <div><span class="eyebrow">Estudantes de Pós-Graduação · Atual</span><h1>Karinna Mendanha Soares</h1><p class="lead">Doutoranda</p><p>Departamento de Física - CEPAE UFG / PPGF-UFG</p><div class="profile-links"><a href="mailto:karinnamendanha@ufg.br">E-mail</a><a href="http://lattes.cnpq.br/6554649578665648" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0000-0003-4963-7267" target="_blank" rel="noopener">ORCID 0000-0003-4963-7267 ↗</a></div></div>
+</div></section>
+<section class="section"><div class="container profile-content">
+  <div class="profile-main">
+    <div class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">
+      <button class="profile-tab active" type="button" role="tab" aria-selected="true" aria-controls="profile-projects" id="tab-projects" data-profile-tab="projects">Projetos <span class="tab-count projects">5</span></button>
+      <button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-productions" id="tab-productions" data-profile-tab="productions">Produções <span class="tab-count">13</span></button>
     </div>
-    <div>
-      <span class="eyebrow">Estudantes de Pós-Graduação · Atual</span>
-      <h1>Karinna Mendanha Soares</h1>
-      <p class="lead">Doutoranda</p>
-      <p>Departamento de Física - CEPAE UFG / PPGF-UFG</p>
-      <div class="profile-links">
-<a href="mailto:karinnamendanha@ufg.br">E-mail</a><a href="http://lattes.cnpq.br/6554649578665648" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0000-0003-4963-7267" target="_blank" rel="noopener">ORCID 0000-0003-4963-7267 ↗</a>      </div>
-    </div>
+    <section class="profile-tab-panel" id="profile-projects" role="tabpanel" aria-labelledby="tab-projects" data-profile-tab-panel="projects">
+      <div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div>
+<div class="project-list"><div class="project-verbatim">Auto-organização e Design Atomístico de Nanoestruturas Peptídicas: Investigação computacional dos princípios físico-químicos responsáveis pela auto-organização de peptídeos em nanoestruturas funcionais, incluindo nanomembranas, nanofibras, nanobastões e outras arquiteturas supramoleculares. Por meio de dinâmica molecular atomística, são analisadas as relações entre sequência peptídica, distribuição de grupos hidrofóbicos e hidrofílicos, formação de estruturas secundárias, hidratação, ligações de hidrogênio e contribuições energéticas para a estabilidade dos agregados. A pesquisa busca estabelecer relações entre composição molecular, organização supramolecular e propriedades emergentes, fornecendo fundamentos para o design racional de materiais orgânicos bioinspirados.</div><div class="project-verbatim">Estabilidade Estrutural e Térmica de Membranas Peptídicas: Estudo da estabilidade, organização e robustez de membranas peptídicas auto-organizadas em diferentes condições estruturais e termodinâmicas. A pesquisa investiga sistemas como A6H, A6K, A6R e EF4K, avaliando efeitos da arquitetura mono ou multicamada, dimensões do sistema, condições periódicas de contorno, hidratação e temperatura sobre a integridade das estruturas. São analisados parâmetros como espessura, empacotamento molecular, conformação das cadeias, redes de ligações de hidrogênio e energias de interação. O objetivo é compreender os fatores que controlam a formação, persistência e reorganização dessas membranas e estabelecer critérios para o desenvolvimento de nanomateriais peptídicos estruturalmente estáveis.</div><div class="project-verbatim">Nanofibras Peptídicas para Liberação de Fármacos e Materiais Biomiméticos: Modelagem molecular de nanofibras peptídicas auto-organizadas com potencial para aplicações biomédicas e desenvolvimento de materiais biomiméticos. A linha investiga particularmente a organização de sequências peptídicas capazes de formar fibras estáveis e funcionalizáveis, avaliando estrutura secundária, agregação, ligações de hidrogênio, distribuição de resíduos, hidratação e acessibilidade molecular. Estudos com a sequência E2(SW)6E2 buscam compreender os mecanismos responsáveis pela estabilidade das nanofibras e suas características estruturais relevantes para encapsulamento, associação e liberação controlada de moléculas bioativas. A abordagem contribui para o desenvolvimento racional de nanocarreadores peptídicos e plataformas moleculares para aplicações terapêuticas.</div><div class="project-verbatim">Membranas Peptídicas Bioinspiradas para Captura de CO₂: Investigação atomística de nanoestruturas peptídicas como materiais funcionais para captura e retenção de dióxido de carbono. A pesquisa utiliza dinâmica molecular para caracterizar a interação do CO₂ com interfaces formadas por peptídeos auto-organizados, com destaque para membranas A6H e A6R. São avaliados os efeitos da química dos resíduos terminais, distribuição de cargas superficiais, interações eletrostáticas e capacidade de formação de contatos específicos sobre a afinidade pelo gás. A comparação entre diferentes sequências permite identificar mecanismos moleculares de adsorção e estabelecer princípios de design para materiais peptídicos ajustáveis, bioinspirados e potencialmente aplicáveis a tecnologias de captura de carbono.</div><div class="project-verbatim">Nanoestruturas Peptídicas Híbridas, Confinadas e Funcionalizadas: Investigação da organização e estabilidade de peptídeos em arquiteturas nanométricas complexas, incluindo sistemas confinados, nanobastões e materiais híbridos peptídeo–carbono. A pesquisa analisa como confinamento geométrico, interação com superfícies de carbono, hidratação e composição da sequência alteram a conformação, agregação e dinâmica dos peptídeos. Entre os sistemas estudados encontram-se nanobastões peptídicos KGAVK e peptídeos confinados em nanotubos de carbono, nos quais são avaliadas redes de ligações de hidrogênio, interações peptídeo–solvente e peptídeo–substrato, distribuições conformacionais e contribuições energéticas. O objetivo é compreender como ambientes nanoconfinados e componentes inorgânicos ou carbonáceos podem ser empregados para controlar a estrutura e funcionalidade de materiais peptídicos híbridos.</div></div>    </section>
+    <section class="profile-tab-panel" id="profile-productions" role="tabpanel" aria-labelledby="tab-productions" data-profile-tab-panel="productions" hidden>
+      <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
+      <div class="profile-publication-toolbar">
+        <div class="profile-production-metrics" aria-live="polite"><div class="profile-production-metric"><strong data-person-current-count>0</strong><span>no ano corrente</span></div><div class="profile-production-metric"><strong>13</strong><span>total no perfil</span></div></div>
+        <label class="profile-year-control"><span>Exibir ano</span><select data-person-year-filter aria-label="Filtrar produções por ano"></select></label>
+      </div>
+      <div class="profile-year-summary" data-person-year-summary aria-label="Produções distribuídas por ano"></div>
+      <div class="publication-list" data-person-publications><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Temperature Effects on the Structural Stability of EF 4 K Peptide Membranes: Insights into Mono- and Multilayer Architectures</h3><p class="authors">Karinna Mendanha, Douglas Xavier de Andrade, Guilherme Colherinhas</p><p class="journal">ACS Materials Au, v. 6, n. 2, 437-449</p><a href="https://doi.org/10.1021/acsmaterialsau.5c00214" target="_blank" rel="noopener">DOI: 10.1021/acsmaterialsau.5c00214 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Peptide–Carbon Nanotube Hybrids under Confinement: Structure and Stability from Atomistic Simulations</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">ACS Omega, acsomega.5c12748</p><a href="https://doi.org/10.1021/acsomega.5c12748" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c12748 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Hydrogen bonding and membrane anchoring of the antimicrobial peptide NP-3a investigated through molecular dynamics</h3><p class="authors">Ana Clara D. Aquino, Karinna Mendanha, Herbert de C. Georg, Guilherme Colherinhas</p><p class="journal">Computational Biology and Chemistry, v. 123, 108997</p><a href="https://doi.org/10.1016/j.compbiolchem.2026.108997" target="_blank" rel="noopener">DOI: 10.1016/j.compbiolchem.2026.108997 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Cholesterol-Driven Optimization of Liposomal Systems for Ivermectin Capture: Insights from Experimental and Molecular Dynamics Studies</h3><p class="authors">Alexandre C. M. Barros, Jader Pires, Karinna Mendanha, Lucas R. de Sousa, Bianca B. Fontanezi, Guilherme Colherinhas, Ana F. M. Botelho, Sebastião A. Mendanha, Eliana M. Lima</p><p class="journal">ACS Applied Materials &amp;amp; Interfaces, v. 18, n. 7, 10832-10841</p><a href="https://doi.org/10.1021/acsami.5c21365" target="_blank" rel="noopener">DOI: 10.1021/acsami.5c21365 ↗</a></div></article><article class="publication" data-person-publication data-year="2026"><div class="pub-year">2026</div><div><h3>Bio-Inspired Peptide Membranes for CO 2 Capture: A Molecular Dynamics Study of A 6 H and A 6 R Interfaces</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 130, n. 20, 5152-5164</p><a href="https://doi.org/10.1021/acs.jpcb.6c00256" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.6c00256 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Versatility of self-assembling A6K peptide nanomembranes under thermal variation: A molecular dynamics analysis across the 300–400 K range</h3><p class="authors">Karinna Mendanha, Douglas X. de Andrade, Guilherme Colherinhas</p><p class="journal">Surfaces and Interfaces, v. 69, 106746</p><a href="https://doi.org/10.1016/j.surfin.2025.106746" target="_blank" rel="noopener">DOI: 10.1016/j.surfin.2025.106746 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Molecular Dynamics Simulations of Self-Assembled E 2 (SW) 6 E 2 Peptide Nanofibers: Implications for Drug Delivery and Biomimetic Material Design</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">ACS Physical Chemistry Au, v. 5, n. 3, 302-315</p><a href="https://doi.org/10.1021/acsphyschemau.5c00028" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00028 ↗</a></div></article><article class="publication" data-person-publication data-year="2025"><div class="pub-year">2025</div><div><h3>Computational analysis of KGAVK peptide nanorod model: High structural stability under low hydration</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 437, 128515</p><a href="https://doi.org/10.1016/j.molliq.2025.128515" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.128515 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Exploring How System Dimensions and Periodic Boundary Conditions Influence the Molecular Dynamics Simulation of A 6 H Peptide Self-Assembly Nanostructures</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 128, n. 28, 6853-6865</p><a href="https://doi.org/10.1021/acs.jpcb.4c03043" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.4c03043 ↗</a></div></article><article class="publication" data-person-publication data-year="2024"><div class="pub-year">2024</div><div><h3>Employing molecular dynamics simulations and DFT calculations to elucidate the energetic, structural, and spectroscopic attributes of (poly)valines in water solution</h3><p class="authors">R.C. Prado, K. Mendanha, L.B.A. Oliveira, G. Colherinhas</p><p class="journal">Chemical Physics Letters, v. 847, 141364</p><a href="https://doi.org/10.1016/j.cplett.2024.141364" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2024.141364 ↗</a></div></article><article class="publication" data-person-publication data-year="2022"><div class="pub-year">2022</div><div><h3>Modeling, energetic and structural analysis of peptide membranes formed by arginine and phenylalanine (R2F4R2) using fully atomistic molecular dynamics</h3><p class="authors">Karinna Mendanha, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 367, 120498</p><a href="https://doi.org/10.1016/j.molliq.2022.120498" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.120498 ↗</a></div></article><article class="publication" data-person-publication data-year="2021"><div class="pub-year">2021</div><div><h3>TD-DFT absorption spectrum of (poly)threonine in water: A study combining molecular dynamics and quantum mechanics calculations</h3><p class="authors">Karinna Mendanha, Richard C. Prado, Leonardo B.A. Oliveira, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 779, 138876</p><a href="https://doi.org/10.1016/j.cplett.2021.138876" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2021.138876 ↗</a></div></article><article class="publication" data-person-publication data-year="2021"><div class="pub-year">2021</div><div><h3>Molecular dynamic simulations, GIAO‐NMR and TD‐DFT spectroscopy analyze for zwitterionic isoleucine ( ILE ) N , 1 ≤ N ≤ 6, in water solution</h3><p class="authors">Karinna Mendanha, Richard Costa Prado, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">Journal of Computational Chemistry, v. 42, n. 5, 344-357</p><a href="https://doi.org/10.1002/jcc.26460" target="_blank" rel="noopener">DOI: 10.1002/jcc.26460 ↗</a></div></article></div>
+      <div class="empty-state profile-year-empty" data-person-year-empty hidden><strong>Nenhuma produção encontrada para o ano selecionado.</strong><p>Use o seletor acima para consultar as produções dos demais anos.</p></div>
+    </section>
   </div>
-</section>
-
-<section class="section">
-  <div class="container profile-content">
-    <div class="profile-main">
-<section><div class="section-heading small"><span class="eyebrow">Atuação</span><h2>Projetos</h2></div><div class="project-list"><div class="project-verbatim">Auto-organização e Design Atomístico de Nanoestruturas Peptídicas: Investigação computacional dos princípios físico-químicos responsáveis pela auto-organização de peptídeos em nanoestruturas funcionais, incluindo nanomembranas, nanofibras, nanobastões e outras arquiteturas supramoleculares. Por meio de dinâmica molecular atomística, são analisadas as relações entre sequência peptídica, distribuição de grupos hidrofóbicos e hidrofílicos, formação de estruturas secundárias, hidratação, ligações de hidrogênio e contribuições energéticas para a estabilidade dos agregados. A pesquisa busca estabelecer relações entre composição molecular, organização supramolecular e propriedades emergentes, fornecendo fundamentos para o design racional de materiais orgânicos bioinspirados.</div><div class="project-verbatim">Estabilidade Estrutural e Térmica de Membranas Peptídicas: Estudo da estabilidade, organização e robustez de membranas peptídicas auto-organizadas em diferentes condições estruturais e termodinâmicas. A pesquisa investiga sistemas como A6H, A6K, A6R e EF4K, avaliando efeitos da arquitetura mono ou multicamada, dimensões do sistema, condições periódicas de contorno, hidratação e temperatura sobre a integridade das estruturas. São analisados parâmetros como espessura, empacotamento molecular, conformação das cadeias, redes de ligações de hidrogênio e energias de interação. O objetivo é compreender os fatores que controlam a formação, persistência e reorganização dessas membranas e estabelecer critérios para o desenvolvimento de nanomateriais peptídicos estruturalmente estáveis.</div><div class="project-verbatim">Nanofibras Peptídicas para Liberação de Fármacos e Materiais Biomiméticos: Modelagem molecular de nanofibras peptídicas auto-organizadas com potencial para aplicações biomédicas e desenvolvimento de materiais biomiméticos. A linha investiga particularmente a organização de sequências peptídicas capazes de formar fibras estáveis e funcionalizáveis, avaliando estrutura secundária, agregação, ligações de hidrogênio, distribuição de resíduos, hidratação e acessibilidade molecular. Estudos com a sequência E2(SW)6E2 buscam compreender os mecanismos responsáveis pela estabilidade das nanofibras e suas características estruturais relevantes para encapsulamento, associação e liberação controlada de moléculas bioativas. A abordagem contribui para o desenvolvimento racional de nanocarreadores peptídicos e plataformas moleculares para aplicações terapêuticas.</div><div class="project-verbatim">Membranas Peptídicas Bioinspiradas para Captura de CO₂: Investigação atomística de nanoestruturas peptídicas como materiais funcionais para captura e retenção de dióxido de carbono. A pesquisa utiliza dinâmica molecular para caracterizar a interação do CO₂ com interfaces formadas por peptídeos auto-organizados, com destaque para membranas A6H e A6R. São avaliados os efeitos da química dos resíduos terminais, distribuição de cargas superficiais, interações eletrostáticas e capacidade de formação de contatos específicos sobre a afinidade pelo gás. A comparação entre diferentes sequências permite identificar mecanismos moleculares de adsorção e estabelecer princípios de design para materiais peptídicos ajustáveis, bioinspirados e potencialmente aplicáveis a tecnologias de captura de carbono.</div><div class="project-verbatim">Nanoestruturas Peptídicas Híbridas, Confinadas e Funcionalizadas: Investigação da organização e estabilidade de peptídeos em arquiteturas nanométricas complexas, incluindo sistemas confinados, nanobastões e materiais híbridos peptídeo–carbono. A pesquisa analisa como confinamento geométrico, interação com superfícies de carbono, hidratação e composição da sequência alteram a conformação, agregação e dinâmica dos peptídeos. Entre os sistemas estudados encontram-se nanobastões peptídicos KGAVK e peptídeos confinados em nanotubos de carbono, nos quais são avaliadas redes de ligações de hidrogênio, interações peptídeo–solvente e peptídeo–substrato, distribuições conformacionais e contribuições energéticas. O objetivo é compreender como ambientes nanoconfinados e componentes inorgânicos ou carbonáceos podem ser empregados para controlar a estrutura e funcionalidade de materiais peptídicos híbridos.</div></div></section>      <section class="profile-publications">
-        <div class="section-heading small"><span class="eyebrow">Produção</span><h2>Artigos Publicados</h2></div>
-          <div class="publication-list">
-<article class="publication"><div class="pub-year">2026</div><div><h3>Temperature Effects on the Structural Stability of EF 4 K Peptide Membranes: Insights into Mono- and Multilayer Architectures</h3><p class="authors">Karinna Mendanha, Douglas Xavier de Andrade, Guilherme Colherinhas</p><p class="journal">ACS Materials Au, v. 6, n. 2, 437-449</p><a href="https://doi.org/10.1021/acsmaterialsau.5c00214" target="_blank" rel="noopener">DOI: 10.1021/acsmaterialsau.5c00214 ↗</a></div></article><article class="publication"><div class="pub-year">2026</div><div><h3>Peptide–Carbon Nanotube Hybrids under Confinement: Structure and Stability from Atomistic Simulations</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">ACS Omega, acsomega.5c12748</p><a href="https://doi.org/10.1021/acsomega.5c12748" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c12748 ↗</a></div></article><article class="publication"><div class="pub-year">2026</div><div><h3>Hydrogen bonding and membrane anchoring of the antimicrobial peptide NP-3a investigated through molecular dynamics</h3><p class="authors">Ana Clara D. Aquino, Karinna Mendanha, Herbert de C. Georg, Guilherme Colherinhas</p><p class="journal">Computational Biology and Chemistry, v. 123, 108997</p><a href="https://doi.org/10.1016/j.compbiolchem.2026.108997" target="_blank" rel="noopener">DOI: 10.1016/j.compbiolchem.2026.108997 ↗</a></div></article><article class="publication"><div class="pub-year">2026</div><div><h3>Cholesterol-Driven Optimization of Liposomal Systems for Ivermectin Capture: Insights from Experimental and Molecular Dynamics Studies</h3><p class="authors">Alexandre C. M. Barros, Jader Pires, Karinna Mendanha, Lucas R. de Sousa, Bianca B. Fontanezi, Guilherme Colherinhas, Ana F. M. Botelho, Sebastião A. Mendanha, Eliana M. Lima</p><p class="journal">ACS Applied Materials &amp;amp; Interfaces, v. 18, n. 7, 10832-10841</p><a href="https://doi.org/10.1021/acsami.5c21365" target="_blank" rel="noopener">DOI: 10.1021/acsami.5c21365 ↗</a></div></article><article class="publication"><div class="pub-year">2026</div><div><h3>Bio-Inspired Peptide Membranes for CO 2 Capture: A Molecular Dynamics Study of A 6 H and A 6 R Interfaces</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 130, n. 20, 5152-5164</p><a href="https://doi.org/10.1021/acs.jpcb.6c00256" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.6c00256 ↗</a></div></article><article class="publication"><div class="pub-year">2025</div><div><h3>Versatility of self-assembling A6K peptide nanomembranes under thermal variation: A molecular dynamics analysis across the 300–400 K range</h3><p class="authors">Karinna Mendanha, Douglas X. de Andrade, Guilherme Colherinhas</p><p class="journal">Surfaces and Interfaces, v. 69, 106746</p><a href="https://doi.org/10.1016/j.surfin.2025.106746" target="_blank" rel="noopener">DOI: 10.1016/j.surfin.2025.106746 ↗</a></div></article><article class="publication"><div class="pub-year">2025</div><div><h3>Molecular Dynamics Simulations of Self-Assembled E 2 (SW) 6 E 2 Peptide Nanofibers: Implications for Drug Delivery and Biomimetic Material Design</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">ACS Physical Chemistry Au, v. 5, n. 3, 302-315</p><a href="https://doi.org/10.1021/acsphyschemau.5c00028" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00028 ↗</a></div></article><article class="publication"><div class="pub-year">2025</div><div><h3>Computational analysis of KGAVK peptide nanorod model: High structural stability under low hydration</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 437, 128515</p><a href="https://doi.org/10.1016/j.molliq.2025.128515" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.128515 ↗</a></div></article><article class="publication"><div class="pub-year">2024</div><div><h3>Exploring How System Dimensions and Periodic Boundary Conditions Influence the Molecular Dynamics Simulation of A 6 H Peptide Self-Assembly Nanostructures</h3><p class="authors">Karinna Mendanha, Guilherme Colherinhas</p><p class="journal">The Journal of Physical Chemistry B, v. 128, n. 28, 6853-6865</p><a href="https://doi.org/10.1021/acs.jpcb.4c03043" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.4c03043 ↗</a></div></article><article class="publication"><div class="pub-year">2024</div><div><h3>Employing molecular dynamics simulations and DFT calculations to elucidate the energetic, structural, and spectroscopic attributes of (poly)valines in water solution</h3><p class="authors">R.C. Prado, K. Mendanha, L.B.A. Oliveira, G. Colherinhas</p><p class="journal">Chemical Physics Letters, v. 847, 141364</p><a href="https://doi.org/10.1016/j.cplett.2024.141364" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2024.141364 ↗</a></div></article><article class="publication"><div class="pub-year">2022</div><div><h3>Modeling, energetic and structural analysis of peptide membranes formed by arginine and phenylalanine (R2F4R2) using fully atomistic molecular dynamics</h3><p class="authors">Karinna Mendanha, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">Journal of Molecular Liquids, v. 367, 120498</p><a href="https://doi.org/10.1016/j.molliq.2022.120498" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.120498 ↗</a></div></article><article class="publication"><div class="pub-year">2021</div><div><h3>TD-DFT absorption spectrum of (poly)threonine in water: A study combining molecular dynamics and quantum mechanics calculations</h3><p class="authors">Karinna Mendanha, Richard C. Prado, Leonardo B.A. Oliveira, Guilherme Colherinhas</p><p class="journal">Chemical Physics Letters, v. 779, 138876</p><a href="https://doi.org/10.1016/j.cplett.2021.138876" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2021.138876 ↗</a></div></article><article class="publication"><div class="pub-year">2021</div><div><h3>Molecular dynamic simulations, GIAO‐NMR and TD‐DFT spectroscopy analyze for zwitterionic isoleucine ( ILE ) N , 1 ≤ N ≤ 6, in water solution</h3><p class="authors">Karinna Mendanha, Richard Costa Prado, Leonardo Bruno Assis Oliveira, Guilherme Colherinhas</p><p class="journal">Journal of Computational Chemistry, v. 42, n. 5, 344-357</p><a href="https://doi.org/10.1002/jcc.26460" target="_blank" rel="noopener">DOI: 10.1002/jcc.26460 ↗</a></div></article>          </div>
-      </section>
-    </div>
-    <aside class="profile-aside">
-      <div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2018</dd></div><div><dt>Saída</dt><dd>—</dd></div><div><dt>Bolsa</dt><dd>CAPES - Doutorado</dd></div></dl></div>
-<div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Física - UFG</dd></div><div><dt>Mestrado</dt><dd>Física - UFG (2023)</dd></div><div><dt>Doutorado</dt><dd>Física - UFG, em andamento desde 2023</dd></div></dl></div>    </aside>
-  </div>
-</section>
+  <aside class="profile-aside"><div class="info-card"><h2>Vínculo com o grupo</h2><dl><div><dt>Entrada</dt><dd>2018</dd></div><div><dt>Saída</dt><dd>—</dd></div><div><dt>Bolsa</dt><dd>CAPES - Doutorado</dd></div></dl></div><div class="info-card"><h2>Formação</h2><dl><div><dt>Graduação</dt><dd>Física - UFG</dd></div><div><dt>Mestrado</dt><dd>Física - UFG (2023)</dd></div><div><dt>Doutorado</dt><dd>Física - UFG, em andamento desde 2023</dd></div></dl></div></aside>
+</div></section>
 </main>
 
 <footer class="site-footer">
@@ -140,7 +488,7 @@ main>.profile-hero+.section{padding-top:42px}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 04/09/2026 18:06</div>
+    <div class="footer-meta">Atualização do site: 05/09/2026 14:17</div>
   </div>
 </footer>
 <script>(() => {
@@ -182,6 +530,90 @@ main>.profile-hero+.section{padding-top:42px}
   };
   select.addEventListener('change', showSelectedYear);
   showSelectedYear();
+})();
+
+(() => {
+  const tabs = [...document.querySelectorAll('[data-profile-tab]')];
+  const panels = [...document.querySelectorAll('[data-profile-tab-panel]')];
+  if (!tabs.length || !panels.length) return;
+  const activate = name => {
+    tabs.forEach(tab => {
+      const active = tab.dataset.profileTab === name;
+      tab.classList.toggle('active', active);
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+    panels.forEach(panel => { panel.hidden = panel.dataset.profileTabPanel !== name; });
+  };
+  tabs.forEach(tab => tab.addEventListener('click', () => activate(tab.dataset.profileTab)));
+  activate(location.hash === '#producoes' ? 'productions' : 'projects');
+})();
+
+(() => {
+  const select = document.querySelector('[data-person-year-filter]');
+  const items = [...document.querySelectorAll('[data-person-publication]')];
+  if (!select || !items.length) return;
+  const empty = document.querySelector('[data-person-year-empty]');
+  const currentCount = document.querySelector('[data-person-current-count]');
+  const currentYear = String(new Date().getFullYear());
+  const counts = new Map();
+  items.forEach(item => {
+    const year = (item.dataset.year || '').trim();
+    counts.set(year, (counts.get(year) || 0) + 1);
+  });
+  const numericYears = [...counts.keys()].filter(year => /^\d{4}$/.test(year)).sort((a, b) => Number(b) - Number(a));
+  const options = [currentYear, ...numericYears.filter(year => year !== currentYear)];
+  if (counts.has('')) options.push('');
+  select.innerHTML = options.map(year => {
+    const count = counts.get(year) || 0;
+    const label = year ? (year === currentYear ? `${year} · ano corrente (${count})` : `${year} (${count})`) : `Sem ano informado (${count})`;
+    return `<option value="${year}">${label}</option>`;
+  }).join('');
+  select.value = currentYear;
+  if (currentCount) currentCount.textContent = String(counts.get(currentYear) || 0);
+  const apply = () => {
+    const selected = select.value;
+    let visible = 0;
+    items.forEach(item => {
+      const show = (item.dataset.year || '').trim() === selected;
+      item.hidden = !show;
+      if (show) visible += 1;
+    });
+    if (empty) empty.hidden = visible !== 0;
+  };
+  select.addEventListener('change', apply);
+  apply();
+})();
+
+(() => {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('#main-menu');
+  if (!toggle || !menu) return;
+  const close = () => {menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open');};
+  toggle.addEventListener('click', () => document.body.classList.toggle('menu-open', menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+  document.addEventListener('keydown', event => {if (event.key === 'Escape') close();});
+  document.addEventListener('click', event => {if (menu.classList.contains('open') && !menu.contains(event.target) && !toggle.contains(event.target)) close();});
+})();
+
+(() => {
+  const select = document.querySelector('[data-person-year-filter]');
+  const items = [...document.querySelectorAll('[data-person-publication]')];
+  const summary = document.querySelector('[data-person-year-summary]');
+  if (!select || !items.length || !summary) return;
+  const counts = new Map();
+  items.forEach(item => {const year=(item.dataset.year||'').trim();counts.set(year,(counts.get(year)||0)+1);});
+  const currentYear = String(new Date().getFullYear());
+  const numericYears = [...counts.keys()].filter(year => /^\d{4}$/.test(year)).sort((a,b) => Number(b)-Number(a));
+  const years = [currentYear,...numericYears.filter(year => year !== currentYear)];
+  if (counts.has('')) years.push('');
+  const refresh = () => {
+    const selected = select.value;
+    summary.innerHTML = years.map(year => `<button class="profile-year-chip${year===selected?' active':''}" type="button" data-profile-year-chip="${year}"><span>${year||'Sem ano'}</span><strong>${counts.get(year)||0}</strong></button>`).join('');
+    summary.querySelectorAll('[data-profile-year-chip]').forEach(button => button.addEventListener('click', () => {select.value=button.dataset.profileYearChip;select.dispatchEvent(new Event('change'));refresh();}));
+  };
+  select.addEventListener('change', refresh);
+  requestAnimationFrame(refresh);
 })();
 </script>
 </body>
