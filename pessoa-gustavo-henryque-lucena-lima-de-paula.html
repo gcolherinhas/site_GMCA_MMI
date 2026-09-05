@@ -421,6 +421,66 @@ a{color:var(--brand)}
 .award-cover a{display:block;width:max-content;max-width:100%;border-radius:16px}
 .award-cover a:hover{text-decoration:none}
 .award-cover a:focus-visible{outline:3px solid rgba(69,214,255,.45);outline-offset:4px}
+
+/* v18 — correção definitiva do dimensionamento das capas de premiações. */
+.awards-page .award-cover{
+  width:170px !important;
+  max-width:170px !important;
+  height:226px;
+  min-width:170px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.awards-page .award-cover a{
+  display:block !important;
+  width:170px !important;
+  max-width:170px !important;
+  height:226px !important;
+  overflow:hidden;
+  border-radius:16px;
+}
+.awards-page .award-cover img{
+  display:block;
+  width:170px !important;
+  max-width:170px !important;
+  height:226px !important;
+  max-height:226px !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center;
+  border-radius:16px;
+}
+@media(max-width:720px){
+  .awards-page .award-cover{
+    width:100px !important;
+    max-width:100px !important;
+    min-width:100px;
+    height:133px;
+  }
+  .awards-page .award-cover a,
+  .awards-page .award-cover img{
+    width:100px !important;
+    max-width:100px !important;
+    height:133px !important;
+    max-height:133px !important;
+  }
+}
+@media(max-width:420px){
+  .awards-page .award-cover{
+    width:110px !important;
+    max-width:110px !important;
+    min-width:110px;
+    height:147px;
+  }
+  .awards-page .award-cover a,
+  .awards-page .award-cover img{
+    width:110px !important;
+    max-width:110px !important;
+    height:147px !important;
+    max-height:147px !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -481,7 +541,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 05/09/2026 14:17</div>
+    <div class="footer-meta">Atualização do site: 05/09/2026 14:36</div>
   </div>
 </footer>
 <script>(() => {
