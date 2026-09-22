@@ -803,6 +803,21 @@ a{color:var(--brand)}
 @media(max-width:760px){.eventos-page .eventos-grid{grid-template-columns:1fr}.eventos-page .evento-photo{height:280px}}
 @media(max-width:420px){.eventos-page .evento-photo{height:240px}.eventos-page .evento-body{padding:20px}}
 
+
+@media(min-width:901px){
+  .nav-links{width:100%;flex-wrap:nowrap;justify-content:space-between;gap:0}
+  .nav-links a{white-space:nowrap;flex-shrink:0;font-size:clamp(.82rem,1vw,1rem);padding:11px clamp(5px,.65vw,10px)}
+}
+@media(min-width:721px) and (max-width:900px){
+  .site-header{position:sticky}
+  .main-nav{position:relative}
+  .nav-inner{min-height:46px}
+  .nav-toggle{display:inline-flex}
+  .nav-links{display:none;position:absolute;top:44px;left:0;right:0;background:white;border:1px solid var(--line);box-shadow:var(--shadow);padding:10px;flex-direction:column}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:9px 10px}
+  main{padding-top:0}
+}
 </style>
 </head>
 <body>
@@ -824,13 +839,13 @@ a{color:var(--brand)}
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
       <div class="nav-links" id="main-menu">
             <a href="pessoal.html">Pessoal</a>
-            <a href="painel.html">Painel de Dados</a>
-            <a href="producoes.html">Produções Científicas</a>
+            <a href="painel.html">Dados</a>
+            <a href="producoes.html">Prod. Científica</a>
             <a href="softwares.html">Softwares</a>
-            <a href="eventos.html">Fotos e Eventos</a>
+            <a href="eventos.html">Momentos</a>
             <a href="premiacoes.html">Premiações</a>
             <a href="cluster.html">Cluster</a>
-            <a href="https://gcolherinhas.github.io/cluster.if.ufg/" target="_blank" rel="noopener">Acesso ao Cluster <span aria-hidden="true">↗</span></a>
+            <a href="https://gcolherinhas.github.io/cluster.if.ufg/" target="_blank" rel="noopener">Cluster-Acesso <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </nav>
@@ -839,7 +854,7 @@ a{color:var(--brand)}
 <main>
 <section class="profile-hero"><div class="container profile-grid">
 
-  <div class="profile-photo"><img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&amp;id=K4866839P3" alt="Foto de Renato Douglas dos Santos" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><span class="avatar-fallback large" style="display:none">R</span></div>
+  <div class="profile-photo"><img src="data:image/gif;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QMpaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6MzI6MDAgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NUMzMTVBQkQyNzMxMUUxQTk5OEYwNjIyODIwMkIyOSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NUMzMTVBQ0QyNzMxMUUxQTk5OEYwNjIyODIwMkIyOSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY1QzMxNUE5RDI3MzExRTFBOTk4RjA2MjI4MjAyQjI5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY1QzMxNUFBRDI3MzExRTFBOTk4RjA2MjI4MjAyQjI5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoKDBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxscHx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f/8AAEQgAYwBfAwERAAIRAQMRAf/EAJkAAQACAwADAQAAAAAAAAAAAAAGCAQFBwECAwkBAQADAQEBAQAAAAAAAAAAAAADBAUCBgEHEAABAwIDBAYGCQQDAAAAAAABAgMEAAUREgYhMUEHUWGBIhMUcaFCUmIIkcEygpKiIzM0ckODFUQlFxEAAgIBAwIEBgMBAAAAAAAAAAECAxEhMQQSBUFRYRNxgZGxIjJSciMz/9oADAMBAAIRAxEAPwC1NAKAUAoBQCgFAKAUAoBQCgFAKAUBj3C4QbdBfnz30RocZBdkSHSEoQhIxKlE19jFt4W4OA6y5/6muanGdHsptVrByou0pvxJTw95phXcbSeGcEnoFbPH7at56vyKtnIS2OQ6iumtbitT1wvNxkrO9Tr60J7G0FKR9FacKIR2SIfebIzD1lrWxzUrt96mRXAdhQ+4U9qVEpP0UlTCW6RKpM7ly5+ZHUsdTUfVzabtbzgFXGMgIlNj3ltI7jqRxygK9O6s7kdsTWYaPyOo364ZZC3XGDc4DFwgPokwpSA7HfbOZC0KGIINYkotPD3LJkV8AoBQCgFAKAr/AM9tVrvGpWtIMOf9Xaw3IuiQdjspYztNK6UtIwWR7xHRW122jC63u9iryLMaGz5Y27QzFsdvN6Wy7KSohhl4ZghsDelB3qVXfMdrajDYgpcEsyOacy71aZd0kvQWksxlKPhoSAABWhRBxgk3qQ56pZRxa5yUuTCpO5JqQtRWht7VOcaQFxzgv2uIw6QPeFfSOSLBfLxrMW+7DSjryl265pW/bitWYoloBcdSCeDyMV4e8k+9WR3Pj5XWvmTcex7MsRWIWxQCgFAKAUBRvUGq1P6gvdzcV35s2S8D0BbqggdiMBXraYdMEvQoWLLMY618OPkDmAw3Y1KQ+yRe76hfmKISTlPGvhNGvBpt9CQzYLrzKgRjlrpRZxLBLtIagctl9ssxtRDkKfHeG/7CXRmHagkVzdT1Qa9DiMsSyXzrxxoigFAKAUAoD87dUNvRbtcoLux2NKeZcHxNuqSfWK9hB5gn6FTGpo6+gAYnCgMyNEKiCRU0IEcpm1jwcQNlWY1leVhtrTalPXCK0gd9x5tCfSpQAqSVeIt+hGp6l9wMABX52bYoBQCgFAKAolz7tCrVzY1ExlytyJAlt9BElCXSfxKNeo4U+qmJWmtTn1WTkyIjOdWNSQjk4mzfQou7ZV2uBUnM3cWFjhsq7CsqymTfllp/z+ubKyUZkJkpfWPhY/VOP4Kq9zsVfHm/TH10OuN+ViRbavzo9CKAUAoBQCgKu/NlYnIepLXqBhlKlXGL5NThAUA4w5jx2YqQ6B2VudqszFx8ivctTgsq23BH77CCeKm8AfVsrVIVJH1gs4EDA+g7DVqpEVjJHAZGytCqJSskSO3xAcNlWJPCKrZ2DkZZs2oZM8pxTEjFKVcAt1QA/KlVea7/AH/5KPm/saHbYZm35I7jXkTaFAKAUAoBQES5p6Cja40dMsqyG5mHj22Qf7UlsHIf6VYlKuo1Y417qmpHMo5RTOch5C3Y8psszYrio8xhW9t5o5VpP3hXqYyTWUZ7jh4MBKR4gq5URzN7bwNlaVRSsJVaWlOLQ22krWsgJQkYkk7gBXy541ZXxks7oDS409p9qO6B51/9aYRwWRsR9wbK8B3Hl+9a2v1WiPRcSj24Y8fEklUCyKAUAoBQCgFAUW54A2znDqVDGAQ5JS6tPAl5pDivzLNen4LzVEq2LUjDMjM4MQUnfgd9atTKk0SK1B155tllCnXnCEttIBUpRPAAVoVzSWWU5xyTLQNzac5qab05GWl51MwO3J9BCkJMdCngwhQ2HKpHfUOOysfu3L6qpdO2C3xONhpst5XizWFAKAUAoBQCgI7qbmHorTPdvd3jxHsMRGzeI+R1Mthbn5amq41ln6ps5lJLcpVzFuQ1Zrm8agbQpDE5/MwhWxQaQkNt5uvIgY16zjcVwrUX4FKd2WYNvVPhpCEJaeaG5uQ0l1I9GYYjsNWPZInajav6jv5huRISI1rZeSUPqgsJZdWk70qe7zmU8QlQo6M7tv4nxTSHLS4R9J68s9/lJUYkF4mRkGZQbcQptZA44JXjVflcVzrcVuSwu1Ll6X5laG1RgmyXiPJfIx8qVFqQP8LgQ56q8pbxrK/2WC8pJ7ElqA6FAKAUBzPXvzBcvtIqciiSbvdkYgwYJSvKocHXcfDR1jEq6qu0cGyzXZepxKaRXjXHzHcxdT+JHhPiw21eI8vBJDykn35BwX+DKOqtejttcNX+TIZWs5xHceW4XHFqW4s4rWokkk8STvrVrWCvMkFteZJCHtieC+j01cjhlOafgSJqzBxsONgONn2kd4eqpMIruwOWlLbZddwbbG9atgphBWEaushtZLbA/THtcVVFMtVrzNGttwOBxBKVpIUlaTgQRuIIqpOGSzGWDpeiPmG5i6X8OPLfF+tiMB5acol5KRwbkDFY+/mHVWbf2uueq/Fk8b2iwWhfmC5f6qU3FXJNmurmAEKeQgKV0NPftr6hiFHorFv4FlfhlFiNiZ0zHjwqkdnAOa2stR6t1qeXmnJJg21pxMe5ym1FC33lgFTWcbUtNhWCgPtHEHZWzwuNGMPdmVbrXnpW5DdfcnbXpFtmOmSiU443mXlTlKTu3YmtLh8n3k3jBUuzB4zk5FJt6G5K0IHdB2VoxgOs8txCDuqRVnLmZTTSk1LGJG2Z8WVMjKzx3VtK6UkipMEbSZ7TZs+arNJdU6RuB3DsGyvnSEkjCXGJ318cDtSPiuH1Vw6zpTMdyJhwqKVZ0pmOYmOIIxHRXHtkimdb5Zc0L4nS+pNE3aSuVBk2S5GzvOKJdYdahuLLIWduQoSSn3SNlZHL4MVZGa/ks/UswtymvQ9YWf8A9I1B/Kzf7ebjhk8f+Qvd7ONWKP8Aittiryf2NjrnP4y8fO7v+Xk8Ttwqfj7eHyKz3Oaq8t4y8fAxx9vx83bhsq9E6Z9B5bh5bs8f66lRyx+lw8Ls8T667RyeRh8Prrs5PbZ8Prr6DwcPh9dAeisPhrln0x3sMPZ9dRyO0Ypw2/ZqMkRk2LH/AGuzN/Fn/t4Y/wAB/fj7PT1Y1U5Oy/tH7k1fj8Gf/9k=" alt="Foto de Renato Douglas dos Santos" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><span class="avatar-fallback large" style="display:none">R</span></div>
 
   <div><span class="eyebrow">Estudantes de Pós-Graduação · Atual</span><h1>Renato Douglas dos Santos</h1><p class="lead">Doutorando</p><p>PPGF/IF-UFG</p><div class="profile-links"><a href="mailto:renatosantos@discente.ufg.br">E-mail</a><a href="http://lattes.cnpq.br/6873511213084720" target="_blank" rel="noopener">Currículo Lattes ↗</a><a href="https://orcid.org/0009-0001-0580-4038" target="_blank" rel="noopener">ORCID 0009-0001-0580-4038 ↗</a></div></div>
 
@@ -886,7 +901,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 21/09/2026 21:48</div>
+    <div class="footer-meta">Atualização do site: 21/09/2026 22:16</div>
   </div>
 </footer>
 <script>(() => {

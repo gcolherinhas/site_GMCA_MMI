@@ -803,6 +803,21 @@ a{color:var(--brand)}
 @media(max-width:760px){.eventos-page .eventos-grid{grid-template-columns:1fr}.eventos-page .evento-photo{height:280px}}
 @media(max-width:420px){.eventos-page .evento-photo{height:240px}.eventos-page .evento-body{padding:20px}}
 
+
+@media(min-width:901px){
+  .nav-links{width:100%;flex-wrap:nowrap;justify-content:space-between;gap:0}
+  .nav-links a{white-space:nowrap;flex-shrink:0;font-size:clamp(.82rem,1vw,1rem);padding:11px clamp(5px,.65vw,10px)}
+}
+@media(min-width:721px) and (max-width:900px){
+  .site-header{position:sticky}
+  .main-nav{position:relative}
+  .nav-inner{min-height:46px}
+  .nav-toggle{display:inline-flex}
+  .nav-links{display:none;position:absolute;top:44px;left:0;right:0;background:white;border:1px solid var(--line);box-shadow:var(--shadow);padding:10px;flex-direction:column}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:9px 10px}
+  main{padding-top:0}
+}
 </style>
 </head>
 <body>
@@ -824,13 +839,13 @@ a{color:var(--brand)}
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
       <div class="nav-links" id="main-menu">
             <a href="pessoal.html">Pessoal</a>
-            <a href="painel.html">Painel de Dados</a>
-            <a href="producoes.html">Produções Científicas</a>
+            <a href="painel.html">Dados</a>
+            <a href="producoes.html">Prod. Científica</a>
             <a href="softwares.html">Softwares</a>
-            <a href="eventos.html">Fotos e Eventos</a>
+            <a href="eventos.html">Momentos</a>
             <a href="premiacoes.html">Premiações</a>
             <a href="cluster.html">Cluster</a>
-            <a href="https://gcolherinhas.github.io/cluster.if.ufg/" target="_blank" rel="noopener">Acesso ao Cluster <span aria-hidden="true">↗</span></a>
+            <a href="https://gcolherinhas.github.io/cluster.if.ufg/" target="_blank" rel="noopener">Cluster-Acesso <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </nav>
@@ -889,7 +904,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 21/09/2026 21:48</div>
+    <div class="footer-meta">Atualização do site: 21/09/2026 22:16</div>
   </div>
 </footer>
 <script>(() => {
