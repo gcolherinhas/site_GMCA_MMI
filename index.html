@@ -902,6 +902,14 @@ a{color:var(--brand)}
   .hero-logo { padding: 9px; border-radius: 17px; }
   .hero-logo img { border-radius: 9px; }
 }
+
+/* Evita que a abertura de um card estique os demais da mesma linha. */
+.research-grid-visual{align-items:start}
+.research-card-visual{align-self:start;height:auto;min-height:0}
+/* Mantém os links de expansão alinhados antes da abertura. */
+.research-card-visual .research-card-content{min-height:198px}
+.research-card-visual h3{margin-bottom:16px}
+.research-card-details{margin-top:auto}
 </style>
 </head>
 <body>
@@ -973,7 +981,6 @@ a{color:var(--brand)}
         <div class="research-card-content">
           <span class="research-card-kicker">Linha de pesquisa 01</span>
           <h3>Materiais Peptídicos, Auto-organização e Nanoestruturas Bioinspiradas</h3>
-          <p class="research-card-excerpt">Investigação computacional das propriedades estruturais, energéticas e dinâmicas de materiais formados por peptídeos auto-organizáveis, incluindo nan…</p>
           <details class="research-card-details">
             <summary>Conheça a pesquisa <span aria-hidden="true">＋</span></summary>
             <p class="project-verbatim">Materiais Peptídicos, Auto-organização e Nanoestruturas Bioinspiradas: Investigação computacional das propriedades estruturais, energéticas e dinâmicas de materiais formados por peptídeos auto-organizáveis, incluindo nanomembranas, nanofibras, nanotapes, nanobastões e sistemas peptídicos confinados em nanoestruturas de carbono. A pesquisa emprega principalmente dinâmica molecular atomística para compreender mecanismos de automontagem, estabilidade térmica e estrutural, formação e persistência de ligações de hidrogênio, organização de estruturas secundárias e balanço entre interações eletrostáticas e de van der Waals. Esses estudos buscam estabelecer relações entre sequência peptídica, ambiente molecular e propriedades emergentes das nanoestruturas, contribuindo para o desenvolvimento racional de materiais biomiméticos, sistemas de transporte molecular, nanocarreadores e componentes funcionais para aplicações em nanotecnologia e armazenamento de energia.</p>
@@ -988,7 +995,6 @@ a{color:var(--brand)}
         <div class="research-card-content">
           <span class="research-card-kicker">Linha de pesquisa 02</span>
           <h3>Líquidos Iônicos, Solventes Funcionais e Ambientes Moleculares Complexos</h3>
-          <p class="research-card-excerpt">Modelagem molecular de líquidos iônicos, eletrólitos altamente concentrados e solventes eutéticos profundos, com ênfase na compreensão de sua organiz…</p>
           <details class="research-card-details">
             <summary>Conheça a pesquisa <span aria-hidden="true">＋</span></summary>
             <p class="project-verbatim">Líquidos Iônicos, Solventes Funcionais e Ambientes Moleculares Complexos: Modelagem molecular de líquidos iônicos, eletrólitos altamente concentrados e solventes eutéticos profundos, com ênfase na compreensão de sua organização microscópica, hidratação, estabilidade e interação com superfícies e nanoestruturas. Por meio de dinâmica molecular clássica e ab initio, são investigados efeitos da composição química, concentração de água, temperatura e confinamento sobre a estrutura local e as interações intermoleculares desses fluidos. A linha contempla tanto líquidos iônicos convencionais quanto sistemas de maior interesse ambiental e biológico, incluindo líquidos iônicos derivados de aminoácidos e Natural Deep Eutectic Solvents (NADES), visando identificar relações entre composição molecular e desempenho em aplicações como eletrólitos, interfaces funcionais e meios de solvatação.</p>
@@ -1003,7 +1009,6 @@ a{color:var(--brand)}
         <div class="research-card-content">
           <span class="research-card-kicker">Linha de pesquisa 03</span>
           <h3>Modelagem Molecular de Supercapacitores e Materiais para Armazenamento de Energia</h3>
-          <p class="research-card-excerpt">Desenvolvimento de modelos computacionais de supercapacitores para investigar, em escala molecular, os mecanismos responsáveis pela formação da dupla…</p>
           <details class="research-card-details">
             <summary>Conheça a pesquisa <span aria-hidden="true">＋</span></summary>
             <p class="project-verbatim">Modelagem Molecular de Supercapacitores e Materiais para Armazenamento de Energia: Desenvolvimento de modelos computacionais de supercapacitores para investigar, em escala molecular, os mecanismos responsáveis pela formação da dupla camada elétrica e pelo armazenamento eletrostático de energia. A pesquisa envolve eletrodos constituídos por materiais bidimensionais, como grafeno e grafino, bem como diferentes classes de eletrólitos, incluindo líquidos iônicos convencionais, líquidos iônicos biocompatíveis e biodegradáveis, sistemas hidratados, misturas de eletrólitos e solventes eutéticos profundos. As simulações permitem avaliar a organização dos íons junto às superfícies eletrificadas, perfis de potencial, capacitância, densidade de energia e efeitos decorrentes da composição do eletrólito, hidratação, temperatura, geometria e espaçamento dos eletrodos. O objetivo é estabelecer princípios moleculares para o projeto de dispositivos de armazenamento de energia mais eficientes e ambientalmente sustentáveis.</p>
@@ -1018,7 +1023,6 @@ a{color:var(--brand)}
         <div class="research-card-content">
           <span class="research-card-kicker">Linha de pesquisa 04</span>
           <h3>Biomoléculas, Fármacos e Nanomateriais em Interfaces Biológicas</h3>
-          <p class="research-card-excerpt">Investigação computacional das interações entre moléculas bioativas, fármacos, peptídeos e nanomateriais com membranas e outros ambientes biomolecula…</p>
           <details class="research-card-details">
             <summary>Conheça a pesquisa <span aria-hidden="true">＋</span></summary>
             <p class="project-verbatim">Biomoléculas, Fármacos e Nanomateriais em Interfaces Biológicas: Investigação computacional das interações entre moléculas bioativas, fármacos, peptídeos e nanomateriais com membranas e outros ambientes biomoleculares. A linha utiliza dinâmica molecular, cálculos de energia livre e, em problemas específicos, estratégias de molecular docking para caracterizar processos como adsorção, inserção, ancoragem, agregação, reconhecimento molecular e estabilização de compostos em interfaces biológicas. Entre os sistemas estudados encontram-se fullerenóis em bicamadas lipídicas, peptídeos antimicrobianos associados a membranas, sistemas lipossomais para incorporação de ivermectina e reposicionamento computacional de fármacos. A abordagem busca elucidar os mecanismos moleculares que controlam afinidade, estabilidade e organização dessas associações, fornecendo subsídios para o desenho de nanocarreadores, sistemas de liberação de fármacos e novas estratégias de aplicação de moléculas bioativas.</p>
@@ -1033,7 +1037,6 @@ a{color:var(--brand)}
         <div class="research-card-content">
           <span class="research-card-kicker">Linha de pesquisa 05</span>
           <h3>Materiais Moleculares e Nanoestruturas para Captura de CO₂</h3>
-          <p class="research-card-excerpt">Prospecção e caracterização, por métodos computacionais, de materiais moleculares e interfaces nanoestruturadas capazes de interagir seletivamente co…</p>
           <details class="research-card-details">
             <summary>Conheça a pesquisa <span aria-hidden="true">＋</span></summary>
             <p class="project-verbatim">Materiais Moleculares e Nanoestruturas para Captura de CO₂: Prospecção e caracterização, por métodos computacionais, de materiais moleculares e interfaces nanoestruturadas capazes de interagir seletivamente com dióxido de carbono. A pesquisa investiga como composição química, distribuição de cargas, grupos funcionais e organização supramolecular determinam a afinidade e os mecanismos de adsorção ou fixação de CO₂. Entre os sistemas estudados destacam-se membranas peptídicas bioinspiradas e sistemas baseados em líquidos iônicos, nos quais são analisadas as interações intermoleculares responsáveis pela captura do gás. As simulações em escala atomística permitem comparar diferentes arquiteturas e identificar sítios e mecanismos de interação, contribuindo para o desenho racional de materiais ajustáveis, sustentáveis e potencialmente aplicáveis a tecnologias de separação, captura e sequestro de carbono.</p>
@@ -1048,7 +1051,6 @@ a{color:var(--brand)}
         <div class="research-card-content">
           <span class="research-card-kicker">Linha de pesquisa 06</span>
           <h3>Inteligência Artificial e Aprendizado de Máquina Aplicados à Física Computacional</h3>
-          <p class="research-card-excerpt">Desenvolvimento e aplicação de métodos de inteligência artificial, aprendizado de máquina e análise de dados como ferramentas complementares à modela…</p>
           <details class="research-card-details">
             <summary>Conheça a pesquisa <span aria-hidden="true">＋</span></summary>
             <p class="project-verbatim">Inteligência Artificial e Aprendizado de Máquina Aplicados à Física Computacional: Desenvolvimento e aplicação de métodos de inteligência artificial, aprendizado de máquina e análise de dados como ferramentas complementares à modelagem computacional de sistemas físicos. A linha investiga a capacidade de algoritmos de classificação, agrupamento e redes neurais artificiais de reconhecer padrões complexos, identificar regiões de transição e produzir previsões em condições nas quais métodos numéricos convencionais apresentam elevado custo computacional ou dificuldades de convergência. Trabalhos já realizados incluem o emprego de K-means, máquinas de vetores de suporte (SVM) e redes neurais artificiais do tipo perceptron multicamadas na previsão de fenômenos de quebra espontânea de simetria em sistemas físicos. A perspectiva é integrar essas técnicas a fluxos de trabalho de Física Computacional, ampliando a capacidade de análise, classificação e predição em problemas de alta dimensionalidade.</p>
@@ -1078,7 +1080,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 26/10/2026 20:29</div>
+    <div class="footer-meta">Atualização do site: 26/10/2026 20:39</div>
   </div>
 </footer>
 <script>(() => {

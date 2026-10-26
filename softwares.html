@@ -902,6 +902,14 @@ a{color:var(--brand)}
   .hero-logo { padding: 9px; border-radius: 17px; }
   .hero-logo img { border-radius: 9px; }
 }
+
+/* Evita que a abertura de um card estique os demais da mesma linha. */
+.research-grid-visual{align-items:start}
+.research-card-visual{align-self:start;height:auto;min-height:0}
+/* Mantém os links de expansão alinhados antes da abertura. */
+.research-card-visual .research-card-content{min-height:198px}
+.research-card-visual h3{margin-bottom:16px}
+.research-card-details{margin-top:auto}
 </style>
 </head>
 <body>
@@ -944,7 +952,7 @@ a{color:var(--brand)}
       <p>Instituto de Física · Universidade Federal de Goiás</p>
       <p class="footer-admin">Site gerenciado/administrado por: Guilherme Colherinhas de Oliveira</p>
     </div>
-    <div class="footer-meta">Atualização do site: 26/10/2026 20:29</div>
+    <div class="footer-meta">Atualização do site: 26/10/2026 20:39</div>
   </div>
 </footer>
 <script>(() => {
